@@ -1,0 +1,90 @@
+.footer-section {
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--glass-border);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.footer-title {
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.footer-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-link {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary-cyan);
+}
+
+/* Dark Mode Map Filter */
+.map-container iframe {
+  filter: grayscale(100%) invert(90%) contrast(85%);
+  transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+  filter: grayscale(0%) invert(0%) contrast(100%);
+}
+
+/* Contact Form Styles */
+.form-input, .form-textarea {
+  width: 100%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--primary-cyan);
+}
+
+.btn-submit {
+  background: var(--primary-cyan);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #0891b2;
+  transform: translateY(-2px);
+}
+
+.success-box {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  animation: fade-in 0.5s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-label {
+  color: var(--text-main);
+  font-weight: 600;
+}

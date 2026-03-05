@@ -1,0 +1,196 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--primary-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary-cyan);
+  animation: pulse 2s infinite;
+}
+
+.badge-text {
+  color: var(--primary-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-cyan), var(--secondary-purple), #d946ef, var(--primary-cyan));
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-flow 4s linear infinite;
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  position: relative;
+  padding: 1rem 2.5rem;
+  background: var(--primary-cyan);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Breathing Glow Effect */
+  animation: glow-breathe 3s infinite ease-in-out;
+}
+
+.hero-btn:hover {
+  background: #0891b2;
+  transform: translateY(-2px);
+  animation: none;
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.8);
+}
+
+@keyframes glow-breathe {
+  0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.3); transform: scale(1); }
+  50% { box-shadow: 0 0 30px rgba(6, 182, 212, 0.6); transform: scale(1.03); }
+}
+
+.hero-bg {
+  background-color: var(--bg-main);
+}
+.hero-title-text {
+  color: var(--text-main);
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(20px) translateX(-10px); }
+}
+
+.animate-float-1 {
+  animation: float-1 8s ease-in-out infinite;
+}
+.animate-float-2 {
+  animation: float-2 10s ease-in-out infinite;
+}
+
+/* --- Bento Grid Card Styles --- */
+.bento-card {
+  background: transparent;
+}
+
+/* The actual card background, inside the beam border */
+.bento-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px; /* Border width */
+  background: var(--card-bg);
+  border-radius: 1rem; /* Corresponds to rounded-2xl */
+  z-index: -1;
+  transition: background 0.5s ease;
+  backdrop-filter: blur(24px); /* backdrop-blur-xl */
+}
+
+/* Spotlight effect on hover */
+.bento-card:hover::after {
+  background: radial-gradient(
+    350px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.07),
+    transparent 80%
+  ), var(--card-bg);
+}
+
+/* The rotating beam */
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  /* Use the custom property for color, with a fallback */
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    transparent,
+    var(--beam-color, #06b6d4),
+    transparent 35%
+  );
+  transform: translate(-50%, -50%);
+  animation: rotate-beam 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -2; /* Behind the ::after element */
+}
+
+.bento-card:hover::before {
+  opacity: 0.5; /* Keep it subtle */
+}
+
+@keyframes rotate-beam {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
