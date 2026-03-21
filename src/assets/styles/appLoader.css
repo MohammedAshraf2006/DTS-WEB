@@ -23,7 +23,7 @@
 }
 
 .logo {
-  width: 1200px; /* حجم اللوجو */
+  width: 300px; /* حجم اللوجو */
   height: auto;
   animation: pulse 1.5s infinite ease-in-out;
 }

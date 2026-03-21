@@ -34,7 +34,7 @@ onUnmounted(() => {
       <div class="loader-content">
         <!-- يتم عرض اللوجو المناسب بناءً على وضع العرض -->
         <img v-if="!isDarkMode" src="/images/dts-logo.png" alt="DTS Logo" class="logo" />
-        <img v-else src="/images/dts-logo-dd.png" alt="DTS Logo" class="logo" />
+        <img v-else src="/images/dts-logo.png" alt="DTS Logo" class="logo" />
       </div>
     </div>
   </Transition>
