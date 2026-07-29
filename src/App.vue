@@ -13,9 +13,10 @@
     </main>
     <Footer id="contact" class="reveal" />
 
-    <!-- Floating WhatsApp Button -->
+    <RobotAssistant />
+
     <a 
-      href="https://wa.me/201000955267" 
+      href="https://wa.me/20105099817" 
       target="_blank" 
       class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 md:p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all duration-300 hover:-translate-y-1 group"
       aria-label="Chat on WhatsApp"
@@ -31,6 +32,7 @@
 import { onMounted } from 'vue'
 import AppLoader from './components/AppLoader.vue'
 import Navbar from './components/Navbar.vue'
+import RobotAssistant from './components/RobotAssistant.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesGrid from './components/ServicesGrid.vue'
 import Products from './components/Products.vue'
@@ -45,7 +47,7 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Only animate once
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.15 });
