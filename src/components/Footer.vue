@@ -68,13 +68,21 @@ const { form, errors, isSubmitting, showSuccess, handleSubmit } = useContactForm
           <ul class="space-y-4 footer-text">
             <li>
               <span class="footer-label">{{ t('footer.techSupport') }}</span>
-              <a href="tel:+201024689100" class="footer-link" dir="ltr">(+20) 10 50992815</a>
+              <a href="tel:+201024689100" class="footer-link" dir="ltr">(+20) 10 50992816</a>
               <a href="mailto:support@dts-eg.net" class="footer-link">support@dts-eg.net</a>
             </li>
              <li>
               <span class="footer-label">{{ t('footer.sales') }}</span>
-              <a href="tel:+201000955267" class="footer-link" dir="ltr">(+20) 10 50992816</a>
               <a href="mailto:sales@dts-eg.net" class="footer-link">sales@dts-eg.net</a>
+            </li>
+            <li>
+              <span class="footer-label">{{ t('footer.contactNumbers') }}</span>
+              <div class="space-y-1">
+                <a href="tel:+201050992815" class="footer-link" dir="ltr">(+20) 10 50992815</a>
+                <a href="tel:+201050992816" class="footer-link" dir="ltr">(+20) 10 50992816</a>
+                <a href="tel:+201050992817" class="footer-link" dir="ltr">(+20) 10 50992817</a>
+                <a href="tel:+201050992818" class="footer-link" dir="ltr">(+20) 10 50992818</a>
+              </div>
             </li>
           </ul>
         </div>
