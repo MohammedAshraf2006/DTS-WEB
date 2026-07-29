@@ -32,7 +32,6 @@
 import { onMounted } from 'vue'
 import AppLoader from './components/AppLoader.vue'
 import Navbar from './components/Navbar.vue'
-import RobotAssistant from './components/RobotAssistant.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesGrid from './components/ServicesGrid.vue'
 import Products from './components/Products.vue'
