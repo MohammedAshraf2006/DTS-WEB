@@ -5,10 +5,10 @@
 
 .clients-display-wrapper {
   width: 100%;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
   padding: 8rem 0;
   position: relative;
   display: flex;
@@ -19,7 +19,9 @@
   overflow: hidden;
 }
 
-/* Gradient masks for depth effect */
+/* Gradient masks for depth effect — tied to the section's own
+   background so the fade actually matches what it's fading into,
+   in both themes. */
 .clients-display-wrapper::before,
 .clients-display-wrapper::after {
   content: '';
@@ -41,6 +43,7 @@
   background: linear-gradient(to left, var(--bg-secondary) 20%, transparent);
 }
 
+/* --- 3D rotating carousel: kept as-is, this is the effect to preserve --- */
 .clients-slider {
   position: relative;
   width: 220px;
@@ -73,8 +76,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 100px;
   cursor: default;
   transition: all 0.3s ease;
@@ -83,6 +86,7 @@
   --s: 1;
   transform: rotateY(var(--ry)) translateZ(420px) translateY(var(--ty)) scale(var(--s));
   animation: float-client 6s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .client-item:nth-child(1) { --ry: 0deg; animation-delay: 0s; }
@@ -98,20 +102,15 @@
 .client-item:nth-child(11) { --ry: 300deg; animation-delay: -6.0s; }
 .client-item:nth-child(12) { --ry: 330deg; animation-delay: -6.5s; }
 
-[data-theme="light"] .client-item {
-  opacity: 1;
-}
-
+/* Hover glow now derives from --primary-cyan via color-mix, so dark
+   and light mode automatically stay in sync with the rest of the
+   site's accent color — no more separate hardcoded overrides. */
 .client-item:hover {
-  background: rgba(6, 182, 212, 0.1);
+  background: color-mix(in srgb, var(--primary-cyan) 8%, var(--card-bg));
   border-color: var(--primary-cyan);
-  box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--primary-cyan) 35%, transparent);
   --ty: -8px;
   --s: 1.1;
-}
-
-[data-theme="light"] .client-text {
-  color: #172554;
 }
 
 .client-text {
@@ -124,7 +123,7 @@
 
 .client-item:hover .client-text {
   color: var(--primary-cyan);
-  text-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+  text-shadow: 0 0 15px color-mix(in srgb, var(--primary-cyan) 50%, transparent);
 }
 
 .client-logo {
@@ -136,29 +135,4 @@
 
 .client-item:hover .client-logo {
   transform: scale(1.1);
-}
-
-/* --- Light Theme Adjustments --- */
-[data-theme="light"] .clients-display-wrapper {
-  background: var(--bg-main);
-  border-color: var(--glass-border);
-}
-
-[data-theme="light"] .clients-display-wrapper::before {
-  background: linear-gradient(to right, var(--bg-main) 20%, transparent);
-}
-
-[data-theme="light"] .clients-display-wrapper::after {
-  background: linear-gradient(to left, var(--bg-main) 20%, transparent);
-}
-
-[data-theme="light"] .client-item {
-  background: #ffffff;
-  border-color: var(--glass-border);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-[data-theme="light"] .client-item:hover {
-  background: rgba(8, 145, 178, 0.05);
-  box-shadow: 0 0 30px rgba(8, 145, 178, 0.15);
 }

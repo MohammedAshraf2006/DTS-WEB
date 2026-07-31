@@ -23,7 +23,7 @@ const { stats, targetElement: statsSection } = useStatsCounter();
               {{ stat.current }}{{ stat.suffix }}
             </span>
           </div>
-          <div class="text-cyan-500 font-medium text-lg mb-2">
+          <div class="stat-label font-medium text-lg mb-2">
             {{ stat.label }}
           </div>
         </div>

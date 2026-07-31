@@ -56,14 +56,6 @@ const chips = computed(() => chipKeys.map((k) => t(k)));
     <div ref="heroVisual" class="hero-visual" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <div
-        class="hero-badge transition-all duration-700 transform"
-        :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
-      >
-        <span class="badge-dot"></span>
-        <span class="badge-text">{{ t('heroSection.badge') }}</span>
-      </div>
-
       <h1
         class="hero-title transition-all duration-700 delay-100 transform"
         :class="isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"

@@ -64,6 +64,10 @@
   transition: color 0.3s;
 }
 
+[data-theme="light"] .mobile-toggle {
+  color: #000;
+}
+
 @media (min-width: 768px) {
   .mobile-toggle {
     display: none;
@@ -92,6 +96,16 @@
   font-weight: 500;
   position: relative;
   transition: color 0.3s;
+}
+
+[data-theme="light"] .nav-link,
+[data-theme="light"] .mobile-nav-link {
+  color: #171717;
+}
+
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .mobile-nav-link {
+  color: #e7e7e7;
 }
 
 .nav-link:hover {
