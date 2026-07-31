@@ -5,9 +5,9 @@ export function useStatsCounter() {
   const { t } = useLanguage();
 
   const stats = ref([
-    { key: 'stats.clients', value: 50000, suffix: '+', current: 0 },
+    { key: 'stats.clients', value: 10000, suffix: '+', current: 0 },
     { key: 'stats.growth', value: 95, suffix: '%', current: 0 },
-    { key: 'stats.experts', value: 1000, suffix: '+', current: 0 }
+    { key: 'stats.experts', value: 100, suffix: '+', current: 0 }
   ]);
 
   const targetElement = ref(null);

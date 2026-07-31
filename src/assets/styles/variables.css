@@ -1,30 +1,43 @@
 :root {
-  --primary-cyan: #06b6d4;
-  --secondary-purple: #7c3aed;
+  /* === DTS Brand Tokens ===
+     Derived from the DTS logo: a navy-to-cyan gradient wordmark
+     with a network/globe mark. Kept as ONE color family (blue → cyan)
+     instead of the old cyan+purple+orange+emerald mix, so every
+     section reads as one brand instead of competing accents.
+
+     NOTE: --secondary-purple is kept as a variable NAME for backward
+     compatibility with components we haven't restyled yet — its VALUE
+     is now a deep blue, not purple. Safe to rename once every
+     component has been migrated off the old palette. */
+  --primary-cyan: #22D3EE;
+  --secondary-purple: #2563EB; /* deep blue (legacy name, new value) */
+  --accent-glow: rgba(34, 211, 238, 0.35);
   --font-main: 'Cairo', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 
   /* Dark Mode (Default) */
-  --bg-main: #010515;
-  --bg-secondary: #080e1b;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --card-bg: rgba(15, 23, 42, 0.6);
-  --nav-bg: rgba(2, 6, 23, 0.7);
-  --bg-icon: rgba(30, 41, 59, 0.5);
+  --bg-main: #020e21;
+  --bg-secondary: #0A1220;
+  --glass-bg: rgba(255, 255, 255, 0.035);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --text-main: #EAF1FA;
+  --text-muted: #8CA0BE;
+  --card-bg: rgba(13, 22, 38, 0.6);
+  --nav-bg: rgba(5, 7, 13, 0.75);
+  --bg-icon: rgba(24, 38, 58, 0.6);
 }
 
 :root[data-theme="light"] {
-  --bg-main: #f1f5f9; /* خلفية رمادية فاتحة محايدة */
-  --bg-secondary: #ffffff; /* أبيض ناصع للأقسام والبطاقات */
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-border: #e2e8f0; /* لون حدود واضح وخفيف */
-  --text-main: #1e293b; /* لون نص أساسي داكن وواضح */
-  --text-muted: #64748b; /* لون نص ثانوي أفتح لتباين أفضل */
-  --card-bg: #ffffff; /* خلفية البطاقات بيضاء */
-  --nav-bg: rgba(255, 255, 255, 0.85); /* خلفية شريط التنقل أقل شفافية للقراءة */
-  --primary-cyan: #0891b2; /* لون سيان مميز وواضح */
-  --secondary-purple: #6d28d9; /* لون بنفسجي أغمق قليلاً لتباين أفضل */
-  --bg-icon: #e2e8f0; /* خلفية الأيقونات بلون مميز */
+  --bg-main: #F6F9FC;
+  --bg-secondary: #FFFFFF;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(10, 30, 55, 0.10);
+  --text-main: #0B1526;
+  --text-muted: #4C5D78;
+  --card-bg: #FFFFFF;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --primary-cyan: #0891B2;
+  --secondary-purple: #1D4ED8; /* deep blue (legacy name, new value) */
+  --accent-glow: rgba(8, 145, 178, 0.18);
+  --bg-icon: #EEF3F9;
 }

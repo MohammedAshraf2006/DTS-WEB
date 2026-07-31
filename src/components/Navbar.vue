@@ -42,8 +42,8 @@
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-4"
     >
-      <div v-if="isMobileMenuOpen" class="md:hidden absolute top-full left-0 w-full bg-slate-950/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-6 shadow-2xl">
-        <a v-for="item in navItems" :key="item.name" :href="item.href" class="text-lg font-medium text-slate-300 hover:text-cyan-400 transition-colors" @click="isMobileMenuOpen = false">
+      <div v-if="isMobileMenuOpen" class="mobile-menu md:hidden absolute top-full left-0 w-full p-6 flex flex-col gap-6 shadow-2xl">
+        <a v-for="item in navItems" :key="item.name" :href="item.href" class="mobile-nav-link text-lg font-medium transition-colors" @click="isMobileMenuOpen = false">
           {{ item.name }}
         </a>
         <!-- <button class="w-full py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold rounded-lg shadow-lg active:scale-95 transition-transform">

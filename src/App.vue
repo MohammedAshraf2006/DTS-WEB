@@ -13,8 +13,6 @@
     </main>
     <Footer id="contact" class="reveal" />
 
-    <RobotAssistant />
-
     <a 
       href="https://wa.me/20105099817" 
       target="_blank" 
