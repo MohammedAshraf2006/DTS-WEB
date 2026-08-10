@@ -14,7 +14,7 @@
     <Footer id="contact" class="reveal" />
 
     <a 
-      href="https://wa.me/20105099817" 
+      href="https://wa.me/201050992817" 
       target="_blank" 
       class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 md:p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all duration-300 hover:-translate-y-1 group"
       aria-label="Chat on WhatsApp"
