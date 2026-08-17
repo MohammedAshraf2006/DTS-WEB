@@ -1,26 +1,19 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useTheme } from '@/composables/useTheme'
 import AppIcon from '@/components/icons/AppIcon.vue'
-import { PRODUCT_KEYS, getProduct, listingPreview } from '@/data/products'
+import { PRODUCT_KEYS, getProduct, selectProductImage } from '@/data/products'
 
 const { t, tm, locale } = useI18n()
+const { isDark } = useTheme()
 
 const tabKeys = PRODUCT_KEYS
 const activeTab = ref('ess')
 
 const activeProduct = computed(() => getProduct(activeTab.value))
 const activeMedia = computed(() => {
-  if (!activeProduct.value?.gallery) return null
-  
-  // Find the first image in gallery
-  const imageItem = activeProduct.value.gallery.find(item => item.type === 'image')
-  if (!imageItem) return null
-  
-  return {
-    type: 'image',
-    src: imageItem.src
-  }
+  return selectProductImage(activeProduct.value, isDark.value, locale.value)
 })
 
 const activeFeatures = computed(() => {

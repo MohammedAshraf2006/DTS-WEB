@@ -2,7 +2,8 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useCardTilt } from '@/composables/useCardTilt'
-import { listingPreview } from '@/data/products'
+import { useTheme } from '@/composables/useTheme'
+import { selectProductImage } from '@/data/products'
 import AppIcon from '@/components/icons/AppIcon.vue'
 
 const props = defineProps({
@@ -11,20 +12,12 @@ const props = defineProps({
   delay: { type: Number, default: 0 }
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+const { isDark } = useTheme()
 const { root, tilt, onMove, onLeave } = useCardTilt({ maxX: 6, maxY: 8 })
 
 const preview = computed(() => {
-  if (!props.product?.gallery) return null
-  
-  // Find the first image in gallery
-  const imageItem = props.product.gallery.find(item => item.type === 'image')
-  if (!imageItem) return null
-  
-  return {
-    type: 'image',
-    src: imageItem.src
-  }
+  return selectProductImage(props.product, isDark.value, locale.value)
 })
 
 const tintClass = computed(() => {
