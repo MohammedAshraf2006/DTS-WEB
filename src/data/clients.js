@@ -40,7 +40,7 @@ export const clientsCatalog = {
   hellmann: {
     key: 'hellmann',
     logo: '/images/clients/1.webp',
-    url: '',
+    url: 'https://www.hellmann.com/en',
     placeholder: false,
     hasStory: false
   },
