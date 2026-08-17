@@ -70,7 +70,7 @@ const tintClass = computed(() => {
             v-if="preview"
             :src="preview.src"
             :alt="t(`products.items.${productKey}.title`)"
-            class="h-full w-full object-cover"
+            class="h-full w-full object-contain"
             loading="lazy"
             decoding="async"
           />

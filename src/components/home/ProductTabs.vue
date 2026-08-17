@@ -118,7 +118,7 @@ const hasMedia = computed(() => Boolean(activeMedia.value))
                 :key="activeMedia.src"
                 :src="activeMedia.src"
                 :alt="t(`home.products.tabs.${activeTab}.title`)"
-                class="h-full w-full object-cover"
+                class="h-full w-full object-contain"
                 loading="lazy"
                 decoding="async"
               />

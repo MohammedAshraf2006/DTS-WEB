@@ -33,8 +33,8 @@ export const productsCatalog = {
     liteDownloadUrl:
       'https://github.com/Mohamedosama-dts/ESA-Lite/releases/download/v2.1.1/ESA_Lite_en.msi',
     gallery: [
-      { type: 'video', src: 'images/Products/media/esa/ESA.mp4', poster: 'images/Products/media/esa/ESA.webp' },
-      { type: 'image', src: '' }
+      { type: 'video', src: '/images/Products/media/esa/ESA.mp4', poster: '/images/Products/media/esa/ESA.webp' },
+      { type: 'image', src: '/images/Products/media/esa/ESA_CARD.webp' }
     ]
   }
 }
@@ -60,12 +60,9 @@ export function firstMedia(product) {
   return items.find((item) => item.type === 'video') || items[0] || null
 }
 
-/** Listing/home teaser: never attach a video file; prefer poster or a still. */
+/** Listing/home teaser: always use the first image available */
 export function listingPreview(product) {
-  const media = firstMedia(product)
-  if (!media) return null
-  if (media.type === 'video') {
-    return media.poster ? { type: 'image', src: media.poster } : null
-  }
-  return media
+  const media = galleryWithSrc(product)
+  const image = media.find(item => item.type === 'image')
+  return image || null
 }
