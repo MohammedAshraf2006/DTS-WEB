@@ -23,12 +23,12 @@
       "ess": {
         "name": "ESS",
         "title": "Electronic Sales System",
-        "description": "From the browser: issue the invoice or receipt, send it to the tax authority, and track accept or reject — no software to install.",
+        "description": "ESS is a comprehensive system for managing electronic invoices and receipts. Create, review, and send documents to the Egyptian Tax Authority while tracking their status and managing sales operations—all in one integrated platform.",
         "features": [
-          "Invoices, receipts, and returns in one workflow",
-          "Items, customers, and suppliers ready for fast issuance",
-          "Document status tracked with the tax authority",
-          "Bulk import and A4 or thermal print"
+          "Unified management: products, customers, suppliers, branches, and POS devices in one place",
+          "Operational flexibility: access from any device with tailored user permissions and controls",
+          "Easier migration: bulk import products, customers, and data—no manual entry required",
+          "Greater multi-company management: run multiple companies from one account with independent profiles"
         ]
       },
       "ers": {

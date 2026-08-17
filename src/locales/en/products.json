@@ -15,32 +15,40 @@
   "items": {
     "ess": {
       "title": "Electronic Sales System",
-      "shortDescription": "From the browser: issue e-invoices and e-receipts, send them to the tax authority, and track status — no software to install.",
-      "description": "ESS is the electronic sales system for businesses that need certified e-invoices and e-receipts. You work in the browser: create the document, review it, submit it to the Egyptian Tax Authority, and follow acceptance or rejection in one place. Manage items, customers, and suppliers; register branches and POS devices; and code your items on the tax portal. Legal signing happens with a USB token on your PC through ESA — without installing invoicing software on every machine.",
+      "shortDescription": "ESS is a comprehensive system for managing electronic invoices and receipts. Issue, review, and send documents to the Egyptian Tax Authority while tracking their status—all from one integrated platform, no software installation needed.",
+      "description": "ESS – Electronic Sales System is a comprehensive system for managing electronic invoices and receipts, allowing companies to create, review, and send documents to the Egyptian Tax Authority while tracking their status and managing sales operations from a single integrated platform. It goes beyond simply sending documents to the tax authority—it provides an integrated environment to issue, manage, and track their status from one unified location.\n\nMaster data is stored once: products, customers, and suppliers. You organize everything by branch, POS device, activity, currency, tax, and measurement unit. Users access the system from any device with permissions tailored to their role, enabling centralized document management while maintaining data consistency across branches. Manage multiple companies from a single account, each with its own independent file for branches, activities, POS devices, currencies, taxes, and units. Switch between companies based on your permissions. ESS supports bulk operations through customizable Excel files and flexible printing templates that match your business type—A4, A5, or thermal formats.\n\nWith ESS you get easier management, greater control, and higher efficiency.",
       "features": [
         {
-          "title": "E-invoices",
-          "detail": "In the browser you build the invoice: seller and buyer, items, quantities, and tax, then review totals before you save. You edit the draft, and you issue an adjustment when price, quantity, or discount changes after issuance.\n\nAfter submit you follow the document at the tax authority: accepted, rejected, or still processing. All of it stays in the browser on any device — no invoicing software to install on every PC."
+          "title": "Unified management",
+          "detail": "Manage all your business data in one place: products, customers, suppliers, branches, POS devices, and users. Store master data once and reuse it across all documents. Organize everything by branch, activity, POS device, currency, tax, and measurement unit. No duplicate data entry—one source of truth for your entire operation."
         },
         {
-          "title": "Receipts and returns",
-          "detail": "Beside the invoice you issue a sales receipt or a return in the same system. You pick the type, add lines, send the receipt to the tax authority, and see whether it was accepted or rejected.\n\nManagement shows receipts and their lines, with status actions limited by each user’s permission. Built for companies that need an e-receipt next to the invoice without a separate cashier product."
+          "title": "Operational flexibility",
+          "detail": "Access ESS from any device, anywhere. Manage user access and permissions according to your business structure. Each user sees only what they need, and approval workflows respect role-based permissions. Switch between companies without re-logging in. Work across multiple devices while maintaining consistent data and permissions."
         },
         {
-          "title": "Items, customers, suppliers",
-          "detail": "Master data is stored once: items and services, invoice and receipt customers, and suppliers. You search them inside the document form instead of retyping, and you can add a customer quickly from the same screen while you issue.\n\nWhen you leave an older system you import items and customers in bulk and follow the import job until it finishes. An update to an item or customer shows up on the next invoices and receipts."
+          "title": "Easier migration",
+          "detail": "Move from your old system without manual data entry. Bulk import products, customers, suppliers, and transaction data through customizable Excel files. Monitor import jobs in real time. Update product or customer information once, and changes reflect automatically on all future documents."
         },
         {
-          "title": "Tax portal follow-up",
-          "detail": "Inside ESS you see recent invoices and receipts as they appear at the tax authority, without opening the official portal every time. You review GPC and portal codes, submit item coding requests, and follow the result.\n\nThe aim is one screen for the team: issue, send, code, and track accept or reject in the same company account."
+          "title": "Control & tracking",
+          "detail": "Monitor all your invoices and receipts in one place: see their status at the tax authority (accepted, rejected, or processing), manage product coding requests, and track tax authority feedback. View GPC and portal codes without opening the official tax portal each time. One screen for your team: issue, send, code, and track."
         },
         {
-          "title": "Branches, POS, and permissions",
-          "detail": "You run more than one company from the same login, with a profile per company: branches, activities, POS devices, currencies, taxes, and units. Each user sees only what their permission allows, and you can switch company without a full re-login.\n\nYou register the signature and seal tokens used with ESA, and you set print templates and notifications. Central settings feed the invoice and receipt forms so branch and POS data is not typed again on every document."
+          "title": "Bulk submission",
+          "detail": "Issue and send multiple invoices and receipts at once using customizable Excel files. Handle large document volumes efficiently with bulk operations. Perfect for high-volume processing, end-of-day batch submissions, or migrating historical transactions."
         },
         {
-          "title": "Print that matches your work",
-          "detail": "You print A4 or A5 for the office, or thermal at the point of sale, using the template linked to the company. The template pulls company name, branch, buyer, lines, and totals so the look stays the same in every branch.\n\nYou pick the template that matches the activity in settings, and you reprint from the view screen when needed without recreating the document."
+          "title": "Tailored issuance & printing",
+          "detail": "Choose from multiple templates and sizes to print invoices and receipts that match your business type. Print A4 or A5 for the office, or thermal format at the point of sale. Templates automatically pull company name, branch, customer data, line items, and totals so every receipt looks professional and consistent. Reprint anytime from the document view without recreating the transaction."
+        },
+        {
+          "title": "Multi-company management",
+          "detail": "Run multiple companies from a single account. Each company has its own independent profile: separate branches, activities, POS devices, currencies, taxes, and units. Switch between companies effortlessly based on your permissions. Centralize access control while keeping company data isolated and organized."
+        },
+        {
+          "title": "Easier management, greater control, higher efficiency",
+          "detail": "ESS combines integrated workflow, flexible permissions, and bulk capabilities to give you one unified platform for document management. Spend less time on administrative tasks, gain full visibility into your operations, and handle larger transaction volumes without increasing overhead."
         }
       ]
     },
