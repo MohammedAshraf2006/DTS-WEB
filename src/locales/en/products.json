@@ -85,24 +85,32 @@
     },
     "esa": {
       "title": "Electronic Signature Agent",
-      "shortDescription": "ESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
-      "description": "ESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals. It is designed to meet the growing reliance on electronic signing in digital transactions and provide a reliable solution for businesses and electronic services across different environments.",
+      "shortDescription": "An advanced electronic signature application designed as a practical and modern alternative to ePass2003, enabling secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
+      "description": "ESA – Electronic Signature Agent is an advanced electronic signature application designed as a practical and modern alternative to ePass2003, enabling secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals. It keeps pace with the growing reliance on electronic signing in digital transactions, providing a reliable solution for use in different business environments and electronic services.\n\nESA provides a more stable and user-friendly signing experience while maintaining the highest security standards. It protects against user mistakes, supports multiple signing device types, and integrates seamlessly with the Egyptian Tax Authority's requirements. Whether you're signing invoices, receipts, or other critical documents, ESA delivers dependable performance with comprehensive device support and fail-safe operation.\n\nWith ESA you get higher efficiency and dependable security.",
       "features": [
         {
-          "title": "A practical and modern alternative to ePass2003",
-          "detail": "ESA was designed as a modern, practical alternative to ePass2003, offering a smoother and more stable signing experience for daily business operations."
+          "title": "Comprehensive support for signing devices",
+          "detail": "ESA supports various types of electronic signature devices (USB Tokens). Works with different device types without compatibility issues, providing a unified solution for electronic signing across your organization."
         },
         {
-          "title": "Wide support for devices and portals",
-          "detail": "ESA supports a broad range of electronic signing devices and works with many government and digital portals, making it a unified and practical solution for secure document signing across platforms."
+          "title": "User-error protection",
+          "detail": "Designed to reduce operational errors and usage mistakes, ensuring a safer and more stable signing experience. The application guides users through the signing workflow with clear prompts and confirmations, minimizing the risk of incorrect signatures or rejected documents."
         },
         {
-          "title": "Simpler and more stable signing",
-          "detail": "The solution is built to deliver a more intuitive signing experience with a stable workflow and a clearer user journey while keeping the highest security standards in place."
+          "title": "Compatible with tax portal requirements",
+          "detail": "Designed to operate according to approved e-signature standards required by the Egyptian Tax Authority. Works seamlessly with ESS for invoice and receipt signing, supporting the full tax compliance workflow without additional configuration."
         },
         {
-          "title": "Higher efficiency and reliable security",
-          "detail": "With ESA, organizations benefit from greater signing efficiency, dependable protection, and a more reliable digital process that supports secure operations across multiple systems."
+          "title": "Simpler, more stable signing experience",
+          "detail": "Delivers an easier and more stable electronic signature experience compared to ePass2003. The modern interface makes signing intuitive, and the stable performance ensures signing operations complete reliably without interruptions or failures."
+        },
+        {
+          "title": "Practical modern alternative to ePass2003",
+          "detail": "Built as a practical replacement for ePass2003 with all the functionality you need plus a smoother user experience. Maintains compatibility with existing workflows while providing better stability and a clearer signing interface."
+        },
+        {
+          "title": "Higher efficiency and dependable security",
+          "detail": "ESA combines greater signing efficiency with reliable protection. Spend less time on signing operations, gain confidence in security, and maintain consistent document integrity across your entire organization."
         }
       ]
     }
