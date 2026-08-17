@@ -7,24 +7,24 @@ export const CLIENT_KEYS = [
   'hellmann',
   'bue',
   'orientalWeavers',
+  'adidas',
+  'freshElectric',
+  'modernMotors',
   'ykk',
   'savco',
-  'nilePharma',
-  'deltaFoods',
-  'cairoSteel',
-  'redSeaHotels',
-  'misrTextiles',
-  'deltaCement',
-  'alexandriaPorts',
-  'gizaRetail',
-  'nileDairy',
-  'horizonPack',
-  'oasisFarms',
-  'atlasAuto',
-  'deltaPrint',
-  'cairoGlass',
-  'lotusCosmetics',
-  'pyramidBuild',
+  'ormanAssociation',
+  'khalihaMashawy',
+  'alexContainers',
+  'amgElghalban',
+  'hilti',
+  'europeanOutlet',
+  'seaharvest',
+  'egyyarn',
+  'spimacoMisr',
+  'sarayaElodda',
+  'classSolutions',
+  'deltaGas',
+  'lotustex',
   'nileLogistics',
   'sunriseMalls',
   'deltaChem',
@@ -72,22 +72,118 @@ export const clientsCatalog = {
     placeholder: false,
     hasStory: false
   },
-  nilePharma: { key: 'nilePharma', logo: '', url: '', placeholder: true, hasStory: false },
-  deltaFoods: { key: 'deltaFoods', logo: '', url: '', placeholder: true, hasStory: false },
-  cairoSteel: { key: 'cairoSteel', logo: '', url: '', placeholder: true, hasStory: false },
-  redSeaHotels: { key: 'redSeaHotels', logo: '', url: '', placeholder: true, hasStory: false },
-  misrTextiles: { key: 'misrTextiles', logo: '', url: '', placeholder: true, hasStory: false },
-  deltaCement: { key: 'deltaCement', logo: '', url: '', placeholder: true, hasStory: false },
-  alexandriaPorts: { key: 'alexandriaPorts', logo: '', url: '', placeholder: true, hasStory: false },
-  gizaRetail: { key: 'gizaRetail', logo: '', url: '', placeholder: true, hasStory: false },
-  nileDairy: { key: 'nileDairy', logo: '', url: '', placeholder: true, hasStory: false },
-  horizonPack: { key: 'horizonPack', logo: '', url: '', placeholder: true, hasStory: false },
-  oasisFarms: { key: 'oasisFarms', logo: '', url: '', placeholder: true, hasStory: false },
-  atlasAuto: { key: 'atlasAuto', logo: '', url: '', placeholder: true, hasStory: false },
-  deltaPrint: { key: 'deltaPrint', logo: '', url: '', placeholder: true, hasStory: false },
-  cairoGlass: { key: 'cairoGlass', logo: '', url: '', placeholder: true, hasStory: false },
-  lotusCosmetics: { key: 'lotusCosmetics', logo: '', url: '', placeholder: true, hasStory: false },
-  pyramidBuild: { key: 'pyramidBuild', logo: '', url: '', placeholder: true, hasStory: false },
+  adidas: {
+    key: 'adidas',
+    logo: '/images/clients/6.webp',
+    url: 'https://www.adidas.com',
+    placeholder: false,
+    hasStory: false
+  },
+  freshElectric: {
+    key: 'freshElectric',
+    logo: '/images/clients/7.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  modernMotors: {
+    key: 'modernMotors',
+    logo: '/images/clients/8.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  ormanAssociation: {
+    key: 'ormanAssociation',
+    logo: '/images/clients/9.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  khalihaMashawy: {
+    key: 'khalihaMashawy',
+    logo: '/images/clients/10.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  alexContainers: {
+    key: 'alexContainers',
+    logo: '/images/clients/11.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  amgElghalban: {
+    key: 'amgElghalban',
+    logo: '/images/clients/12.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  hilti: {
+    key: 'hilti',
+    logo: '/images/clients/13.webp',
+    url: 'https://www.hilti.com',
+    placeholder: false,
+    hasStory: false
+  },
+  europeanOutlet: {
+    key: 'europeanOutlet',
+    logo: '/images/clients/14.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  seaharvest: {
+    key: 'seaharvest',
+    logo: '/images/clients/15.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  egyyarn: {
+    key: 'egyyarn',
+    logo: '/images/clients/16.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  spimacoMisr: {
+    key: 'spimacoMisr',
+    logo: '/images/clients/17.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  sarayaElodda: {
+    key: 'sarayaElodda',
+    logo: '/images/clients/18.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  classSolutions: {
+    key: 'classSolutions',
+    logo: '/images/clients/19.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  deltaGas: {
+    key: 'deltaGas',
+    logo: '/images/clients/20.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  lotustex: {
+    key: 'lotustex',
+    logo: '/images/clients/21.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
   nileLogistics: { key: 'nileLogistics', logo: '', url: '', placeholder: true, hasStory: false },
   sunriseMalls: { key: 'sunriseMalls', logo: '', url: '', placeholder: true, hasStory: false },
   deltaChem: { key: 'deltaChem', logo: '', url: '', placeholder: true, hasStory: false },
@@ -103,6 +199,21 @@ export function getClientsList() {
   return CLIENT_KEYS.map((key) => clientsCatalog[key])
 }
 
+// Curated 12-client selection for the home page trust bar (7 in row 1, 5 in row 2).
+export const TRUST_BAR_KEYS = [
+  'bue',
+  'orientalWeavers',
+  'adidas',
+  'freshElectric',
+  'seaharvest',
+  'khalihaMashawy',
+  'ormanAssociation',
+  'hilti',
+  'ykk',
+  'hellmann',
+  'spimacoMisr',
+]
+
 export function getTrustBarClients() {
-  return getClientsList().filter((client) => !client.placeholder)
+  return TRUST_BAR_KEYS.map((key) => clientsCatalog[key]).filter(Boolean)
 }
