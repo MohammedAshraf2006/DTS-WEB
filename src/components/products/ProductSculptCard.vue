@@ -9,7 +9,8 @@ import AppIcon from '@/components/icons/AppIcon.vue'
 const props = defineProps({
   productKey: { type: String, required: true },
   product: { type: Object, required: true },
-  delay: { type: Number, default: 0 }
+  delay: { type: Number, default: 0 },
+  compact: { type: Boolean, default: false }
 })
 
 const { t, locale } = useI18n()
@@ -69,7 +70,7 @@ const tintClass = computed(() => {
           {{ t(`products.items.${productKey}.shortDescription`) }}
         </p>
 
-        <div class="product-preview relative mt-6 aspect-[16/10] overflow-hidden rounded-xl bg-surface">
+        <div class="product-preview relative mt-6 overflow-hidden rounded-xl bg-surface-alt" :class="[productKey === 'ess' ? (compact ? 'h-[100px] sm:h-[130px] lg:h-[150px]' : 'h-[120px] sm:h-[150px] lg:h-[180px]') : productKey === 'esa' ? (compact ? 'mx-auto w-[78%] max-w-[240px] h-[120px] sm:h-[160px] lg:h-[200px]' : 'mx-auto w-[82%] max-w-[320px] h-[160px] sm:h-[200px] lg:h-[240px]') : 'aspect-[16/10]']">
           <img
             v-if="preview"
             :src="preview.src"
