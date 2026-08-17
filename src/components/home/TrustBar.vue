@@ -20,7 +20,7 @@ const logoImgClass =
 </script>
 
 <template>
-  <section class="overflow-hidden border-y border-border bg-surface-alt dark:border-border dark:bg-surface-alt">
+  <section class="overflow-hidden border-y border-border bg-surface-alt dark:border-border dark:bg-[linear-gradient(180deg,#edf4ff_0%,#e6eef9_35%,#dfeaf8_100%)]">
     <header class="trust-header reveal relative border-b border-border px-5 py-5 sm:py-6 lg:px-10 dark:border-border">
       <div
         class="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface-raised via-surface-alt to-surface-alt"

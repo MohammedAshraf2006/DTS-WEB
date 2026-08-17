@@ -10,6 +10,7 @@ export const CLIENT_KEYS = [
   'adidas',
   'freshElectric',
   'modernMotors',
+  'asct',
   'ykk',
   'savco',
   'ormanAssociation',
@@ -32,8 +33,7 @@ export const CLIENT_KEYS = [
   'emeraldFoods',
   'saharaMining',
   'nileElectronics',
-  'deltaFurniture',
-  'cairoHealth'
+  'deltaFurniture'
 ]
 
 export const clientsCatalog = {
@@ -75,14 +75,14 @@ export const clientsCatalog = {
   adidas: {
     key: 'adidas',
     logo: '/images/clients/6.webp',
-    url: 'https://www.adidas.com',
+    url: 'https://www.adidas.com.eg/ar',
     placeholder: false,
     hasStory: false
   },
   freshElectric: {
     key: 'freshElectric',
     logo: '/images/clients/7.webp',
-    url: '',
+    url: 'https://fresh.com.eg/ar/',
     placeholder: false,
     hasStory: false
   },
@@ -96,21 +96,21 @@ export const clientsCatalog = {
   ormanAssociation: {
     key: 'ormanAssociation',
     logo: '/images/clients/9.webp',
-    url: '',
+    url: 'https://www.ormanschools.com/ar/',
     placeholder: false,
     hasStory: false
   },
   khalihaMashawy: {
     key: 'khalihaMashawy',
     logo: '/images/clients/10.webp',
-    url: '',
+    url: 'https://www.facebook.com/eg.mashawy/?locale=ar_AR',
     placeholder: false,
     hasStory: false
   },
   alexContainers: {
     key: 'alexContainers',
     logo: '/images/clients/11.webp',
-    url: '',
+    url: 'https://alexcont.com/ar/',
     placeholder: false,
     hasStory: false
   },
@@ -138,7 +138,7 @@ export const clientsCatalog = {
   seaharvest: {
     key: 'seaharvest',
     logo: '/images/clients/15.webp',
-    url: '',
+    url: 'https://seaharvest.org/',
     placeholder: false,
     hasStory: false
   },
@@ -166,7 +166,7 @@ export const clientsCatalog = {
   classSolutions: {
     key: 'classSolutions',
     logo: '/images/clients/19.webp',
-    url: '',
+    url: 'https://www.class-solution.com/home/index/ar',
     placeholder: false,
     hasStory: false
   },
@@ -184,6 +184,13 @@ export const clientsCatalog = {
     placeholder: false,
     hasStory: false
   },
+  asct: {
+    key: 'asct',
+    logo: '/images/clients/22.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
   nileLogistics: { key: 'nileLogistics', logo: '', url: '', placeholder: true, hasStory: false },
   sunriseMalls: { key: 'sunriseMalls', logo: '', url: '', placeholder: true, hasStory: false },
   deltaChem: { key: 'deltaChem', logo: '', url: '', placeholder: true, hasStory: false },
@@ -192,7 +199,6 @@ export const clientsCatalog = {
   saharaMining: { key: 'saharaMining', logo: '', url: '', placeholder: true, hasStory: false },
   nileElectronics: { key: 'nileElectronics', logo: '', url: '', placeholder: true, hasStory: false },
   deltaFurniture: { key: 'deltaFurniture', logo: '', url: '', placeholder: true, hasStory: false },
-  cairoHealth: { key: 'cairoHealth', logo: '', url: '', placeholder: true, hasStory: false }
 }
 
 export function getClientsList() {
@@ -211,7 +217,7 @@ export const TRUST_BAR_KEYS = [
   'hilti',
   'ykk',
   'hellmann',
-  'spimacoMisr',
+  'alexContainers',
 ]
 
 export function getTrustBarClients() {
