@@ -34,7 +34,7 @@ export const productsCatalog = {
       'https://github.com/Mohamedosama-dts/ESA-Lite/releases/download/v2.1.1/ESA_Lite_en.msi',
     gallery: [
       { type: 'video', src: '', poster: '' },
-      { type: 'image', src: '' }
+      { type: 'image', src: '/images/Products/esa-logo.webp' }
     ]
   }
 }
