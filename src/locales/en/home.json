@@ -45,12 +45,12 @@
       "esa": {
         "name": "ESA",
         "title": "Electronic Signature Agent",
-        "description": "A Windows agent that signs the document from a USB token before it reaches the tax authority — the PIN is never saved on disk.",
+        "description": "ESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
         "features": [
-          "Detects the token on plug-in; supports signature and seal",
-          "PIN stays in memory only and is never written to disk",
-          "Works with ESS on the same PC over a secure local link",
-          "Expiry alerts so issuance does not stop"
+          "Modern alternative to ePass2003",
+          "Supports multiple signing devices and portals",
+          "Simpler, more stable signing experience",
+          "High efficiency and dependable security"
         ]
       }
     },

@@ -77,32 +77,24 @@
     },
     "esa": {
       "title": "Electronic Signature Agent",
-      "shortDescription": "A Windows agent that signs your invoices and receipts from a USB token before they reach the tax authority — the PIN is never saved on disk.",
-      "description": "ESA is an electronic signature agent for Windows 10 and 11. Plug in a USB token (certified e-signature or e-seal), log in with your PIN, and the agent signs the document to ITIDA and tax-authority standards. It detects the token the moment you insert or remove it, and works locally with ESS on the same PC through a secure interface that never leaves the machine. For companies with many PCs, signing can run across devices without moving the certificate. It supports the token brands most used in Egypt, and warns you before a certificate expires so issuance does not stop.",
+      "shortDescription": "ESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
+      "description": "ESA – Electronic Signature Agent\n\nESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals. It is designed to meet the growing reliance on electronic signing in digital transactions and provide a reliable solution for businesses and electronic services across different environments.",
       "features": [
         {
-          "title": "Sign and seal from the token",
-          "detail": "ESA is a Windows 10 and 11 agent. You plug in a certified USB token — e-signature or e-seal — log in with the PIN, and the agent builds a signature to ITIDA and tax-authority standards before the document leaves your PC.\n\nIt supports the token brands most used in Egypt. The interface is Arabic and English, and it can sit in the system tray so the token stays ready without a window open all day."
+          "title": "A practical and modern alternative to ePass2003",
+          "detail": "ESA was designed as a modern, practical alternative to ePass2003, offering a smoother and more stable signing experience for daily business operations."
         },
         {
-          "title": "Detects the token instantly",
-          "detail": "When you plug the token in or remove it, it appears or disappears in the list at once — no restart and no search through Windows settings. Status shows ready, logged in, or disconnected.\n\nIf the Windows Smart Card service is stopped, the agent warns you so you can fix it before invoices fail to sign during the shift."
+          "title": "Wide support for devices and portals",
+          "detail": "ESA supports a broad range of electronic signing devices and works with many government and digital portals, making it a unified and practical solution for secure document signing across platforms."
         },
         {
-          "title": "The PIN is never saved",
-          "detail": "The token PIN is never written to disk or to settings files. It stays in memory for the session only, and it is cleared on logout, when the token is removed, or when the agent closes.\n\nWrong PIN attempts are counted on screen. After too many tries the token locks and a message tells you to contact the issuer — so the key is not closed for good without you noticing. You change the PIN from the same interface after entering the current one."
+          "title": "Simpler and more stable signing",
+          "detail": "The solution is built to deliver a more intuitive signing experience with a stable workflow and a clearer user journey while keeping the highest security standards in place."
         },
         {
-          "title": "Works with ESS on the same PC",
-          "detail": "ESS in the browser never talks to the token directly. It asks the agent on your PC only, through a local interface that does not leave the machine. You create the invoice or receipt as usual; legal signing happens on the PC that holds the token.\n\nIf the agent is not running, ESS points you to install it. After it starts, it finds connected tokens and you register them in company settings for the next issuance."
-        },
-        {
-          "title": "More than one token on the PC",
-          "detail": "The same PC can hold more than one token for different companies or certificates. The agent lists each one: type, issuer, and expiry, and it signs each request on the right token without mixing sessions.\n\nWhile signing, the token shows as busy, and logout is blocked until jobs finish — so a batch of invoices is not cut off mid-send."
-        },
-        {
-          "title": "Alert before the certificate expires",
-          "detail": "Each token shows how many days remain until the certificate expires, or that it has already expired. The warning appears in the interface before invoices and receipts stop because of an expired certificate.\n\nYou check status daily from the same screen you log in on, instead of waiting for a tax rejection at the end of the day. Renew on time, plug the token back in, and the agent detects the new certificate."
+          "title": "Higher efficiency and reliable security",
+          "detail": "With ESA, organizations benefit from greater signing efficiency, dependable protection, and a more reliable digital process that supports secure operations across multiple systems."
         }
       ]
     }
