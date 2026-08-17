@@ -14,7 +14,18 @@ const props = defineProps({
 const { t } = useI18n()
 const { root, tilt, onMove, onLeave } = useCardTilt({ maxX: 6, maxY: 8 })
 
-const preview = computed(() => listingPreview(props.product))
+const preview = computed(() => {
+  if (!props.product?.gallery) return null
+  
+  // Find the first image in gallery
+  const imageItem = props.product.gallery.find(item => item.type === 'image')
+  if (!imageItem) return null
+  
+  return {
+    type: 'image',
+    src: imageItem.src
+  }
+})
 
 const tintClass = computed(() => {
   if (props.product.tint === 'ers') {

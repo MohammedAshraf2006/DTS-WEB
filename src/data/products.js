@@ -14,6 +14,9 @@ export const productsCatalog = {
     tint: 'ess',
     gallery: [
       { type: 'video', src: '', poster: '' },
+      { type: 'image', src: '' },
+      { type: 'image', src: '' },
+      { type: 'image', src: '' },
       { type: 'image', src: '' }
     ]
   },
@@ -23,6 +26,9 @@ export const productsCatalog = {
     tint: 'ers',
     gallery: [
       { type: 'video', src: '', poster: '' },
+      { type: 'image', src: '' },
+      { type: 'image', src: '' },
+      { type: 'image', src: '' },
       { type: 'image', src: '' }
     ]
   },
@@ -34,7 +40,10 @@ export const productsCatalog = {
       'https://github.com/Mohamedosama-dts/ESA-Lite/releases/download/v2.1.1/ESA_Lite_en.msi',
     gallery: [
       { type: 'video', src: '/images/Products/media/esa/ESA.mp4', poster: '/images/Products/media/esa/ESA.webp' },
-      { type: 'image', src: '/images/Products/media/esa/ESA_CARD.webp' }
+      { type: 'image', src: '/images/Products/media/esa/esa-light-ar.webp' },
+      { type: 'image', src: '/images/Products/media/esa/esa-light-en.webp' },
+      { type: 'image', src: '/images/Products/media/esa/esa-dark-ar.webp' },
+      { type: 'image', src: '/images/Products/media/esa/esa-dark-en.webp' }
     ]
   }
 }
@@ -60,9 +69,25 @@ export function firstMedia(product) {
   return items.find((item) => item.type === 'video') || items[0] || null
 }
 
-/** Listing/home teaser: always use the first image available */
+/** Listing/home teaser: select appropriate image based on theme and language */
 export function listingPreview(product) {
-  const media = galleryWithSrc(product)
-  const image = media.find(item => item.type === 'image')
-  return image || null
+  if (!product?.gallery) return null
+  
+  // Find the first image in gallery
+  const imageItem = product.gallery.find(item => item.type === 'image')
+  if (!imageItem) return null
+  
+  return {
+    type: 'image',
+    src: imageItem.src
+  }
+}
+
+/** Get video for product pages */
+export function productVideo(product) {
+  if (!product?.video) return null
+  return {
+    type: 'video',
+    src: product.video
+  }
 }

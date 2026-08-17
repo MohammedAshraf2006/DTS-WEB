@@ -10,7 +10,18 @@ const tabKeys = PRODUCT_KEYS
 const activeTab = ref('ess')
 
 const activeProduct = computed(() => getProduct(activeTab.value))
-const activeMedia = computed(() => listingPreview(activeProduct.value))
+const activeMedia = computed(() => {
+  if (!activeProduct.value?.gallery) return null
+  
+  // Find the first image in gallery
+  const imageItem = activeProduct.value.gallery.find(item => item.type === 'image')
+  if (!imageItem) return null
+  
+  return {
+    type: 'image',
+    src: imageItem.src
+  }
+})
 
 const activeFeatures = computed(() => {
   void locale.value
