@@ -12,7 +12,7 @@ function hasExternalUrl(url) {
 }
 
 function staggerDelay(index) {
-  return `${index * 0.1}s`
+  return `${index * 0.035}s`
 }
 
 const logoImgClass =
@@ -126,8 +126,8 @@ const logoImgClass =
   opacity: 0;
   transform: translateY(18px);
   transition:
-    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .trust-logos.is-visible .trust-logo-item {
