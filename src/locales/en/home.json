@@ -45,12 +45,12 @@
       "esa": {
         "name": "ESA",
         "title": "Electronic Signature Agent",
-        "description": "ESA is an advanced electronic signature application developed as a practical and modern alternative to ePass2003, enabling the secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
+        "description": "An advanced electronic signature application designed as a practical and modern alternative to ePass2003, enabling secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals with comprehensive device support and user-error protection.",
         "features": [
-          "Modern alternative to ePass2003",
-          "Supports multiple signing devices and portals",
-          "Simpler, more stable signing experience",
-          "High efficiency and dependable security"
+          "Comprehensive support for signing devices: works with various electronic signature devices (USB Tokens)",
+          "User-error protection: designed to reduce operational errors and usage mistakes, ensuring a safer and more stable signing experience",
+          "Compatible with tax portal requirements: designed to operate according to approved e-signature standards required by the Egyptian Tax Authority",
+          "Simpler, more stable signing experience: delivers an easier and more stable electronic signature experience while maintaining the highest security standards"
         ]
       }
     },
@@ -113,7 +113,7 @@
     ]
   },
   "cta": {
-    "title": "Trusted by 1,000+ clients",
+    "title": "Trusted by 1,0000+ clients",
     "subtitle": "Join them — use our services and grow your business.",
     "button": "See our clients"
   }
