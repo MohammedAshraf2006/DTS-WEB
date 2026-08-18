@@ -20,11 +20,11 @@ const firstVideo = computed(() => videoItems.value[0] || null)
 
 <template>
   <div>
-    <div class="product-stage relative aspect-video overflow-hidden rounded-2xl border border-border bg-surface-alt">
+    <div class="product-stage relative overflow-hidden rounded-2xl border border-border bg-surface-alt">
       <video
         v-if="firstVideo"
         :key="firstVideo.src"
-        class="h-full w-full object-contain"
+        class="block h-auto w-full object-contain"
         :src="firstVideo.src"
         :poster="firstVideo.poster || undefined"
         controls
@@ -33,7 +33,7 @@ const firstVideo = computed(() => videoItems.value[0] || null)
       />
       <div
         v-else
-        class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary-light/30 via-surface to-surface-alt px-6 text-center"
+        class="absolute inset-0 flex min-h-[220px] flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary-light/30 via-surface to-surface-alt px-6 text-center"
       >
         <span class="logo-well flex h-16 w-16 items-center justify-center rounded-2xl">
           <img :src="product.logo" alt="" class="h-10 w-auto object-contain" />
