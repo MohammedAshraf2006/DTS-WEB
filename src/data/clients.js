@@ -26,14 +26,14 @@ export const CLIENT_KEYS = [
   'classSolutions',
   'deltaGas',
   'lotustex',
-  'nileLogistics',
-  'sunriseMalls',
-  'deltaChem',
-  'cairoPaper',
-  'emeraldFoods',
-  'saharaMining',
-  'nileElectronics',
-  'deltaFurniture'
+  'abuQirPorts',
+  'cityGlass',
+  'aLHANA',
+  'aMARKET',
+  'innovation',
+  'hadrMoutHalabi',
+  'hajja',
+  'egySeacn'
 ]
 
 export const clientsCatalog = {
@@ -252,10 +252,10 @@ export const clientsCatalog = {
     placeholder: false,
     hasStory: false
   },
-  jesiHousing: {
-    key: 'jesiHousing',
-    name: 'Jesi Housing',
-    industry: 'Real estate & construction',
+  egySeacn: {
+    key: 'egySeacn',
+    name: 'EGY Seacn',
+    industry: 'Medical laboratory',
     logo: '/images/clients/30.webp',
     url: '',
     placeholder: false,
