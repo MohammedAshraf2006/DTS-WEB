@@ -28,14 +28,13 @@
     "deltaGas": { "name": "Delta Total Gas Solutions", "industry": "Gas & energy" },
     "lotustex": { "name": "LotusTex", "industry": "Textile manufacturing" },
     "asct": { "name": "Red Sea Container Terminals (RSCT)", "industry": "Ports & container handling" },
-    "nileLogistics": { "name": "Nile Logistics", "industry": "Freight & distribution" },
-    "sunriseMalls": { "name": "Sunrise Malls", "industry": "Shopping malls" },
-    "deltaChem": { "name": "Delta Chem", "industry": "Chemicals" },
-    "cairoPaper": { "name": "Cairo Paper", "industry": "Paper & board" },
-    "emeraldFoods": { "name": "Emerald Foods", "industry": "Food & beverage" },
-    "saharaMining": { "name": "Sahara Mining", "industry": "Mining" },
-    "nileElectronics": { "name": "Nile Electronics", "industry": "Electronics" },
-    "deltaFurniture": { "name": "Delta Furniture", "industry": "Furniture" },
-    "cairoHealth": { "name": "Cairo Health", "industry": "Healthcare" }
+    "abuQirPorts": { "name": "Abu Qir for Container Terminals", "industry": "Ports & cargo handling" },
+    "cityGlass": { "name": "City Glass", "industry": "Glass & building materials" },
+    "aLHANA": { "name": "ALHANA", "industry": "Consumer products" },
+    "aMARKET": { "name": "A MARKET", "industry": "Retail & supermarkets" },
+    "innovation": { "name": "Innovation University", "industry": "Higher education" },
+    "hadrMoutHalabi": { "name": "Hadr Mout Halabi", "industry": "Restaurants & grills" },
+    "hajja": { "name": "Hajja", "industry": "Restaurants & grills" },
+    "jesiHousing": { "name": "Jesi Housing", "industry": "Real estate & construction" }
   }
 }

@@ -191,14 +191,76 @@ export const clientsCatalog = {
     placeholder: false,
     hasStory: false
   },
-  nileLogistics: { key: 'nileLogistics', logo: '', url: '', placeholder: true, hasStory: false },
-  sunriseMalls: { key: 'sunriseMalls', logo: '', url: '', placeholder: true, hasStory: false },
-  deltaChem: { key: 'deltaChem', logo: '', url: '', placeholder: true, hasStory: false },
-  cairoPaper: { key: 'cairoPaper', logo: '', url: '', placeholder: true, hasStory: false },
-  emeraldFoods: { key: 'emeraldFoods', logo: '', url: '', placeholder: true, hasStory: false },
-  saharaMining: { key: 'saharaMining', logo: '', url: '', placeholder: true, hasStory: false },
-  nileElectronics: { key: 'nileElectronics', logo: '', url: '', placeholder: true, hasStory: false },
-  deltaFurniture: { key: 'deltaFurniture', logo: '', url: '', placeholder: true, hasStory: false },
+  abuQirPorts: {
+    key: 'abuQirPorts',
+    logo: '/images/clients/23.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  cityGlass: {
+    key: 'cityGlass',
+    name: 'City Glass',
+    industry: 'Glass & building materials',
+    logo: '/images/clients/24.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  aLHANA: {
+    key: 'aLHANA',
+    name: 'ALHANA',
+    industry: 'Consumer products',
+    logo: '/images/clients/25.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  aMARKET: {
+    key: 'aMARKET',
+    name: 'A MARKET',
+    industry: 'Retail & supermarkets',
+    logo: '/images/clients/26.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  innovation: {
+    key: 'innovation',
+    name: 'Innovation University',
+    industry: 'Higher education',
+    logo: '/images/clients/27.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  hadrMoutHalabi: {
+    key: 'hadrMoutHalabi',
+    name: 'Hadr Mout Halabi',
+    industry: 'Restaurants & grills',
+    logo: '/images/clients/28.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  hajja: {
+    key: 'hajja',
+    name: 'Hajja',
+    industry: 'Restaurants & grills',
+    logo: '/images/clients/29.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
+  jesiHousing: {
+    key: 'jesiHousing',
+    name: 'Jesi Housing',
+    industry: 'Real estate & construction',
+    logo: '/images/clients/30.webp',
+    url: '',
+    placeholder: false,
+    hasStory: false
+  },
 }
 
 export function getClientsList() {

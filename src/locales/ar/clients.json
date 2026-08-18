@@ -28,14 +28,13 @@
     "deltaGas": { "name": "دلتا لحلول الغاز", "industry": "طاقة وغاز" },
     "lotustex": { "name": "لوتس تكس", "industry": "صناعات نسيجية" },
     "asct": { "name": "محطات البحر الأحمر لتداول الحاويات (RSCT)", "industry": "موانئ وتداول حاويات" },
-    "nileLogistics": { "name": "نايل لوجستكس", "industry": "شحن وتوزيع" },
-    "sunriseMalls": { "name": "صن رايز مولز", "industry": "مراكز تجارية" },
-    "deltaChem": { "name": "دلتا كيم", "industry": "كيماويات" },
-    "cairoPaper": { "name": "كايرو بيبر", "industry": "ورق وكرتون" },
-    "emeraldFoods": { "name": "إميرالد فودز", "industry": "أغذية ومشروبات" },
-    "saharaMining": { "name": "صحارى ماينينج", "industry": "تعدين" },
-    "nileElectronics": { "name": "نايل إلكترونيكس", "industry": "إلكترونيات" },
-    "deltaFurniture": { "name": "دلتا فرنتشر", "industry": "أثاث منزلي" },
-    "cairoHealth": { "name": "كايرو هيلث", "industry": "رعاية صحية" }
-  }
+    "abuQirPorts": { "name": "أبو قير لمحطات الحاويات", "industry": "موانئ وتداول حاويات" },
+    "cityGlass": { "name": "سيتي جلاس", "industry": "زجاج ومواد بناء" },
+    "aLHANA": { "name": "ألهانا", "industry": "منتجات استهلاكية" },
+    "aMARKET": { "name": "أ ماركت", "industry": "تجارة وتجزئة" },
+    "innovation": { "name": "جامعة الابتكار", "industry": "تعليم عالي" },
+    "hadrMoutHalabi": { "name": "حضرموت الحلبى", "industry": "مطاعم ومشويات" },
+    "hajja": { "name": "حجا", "industry": "مطاعم ومشويات" },
+    "jesiHousing": { "name": "جيسى إسكان", "industry": "عقارات وبناء" }
+    }
 }
