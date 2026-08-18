@@ -13,7 +13,7 @@ export const productsCatalog = {
     logo: '/images/Products/ess-logo.webp',
     tint: 'ess',
     gallery: [
-      { type: 'video', src: '', poster: '' },
+      { type: 'video', src: '/images/Products/media/ess/ESS.mp4', poster: '/images/Products/media/ess/ESS.webp' },
       { type: 'image', src: '/images/Products/media/ess/ess-light-ar.webp' },
       { type: 'image', src: '/images/Products/media/ess/ess-light-en.webp' },
       { type: 'image', src: '/images/Products/media/ess/ess-dark-ar.webp' },
