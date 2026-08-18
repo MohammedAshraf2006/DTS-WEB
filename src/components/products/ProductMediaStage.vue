@@ -20,7 +20,7 @@ const firstVideo = computed(() => videoItems.value[0] || null)
 
 <template>
   <div>
-    <div class="product-stage relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-surface-alt">
+    <div class="product-stage relative aspect-video overflow-hidden rounded-2xl border border-border bg-surface-alt">
       <video
         v-if="firstVideo"
         :key="firstVideo.src"
