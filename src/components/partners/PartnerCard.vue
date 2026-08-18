@@ -75,10 +75,6 @@ const ctaClass =
           {{ t('partners.visitSite') }}
           <AppIcon name="external" class="h-4 w-4" />
         </a>
-        <span v-else :class="ctaClass">
-          {{ t('partners.visitSite') }}
-          <AppIcon name="external" class="h-4 w-4" />
-        </span>
       </div>
     </div>
   </article>
