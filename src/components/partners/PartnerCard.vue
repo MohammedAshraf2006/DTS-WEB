@@ -43,7 +43,7 @@ const ctaClass =
       :class="[tintClass, reverse ? 'lg:flex-row-reverse' : 'lg:flex-row']"
     >
       <div
-        class="pointer-events-none flex min-h-[16rem] shrink-0 items-center justify-center bg-surface p-8 sm:min-h-[18rem] sm:p-10 lg:w-[42%] dark:bg-[#050a18]"
+        class="logo-well pointer-events-none flex min-h-[16rem] shrink-0 items-center justify-center rounded-2xl border border-border/60 bg-surface p-8 shadow-[0_10px_30px_rgba(15,23,42,0.08)] sm:min-h-[18rem] sm:p-10 lg:w-[42%]"
       >
         <img
           :src="logo"
