@@ -34,18 +34,18 @@
       "ers": {
         "name": "ERS",
         "title": "POS E-Receipts",
-        "description": "A fast cashier screen: issue the e-receipt at the POS and link it to the tax authority — without the invoice cycle.",
+        "description": "Purpose-built for retail point-of-sale teams. Issue e-receipts instantly and send them to the tax authority—all from one fast cashier screen, with centralized branch and POS management, and live dashboard monitoring from anywhere.",
         "features": [
-          "Sales receipt or return from the cashier screen",
-          "POS devices and branches ready to run",
-          "Accept/reject status and net for the shift",
-          "Thermal print and sales follow-up from anywhere"
+          "Instant receipt issuance purpose-built cashier interface for speed and accuracy",
+          "Flexible integration import receipts from other sales systems seamlessly",
+          "Centralized POS and branch management organize devices, branches, and cashier permissions from one dashboard",
+          "Live receipt status monitoring track accepted, rejected, and in-process receipts in real time"
         ]
       },
       "esa": {
         "name": "ESA",
         "title": "Electronic Signature Agent",
-        "description": "An advanced electronic signature application designed as a practical and modern alternative to ePass2003. Enables secure and easy use of e-signature and e-seal certificates across different platforms and portals.",
+        "description": "An advanced electronic signature application designed as a practical and modern alternative to ePass2003. Enables secure and easy use of e-signature and e-seal certificates across different platforms and electronic portals.",
         "features": [
           "Comprehensive support for signing devices: works with various electronic signature devices (USB Tokens)",
           "User-error protection: designed to reduce operational errors and usage mistakes, ensuring safer, more stable signing",

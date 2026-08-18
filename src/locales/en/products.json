@@ -54,32 +54,32 @@
     },
     "ers": {
       "title": "POS E-Receipts",
-      "shortDescription": "A fast cashier screen to issue e-receipts and link them to the tax authority — without the full invoice workflow.",
-      "description": "ERS is built for retail and point-of-sale teams that need an e-receipt at the cashier — not an invoice. The cashier picks items, issues the receipt, and sends it to the Egyptian Tax Authority. You manage POS devices, branches, and customers, and import receipts when needed. The dashboard shows accepted, rejected, and net daily sales so you can follow the shift from anywhere.",
+      "shortDescription": "A purpose-built system designed specifically for retail point-of-sale teams. Issue e-receipts instantly, send them to the tax authority, and monitor their status from a centralized cloud dashboard.",
+      "description": "ERS is purpose-built for retail and point-of-sale teams that need to issue e-receipts instantly—not invoices. A cashier picks items, issues a receipt or return in seconds, and the system automatically sends it to the Egyptian Tax Authority. From one centralized dashboard, you manage branches, POS devices, cashier permissions, and track receipt status in real time. The cloud-based monitoring panel shows daily sales performance, acceptance/rejection rates, and net shift totals from anywhere, without standing at the cashier.\n\nERS combines ease of use with complete tax compliance, designed for speed and accuracy at the point of sale.",
       "features": [
         {
-          "title": "Receipt from the cashier screen",
-          "detail": "The cashier path is short on purpose: pick items from the grid, set quantity, then issue a sales receipt or a return. There are no invoice screens and no fields the seller does not need during the shift.\n\nAfter issue, the receipt is sent to the tax authority in the same step. The design is for point-of-sale speed: fewer taps, and fewer entry mistakes at peak hours."
+          "title": "Instant receipt issuance",
+          "detail": "A purpose-built fast cashier interface with minimal fields and maximum speed. Select items, set quantity, issue a sales receipt or return in seconds. The interface is stripped of complex invoice fields, cutting errors during peak hours. Upon issuance, receipts are encrypted and sent instantly to the tax authority automatically—no extra steps."
         },
         {
-          "title": "POS devices and branches",
-          "detail": "Each cashier device is registered as a POS linked to a branch and a tax-approved activity. The receipt is attributed to the right device and branch so shifts do not mix, and the tax authority does not reject the receipt for the wrong POS data.\n\nIn settings you add branches and devices, connect the tax link and activity codes once, then the cashier works on the simple screen with no daily reconfiguration."
+          "title": "Branch and POS device management",
+          "detail": "Precise organizational structure: register each cashier device as an independent POS linked to a specific branch and tax-approved activity code. This ensures every receipt is attributed to the correct device and branch, preventing shift data from mixing and eliminating tax rejection risks. Set up branches, devices, and activity codes once in centralized settings, then the cashier operates the simplified screen with zero daily reconfiguration."
         },
         {
-          "title": "Items, customers, and import",
-          "detail": "You manage items and customers on their own screens: prices, taxes, units, and customer type. At the cashier the item is ready to pick, and you can attach a customer when needed without slowing the shift.\n\nIf you have an external source — a file or an older system — you import items, customers, or receipts in bulk and follow the import job until it finishes, instead of typing every record."
+          "title": "Data management and bulk import",
+          "detail": "Centralized management of items, customers, prices, tax brackets, measurement units, and customer categories through dedicated screens. Items appear ready-to-pick at the cashier, and customers can be linked to receipts seamlessly without slowing the shift. For seamless integration with other systems, use advanced bulk import tools to upload items, customers, or receipts from external files, with real-time import progress tracking."
         },
         {
-          "title": "Accept and reject status",
-          "detail": "Receipt management shows the list and the lines, and separates valid documents, those accepted by the tax authority, those still processing, and those rejected. Rejected items are obvious so a supervisor can fix them before the day closes.\n\nReturns have their own view so they do not mix with shift sales. Each status comes from the tax authority, not a local guess on the device."
+          "title": "Receipt status tracking",
+          "detail": "Detailed receipt lifecycle monitoring with intelligent categorization: locally valid, in-process, tax authority approved, or rejected. Rejected receipts are highlighted as urgent alerts, enabling supervisors to review and correct them immediately before shift closing. Returns are displayed separately to prevent mixing with sales totals. Status accuracy is guaranteed—each status reflects the official response from the tax authority, not a local device estimate."
         },
         {
           "title": "Thermal cashier print",
-          "detail": "Templates are set for a thermal printer at the point of sale: a short customer receipt right after the sale, with no layout work each shift. You can reprint from the view screen if the paper jams or the customer asks for a copy.\n\nSeller, branch, and POS data come from company settings so the receipt looks the same on every cashier."
+          "detail": "Pre-configured thermal printer templates optimized for point-of-sale efficiency. Issue a professional customer receipt immediately after sale with zero layout setup required each shift. The system automatically pulls entity name, branch, POS device number, and transaction totals from centralized settings to ensure uniform branding across all cashiers. Reprint any receipt with a single tap if paper jams or the customer requests a copy."
         },
         {
-          "title": "Shift sales board",
-          "detail": "The dashboard summarizes today, this week, or this month: total receipts, valid, accepted by the tax authority, in process, and rejected. It shows sales versus returns and net for the shift.\n\nA supervisor follows this from any connected device without standing at the cashier. The financial view counts only valid receipts so in-process numbers do not distort close-of-day decisions."
+          "title": "Shift sales dashboard",
+          "detail": "Panoramic performance view for any time period (daily, weekly, or monthly): total receipts, locally valid, tax authority approved, in-process, and rejected counts. Compare sales against returns to extract accurate net shift totals. Monitor from any connected device—supervisors track performance remotely without standing at the cashier. Intelligent financial filter counts only complete valid receipts, excluding in-process transactions to prevent number distortion during shift close decisions."
         }
       ]
     },
@@ -98,7 +98,7 @@
         },
         {
           "title": "Compatible with tax portal requirements",
-          "detail": "Designed to operate according to approved e-signature standards required by the Egyptian Tax Authority. Works seamlessly with ESS for invoice and receipt signing, supporting the full tax compliance workflow without additional configuration."
+          "detail": "Designed to operate according to approved e-signature standards required by the Egyptian Tax Authority. Works seamlessly with ESS and ERS for invoice and receipt signing, supporting the full tax compliance workflow without additional configuration."
         },
         {
           "title": "Simpler, more stable signing experience",
