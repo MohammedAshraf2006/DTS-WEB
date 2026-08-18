@@ -24,7 +24,7 @@ const firstVideo = computed(() => videoItems.value[0] || null)
       <video
         v-if="firstVideo"
         :key="firstVideo.src"
-        class="h-full w-full object-cover"
+        class="h-full w-full object-contain"
         :src="firstVideo.src"
         :poster="firstVideo.poster || undefined"
         controls
