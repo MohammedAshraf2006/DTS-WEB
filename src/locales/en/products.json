@@ -54,12 +54,12 @@
     },
     "ers": {
       "title": "POS E-Receipts",
-      "shortDescription": "A purpose-built system designed specifically for retail point-of-sale teams. Issue e-receipts instantly, send them to the tax authority, and monitor their status from a centralized cloud dashboard.",
-      "description": "ERS is purpose-built for retail and point-of-sale teams that need to issue e-receipts instantly—not invoices. A cashier picks items, issues a receipt or return in seconds, and the system automatically sends it to the Egyptian Tax Authority. From one centralized dashboard, you manage branches, POS devices, cashier permissions, and track receipt status in real time. The cloud-based monitoring panel shows daily sales performance, acceptance/rejection rates, and net shift totals from anywhere, without standing at the cashier.\n\nERS combines ease of use with complete tax compliance, designed for speed and accuracy at the point of sale.",
+      "shortDescription": "Designed specifically for retail point-of-sale teams. Issue e-receipts instantly, send them to the tax authority, and monitor their status from a centralized cloud dashboard.",
+      "description": "Designed specifically for retail point-of-sale teams to issue e-receipts instantly and send them to the tax authority from one fast cashier screen. A cashier selects items, issues a receipt or return in seconds, and the system automatically encrypts and sends it to the Egyptian Tax Authority. From one centralized dashboard, you manage branches, POS devices, cashier permissions, and track receipt status in real time. The cloud-based monitoring panel shows daily sales performance, acceptance and rejection rates, and net shift totals from anywhere, without needing to stand at the cashier.\n\nERS combines ease of use with complete tax compliance, designed for speed and accuracy at the point of sale.",
       "features": [
         {
           "title": "Instant receipt issuance",
-          "detail": "A purpose-built fast cashier interface with minimal fields and maximum speed. Select items, set quantity, issue a sales receipt or return in seconds. The interface is stripped of complex invoice fields, cutting errors during peak hours. Upon issuance, receipts are encrypted and sent instantly to the tax authority automatically—no extra steps."
+          "detail": "A purpose-built fast cashier interface with minimal fields and maximum speed. Select items, set quantity, issue a sales receipt or return in seconds. The interface strips away complex invoice fields to minimize errors during peak hours. Upon issuance, receipts are encrypted and sent instantly to the tax authority automatically—no extra steps required from the cashier."
         },
         {
           "title": "Branch and POS device management",
@@ -67,7 +67,7 @@
         },
         {
           "title": "Data management and bulk import",
-          "detail": "Centralized management of items, customers, prices, tax brackets, measurement units, and customer categories through dedicated screens. Items appear ready-to-pick at the cashier, and customers can be linked to receipts seamlessly without slowing the shift. For seamless integration with other systems, use advanced bulk import tools to upload items, customers, or receipts from external files, with real-time import progress tracking."
+          "detail": "Centralized management of items, customers, prices, tax brackets, measurement units, and customer categories through dedicated screens. Items appear ready-to-pick at the cashier, and customers can be linked to receipts seamlessly without slowing the shift. For seamless system integration, use advanced bulk import tools to upload items, customers, or receipts from external files, with real-time import progress tracking."
         },
         {
           "title": "Receipt status tracking",

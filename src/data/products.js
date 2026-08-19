@@ -25,7 +25,7 @@ export const productsCatalog = {
     logo: '/images/Products/ers-logo.webp',
     tint: 'ers',
     gallery: [
-      { type: 'video', src: '', poster: '' },
+      { type: 'video', src: '/images/Products/media/ers/ERS.mp4', poster: '/images/Products/media/ers/ERS.webp' },
       { type: 'image', src: '/images/Products/media/ers/ers-light-ar.webp' },
       { type: 'image', src: '/images/Products/media/ers/ers-light-en.webp' },
       { type: 'image', src: '/images/Products/media/ers/ers-dark-ar.webp' },

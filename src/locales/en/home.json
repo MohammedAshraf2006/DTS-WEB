@@ -34,12 +34,12 @@
       "ers": {
         "name": "ERS",
         "title": "POS E-Receipts",
-        "description": "Purpose-built for retail point-of-sale teams. Issue e-receipts instantly and send them to the tax authority—all from one fast cashier screen, with centralized branch and POS management, and live dashboard monitoring from anywhere.",
+        "description": "Designed specifically for retail point-of-sale teams to issue e-receipts instantly and send them to the tax authority from one fast cashier screen. Manage branches and POS devices centrally, track receipt status in real time, and monitor daily sales performance from any device.",
         "features": [
-          "Instant receipt issuance purpose-built cashier interface for speed and accuracy",
-          "Flexible integration import receipts from other sales systems seamlessly",
-          "Centralized POS and branch management organize devices, branches, and cashier permissions from one dashboard",
-          "Live receipt status monitoring track accepted, rejected, and in-process receipts in real time"
+          "Instant receipt issuance purpose-built cashier interface designed for speed and accuracy",
+          "Flexible integration seamlessly import receipts from other sales systems",
+          "Centralized management complete control over POS devices, branches, and cashier permissions from one dashboard",
+          "Live monitoring cloud-based dashboard tracks receipt status (accepted, rejected, processing) and daily sales in real time"
         ]
       },
       "esa": {
