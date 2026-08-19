@@ -2,7 +2,16 @@
  * Partners catalog (identifiers, media, and website only).
  * Copy lives in locales/partners.json under items.{key}.
  */
-export const PARTNER_KEYS = ['fedis', 'tawqe3y', 'mts', 'khalil', 'textWorld']
+export const PARTNER_KEYS = [
+  'fedis',
+  'tawqe3y',
+  'mts',
+  'khalil',
+  'textWorld',
+  'essamAbdelgawad',
+  'gamalAbdelrazek',
+  'ramiMinyaElQamh'
+]
 
 export const partnersCatalog = {
   fedis: {
@@ -34,6 +43,24 @@ export const partnersCatalog = {
     logo: '/images/partners/text-world.webp',
     url: 'https://text-world.com/',
     tint: 'navy'
+  },
+  essamAbdelgawad: {
+    key: 'essamAbdelgawad',
+    logo: '',
+    url: '',
+    tint: 'amber'
+  },
+  ramiMinyaElQamh: {
+    key: 'ramiMinyaElQamh',
+    logo: '',
+    url: '',
+    tint: 'navy'
+  },
+  gamalAbdelrazek: {
+    key: 'gamalAbdelrazek',
+    logo: '',
+    url: '',
+    tint: 'red'
   }
 }
 

@@ -28,6 +28,21 @@
       "name": "Text-World",
       "role": "WhatsApp sales automation",
       "description": "Text-World operates in customer communication and WhatsApp conversation management solutions, organizing inquiries, responses, and prospective customer information."
+    },
+    "essamAbdelgawad": {
+      "name": "Essam Abdelgawad Office",
+      "role": "Accounting & tax services",
+      "description": "An office providing accounting, tax, and financial reporting services for businesses and individuals."
+    },
+    "ramiMinyaElQamh": {
+      "name": "Rami Office",
+      "role": "Accounting & tax services",
+      "description": "An accounting office providing bookkeeping, tax, and financial services for businesses and individuals in Minya Al-Qamh."
+    },
+    "gamalAbdelrazek": {
+      "name": "Gamal Abdelrazek GAT",
+      "role": "Accounting & tax services",
+      "description": "An office specializing in accounting, tax, and related financial services for businesses and individuals."
     }
   }
 }
