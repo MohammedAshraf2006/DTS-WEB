@@ -1,4 +1,52 @@
+# Public marketing site: search engines and AI assistants may fetch pages.
+#
+# Hosted on GitHub Pages. If dts-eg.com is proxied through Cloudflare,
+# Cloudflare AI Crawl Control can prepend Disallow for GPTBot/ClaudeBot/etc.
+# Disable that overlay (or grey-cloud DNS) so this file is what crawlers see.
+
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CloudflareBrowserRenderingCrawler
 Allow: /
 
 Sitemap: https://dts-eg.com/sitemap.xml

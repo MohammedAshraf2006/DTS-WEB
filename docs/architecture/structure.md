@@ -51,6 +51,9 @@ src/
     contact.js            # FormSubmit → sales@dts-eg.com (signature form → tawqe3y_10thoframdan@dts-eg.com)
 public/images/            # logos, clients, partners, products, services icons
 public/animations/        # Lottie (mail-box.json)
+public/robots.txt         # allow search + AI fetch (see architecture/crawlers.md)
+public/sitemap.xml        # public routes
+public/llms.txt           # short map for AI assistants
 ```
 
 ## Conventions
