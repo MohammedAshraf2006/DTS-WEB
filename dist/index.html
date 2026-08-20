@@ -2,9 +2,24 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/dts.svg" />
+    <script>
+      // GitHub Pages SPA fallback: restore the real path that 404.html
+      // encoded into the query string, before Vue Router boots.
+      // https://github.com/rafgraph/spa-github-pages
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch.png" />
+    <link rel="preload" as="image" href="/images/DTS.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DTS | الفاتورة والتوقيع الإلكتروني</title>
+    <title>DTS | خدمات التحول الرقمى</title>
     <meta
       name="description"
       content="منظومة DTS المتكاملة لإصدار الفواتير والإيصالات الإلكترونية والتوقيع الرقمي، مرتبطة مباشرة بمصلحة الضرائب المصرية."
@@ -15,10 +30,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-DaEUX8_7.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BvORgR_G.css">
+    <script type="module" crossorigin src="/assets/index-D0AFH-pE.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vue-vendor-DDTqm6ev.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-C5FbEODm.css">
   </head>
   <body>
     <div id="app"></div>
+    <noscript>
+      <p>DTS | خدمات التحول الرقمى — منظومة الفواتير والإيصالات الإلكترونية والتوقيع الرقمي المرتبطة بمصلحة الضرائب المصرية.</p>
+      <p>DTS — Electronic invoices, receipts, and digital signature for companies in Egypt.</p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li><a href="/partners">Partners</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </noscript>
   </body>
 </html>
