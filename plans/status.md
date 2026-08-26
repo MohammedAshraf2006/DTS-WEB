@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-08-26 (partners: Text World is a legal accountant office; no website CTA)
+Last updated: 2026-08-26 (mobile sidebar close X + nested products/services)
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|

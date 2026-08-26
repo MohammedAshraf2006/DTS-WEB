@@ -23,7 +23,7 @@ src/
     AppHeader.vue
     AppFooter.vue
     AppLoader.vue         # first-open splash
-    WhatsAppFloat.vue     # site-wide WhatsApp FAB
+    WhatsAppFloat.vue     # site-wide WhatsApp FAB (below mobile sidebar)
     SiteBackground.vue    # fixed starfield (light + dark)
     home/                 # home page sections
     products/             # listing cards, header menu cards, media stage

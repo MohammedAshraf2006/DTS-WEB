@@ -13,7 +13,7 @@
 | Partners `/partners` | `PartnersView` — stacked cards (FEDIS, Tawqe3y, MTS, plus certified accountant offices). Visit-site CTA only when a partner has a URL. |
 | 404 | `NotFoundView` |
 | Contact `/contact` | `ContactView` — form to `sales@dts-eg.com` + Mail Box Lottie on success |
-| Chrome | `AppLoader` + `MainLayout` (`SiteBackground`, `AppHeader`, `AppFooter`) + `WhatsAppFloat` |
+| Chrome | `AppLoader` + `MainLayout` (`SiteBackground`, `AppHeader` with mobile menu at header end and side drawer from the same side, `AppFooter`) + `WhatsAppFloat` |
 
 ### Home / footer anchors
 
@@ -38,7 +38,7 @@ Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (
 | Clients / trust | Live `/clients` (30 featured cards); Home `TrustBar` uses curated logos |
 | Partners | Live `/partners` (tech partners + legal accountant offices; visit-site only if URL exists) |
 | Contact | Live `/contact` form to `sales@dts-eg.com`; footer Support/Sales/E-signature emails reveal on click |
-| WhatsApp float | Live — `https://wa.me/201050992817` (same as DTS-WEB) |
+| WhatsApp float | Live — `https://wa.me/201050992817`; sits under the mobile sidebar when the menu is open |
 
 ## Media drop paths
 
