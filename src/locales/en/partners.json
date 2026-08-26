@@ -20,29 +20,29 @@
       "description": "A platform to issue and activate certified e-signature and e-seal — with a clear path for people and companies."
     },
     "khalil": {
-      "name": "Mahmoud Khalil",
+      "name": "Legal accountant office Mahmoud Khalil",
       "role": "Accounting & tax services",
-      "description": "A specialist partner for accounting, tax, and financial reporting for businesses and individuals in line with local requirements."
+      "description": "A certified accountant office for accounting, tax, and financial reporting for businesses and individuals in line with local requirements."
     },
     "textWorld": {
-      "name": "Text-World",
-      "role": "WhatsApp sales automation",
-      "description": "Text-World operates in customer communication and WhatsApp conversation management solutions, organizing inquiries, responses, and prospective customer information."
+      "name": "Legal accountant office Text World",
+      "role": "Accounting & tax services",
+      "description": "A certified accountant office providing accounting, tax, and financial reporting for companies and individuals."
     },
     "essamAbdelgawad": {
-      "name": "Essam Abdelgawad Office",
+      "name": "Legal accountant office Essam Abdelgawad",
       "role": "Accounting & tax services",
-      "description": "An office providing accounting, tax, and financial reporting services for businesses and individuals."
+      "description": "A certified accountant office providing accounting, tax, and financial reporting for businesses and individuals."
     },
     "ramiMinyaElQamh": {
-      "name": "Rami Office",
+      "name": "Legal accountant office Rami",
       "role": "Accounting & tax services",
-      "description": "An accounting office providing bookkeeping, tax, and financial services for businesses and individuals in Minya Al-Qamh."
+      "description": "A certified accountant office providing bookkeeping, tax, and financial services for businesses and individuals in Minya Al-Qamh."
     },
     "gamalAbdelrazek": {
-      "name": "Gamal Abdelrazek GAT",
+      "name": "Legal accountant office Gamal Abdelrazek GAT",
       "role": "Accounting & tax services",
-      "description": "An office specializing in accounting, tax, and related financial services for businesses and individuals."
+      "description": "A certified accountant office specializing in accounting, tax, and related financial services for businesses and individuals."
     }
   }
 }

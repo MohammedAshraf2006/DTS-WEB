@@ -41,7 +41,7 @@ export const partnersCatalog = {
   textWorld: {
     key: 'textWorld',
     logo: '/images/partners/text-world.webp',
-    url: 'https://text-world.com/',
+    url: '',
     tint: 'navy'
   },
   essamAbdelgawad: {
