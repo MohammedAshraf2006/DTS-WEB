@@ -9,7 +9,7 @@
 | Product detail `/products/:key` | `ProductDetailView` — hero, media gallery, features, ESA Lite CTA |
 | Services `/services` | `ServicesView` — 8 services with detail copy + 3D icons |
 | Signature `/services/signature` | `SignatureServiceView` — توقيع/ختم panels + benefits + request form to `tawqe3y_10thoframdan@dts-eg.com` (WhatsApp `201050992816`) |
-| Clients `/clients` | `ClientsView` — 1000+ highlight + 30 cards (logo, name, industry). Stories later. |
+| Clients `/clients` | `ClientsView` — 10000+ highlight + 30 cards (logo, name, industry). Names/industries live in locale JSON. Stories later. |
 | Partners `/partners` | `PartnersView` — 3 stacked feature cards (MTS, FEDIS, Tawqe3y) + visit-site button |
 | 404 | `NotFoundView` |
 | Contact `/contact` | `ContactView` — form to `sales@dts-eg.com` + Mail Box Lottie on success |
@@ -35,7 +35,7 @@ Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (
 | Products listing | Live `/products` |
 | Product detail | Live `/products/ess`, `/products/ers`, `/products/esa` (media placeholders until files are dropped) |
 | About / numbers | Live as home `#about` (StatsCta); former About nav label is now **Clients** |
-| Clients / trust | Live `/clients` (5 real + 25 placeholders); Home `TrustBar` uses the 5 real logos |
+| Clients / trust | Live `/clients` (30 featured cards); Home `TrustBar` uses curated logos |
 | Partners | Live `/partners` (3 cards; visit-site button; no mega menu) |
 | Contact | Live `/contact` form to `sales@dts-eg.com`; footer Support/Sales/E-signature emails reveal on click |
 | WhatsApp float | Live — `https://wa.me/201050992817` (same as DTS-WEB) |

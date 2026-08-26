@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-08-26 (hero product pills/logos → product detail pages)
+Last updated: 2026-08-26 (client names and industries corrected)
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|
