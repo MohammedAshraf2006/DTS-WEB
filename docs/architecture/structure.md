@@ -36,7 +36,7 @@ src/
     products.js           # ESS / ERS / ESA catalog + gallery paths
     services.js           # services catalog + icon paths
     clients.js            # featured clients catalog + logo paths
-    partners.js           # MTS / FEDIS / Tawqe3y + website URLs
+    partners.js           # FEDIS / Tawqe3y / MTS + legal accountant offices
   composables/
     useTheme.js
     useScrolledHeader.js
