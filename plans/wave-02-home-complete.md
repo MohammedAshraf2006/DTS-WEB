@@ -16,7 +16,7 @@ Align Home sections with reference product intent; fix hash targets; sync copy a
 
 ## Shipped
 
-- [x] **Hero** — Vanta globe; rotating pills (invoice blue / receipt green / signature gold); light hero brightened; dark hero solid navy; spacing tuned
+- [x] **Hero** — Vanta globe; rotating pills (invoice blue / receipt green / signature gold) + logo cards link to `/products/ess|ers|esa`; light hero brightened; dark hero solid navy; spacing tuned
 - [x] **TrustBar** — logo strip; `clients/1.png`, `2.png`; external `http(s)` only; dark bevel without white edges
 - [x] **ProductTabs** — Notion two-column; logo-only tabs; soft tab transition; media slot via `productMedia` (src empty until assets drop)
 - [x] **ServicesGrid** — 3 home services + sculpted e-signature highlight; “all services” → `/services` (page still wave 03)

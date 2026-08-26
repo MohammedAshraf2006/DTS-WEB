@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-08-20 (origin robots/sitemap/llms allow AI fetch; Cloudflare dashboard still required)
+Last updated: 2026-08-26 (hero product pills/logos → product detail pages)
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|

@@ -68,7 +68,7 @@ public/llms.txt           # short map for AI assistants
 
 ## Current home composition (`HomeView`)
 
-1. `HeroSection` — Vanta + rotating product pills
+1. `HeroSection` — Vanta + rotating product pills (links to `/products/:key`)
 2. `TrustBar` — client logo strip
 3. `ProductTabs` — ESS / ERS / ESA (`#products`)
 4. `ServicesGrid` — 3 services + e-signature highlight (`#services`)

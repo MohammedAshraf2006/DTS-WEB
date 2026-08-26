@@ -4,7 +4,7 @@
 
 | Surface | Implementation |
 |---------|----------------|
-| Home `/` | `HomeView`: Hero → TrustBar → ProductTabs → ServicesGrid → StatsCta |
+| Home `/` | `HomeView`: Hero → TrustBar → ProductTabs → ServicesGrid → StatsCta. Hero rotating pills and product logos link to `/products/ess`, `/products/ers`, `/products/esa`. |
 | Products `/products` | `ProductsView` — three sculpted cards (ESS / ERS / ESA) |
 | Product detail `/products/:key` | `ProductDetailView` — hero, media gallery, features, ESA Lite CTA |
 | Services `/services` | `ServicesView` — 8 services with detail copy + 3D icons |
