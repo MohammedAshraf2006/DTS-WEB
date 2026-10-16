@@ -92,9 +92,9 @@ const essFeatures = computed(() => {
         <AppIcon name="arrowRight" class="h-4 w-4 shrink-0 text-primary ltr:block rtl:hidden" />
       </RouterLink>
 
-      <p class="reveal mt-6 text-center text-sm text-text-subtle">
+      <p class="reveal mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm text-text-subtle">
         <span>{{ t('home.products.ersQuiet') }}</span>
-        <RouterLink to="/products/ers" class="ms-2 font-semibold text-text-muted underline-offset-4 hover:text-primary hover:underline">
+        <RouterLink to="/products/ers" class="font-semibold text-text-muted underline-offset-4 hover:text-primary hover:underline">
           {{ t('home.products.ersCta') }}
         </RouterLink>
       </p>

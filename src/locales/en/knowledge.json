@@ -1,6 +1,9 @@
 {
-  "eyebrow": "Knowledge",
-  "title": "Procedures",
-  "subtitle": "How to request a signature or seal, what ESS is, and how to reach DTS.",
-  "back": "All procedures"
+  "eyebrow": "Knowledge center",
+  "title": "Knowledge center",
+  "section": "Articles",
+  "subtitle": "Practical guides on e-signature and e-seal, the token, requesting a certificate from DTS, and how ESS and ESA connect to the tax system.",
+  "back": "All articles",
+  "read": "Read article",
+  "more": "Related articles"
 }

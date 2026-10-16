@@ -17,8 +17,7 @@ src/
     ClientsView.vue
     PartnersView.vue
     ContactView.vue
-    KnowledgeIndexView.vue
-    KnowledgeArticleView.vue
+    KnowledgeHubView.vue
     ProductDetailView.vue
     NotFoundView.vue
   components/
@@ -32,6 +31,7 @@ src/
     services/             # services listing cards + signature panels + header menu cards
     clients/              # client logo cards
     partners/             # stacked partner feature cards
+    knowledge/            # knowledge article cards
     contact/              # contact form + success Lottie
     icons/AppIcon.vue
   data/
@@ -76,6 +76,7 @@ public/llms.txt           # short map for AI assistants
 2. `TrustBar` — client logo strip
 3. `ProductTabs` — ESS featured, ESA as a complement row, ERS as a quiet link (`#products`)
 4. `ServicesGrid` — 3 services + e-signature highlight (`#services`)
+5. `ArticlesTeaser` — dense knowledge list with unique covers (`#articles`)
 
 Ambient orbs on Home are **dark mode only**.
 
@@ -88,8 +89,8 @@ Ambient orbs on Home are **dark mode only**.
 - `/contact` → `ContactView` (`name: contact`)
 - `/clients` → `ClientsView` (`name: clients`)
 - `/partners` → `PartnersView` (`name: partners`)
-- `/knowledge` → `KnowledgeIndexView` (`name: knowledge`)
-- `/knowledge/:slug` → `KnowledgeArticleView` (`name: knowledge-article`)
+- `/knowledge` → `KnowledgeHubView` (`name: knowledge`; opens the first article)
+- `/knowledge/:slug` → `KnowledgeHubView` (`name: knowledge-article`; docs-style sticky sidebar + wide article)
 - `/products/:key` → `ProductDetailView` (`name: product-detail`; `key` = ess | esa | ers)
 - catch-all → lazy `NotFoundView` (`name: not-found`)
 - Hash scroll uses top offset `90` for the fixed header

@@ -41,7 +41,47 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dts-eg.com/knowledge/what-is-e-signature</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/signature-characteristics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/signature-services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/signature-applications</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/e-seal-steps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/signature-faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/usb-token</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dts-eg.com/knowledge/request-signature</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dts-eg.com/knowledge/e-seal-vs-signature</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

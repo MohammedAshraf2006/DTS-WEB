@@ -114,12 +114,12 @@ const pages = {
   knowledge: {
     path: '/knowledge',
     ar: {
-      title: 'إجراءات | DTS',
-      description: 'خطوات طلب التوقيع، ما هو ESS، وكيف تتواصل مع DTS.'
+      title: 'مركز المعرفة | DTS',
+      description: 'التوقيع والختم الإلكتروني، التوكن، طلب الشهادة من DTS، وربط ESS وESA بمنظومة الضرائب.'
     },
     en: {
-      title: 'Procedures | DTS',
-      description: 'How to request a signature, what ESS is, and how to reach DTS.'
+      title: 'Knowledge center | DTS',
+      description: 'E-signature and e-seal, the token, requesting a certificate from DTS, and how ESS and ESA connect to the tax system.'
     }
   }
 }

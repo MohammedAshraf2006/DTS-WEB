@@ -20,7 +20,7 @@
 
 - History mode via `createWebHistory`
 - Shell: `MainLayout` with nested home, products, services, and contact routes
-- `scrollBehavior` supports saved position, hash targets (offset 90), else top
+- `scrollBehavior` supports saved position, hash targets (offset 90), keeps window scroll on knowledge article switches, else top
 
 ### Page routes (extra)
 
@@ -30,8 +30,8 @@
 | `/services/signature` | Live — e-signature / e-seal detail + request form |
 | `/clients` | Live — featured client cards, no public count claim |
 | `/partners` | Live — partner cards; visit-site only when a URL exists; accountant offices prefixed مكتب محاسب قانوني |
-| `/knowledge` | Live — procedure index compiled from Markdown |
-| `/knowledge/:slug` | Live — one article (`request-signature`, `what-is-ess`, `contact-hours`) |
+| `/knowledge` | Live — docs hub compiled from Markdown |
+| `/knowledge/:slug` | Live — articles on e-signature, token, request, seal vs signature, ESS, contact |
 
 ### Hash targets (Home / footer)
 

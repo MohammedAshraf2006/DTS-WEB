@@ -4,13 +4,13 @@
 
 | Surface | Implementation |
 |---------|----------------|
-| Home `/` | `HomeView`: Hero (three doors) → TrustBar → ProductTabs (ESS, then ESA, quiet ERS) → ServicesGrid. |
-| Products `/products` | `ProductsView` — ESS featured, ESA complement card, quiet ERS link |
+| Home `/` | `HomeView`: Hero → TrustBar → ProductTabs → ServicesGrid → ArticlesTeaser. |
+| Products `/products` | `ProductsView` — ESS featured + ESA complement; ERS stays on its detail route |
 | Product detail `/products/:key` | `ProductDetailView` — hero, media gallery, features, ESA Lite CTA |
 | Services `/services` | `ServicesView` — 8 services with detail copy + 3D icons |
 | Signature `/services/signature` | `SignatureServiceView` — signature/seal panels + request form to `tawqe3y_10thoframdan@dts-eg.com` |
-| Knowledge `/knowledge` | `KnowledgeIndexView` — procedure articles compiled from `content/knowledge/{ar,en}` |
-| Knowledge article `/knowledge/:slug` | `KnowledgeArticleView` |
+| Knowledge `/knowledge` | `KnowledgeHubView` — docs nav (start accent) + open article canvas |
+| Knowledge article `/knowledge/:slug` | Same hub; first article opens from `/knowledge` |
 | Clients `/clients` | `ClientsView` — featured client cards (logo, name, industry). No public client-count claim. |
 | Partners `/partners` | `PartnersView` — stacked cards (FEDIS, Tawqe3y, MTS, plus certified accountant offices). Visit-site CTA only when a partner has a URL. |
 | 404 | `NotFoundView` |
@@ -23,6 +23,7 @@
 |----|---------|
 | `#products` | ESS panel, ESA complement, quiet ERS link |
 | `#services` | Top 3 services + e-signature highlight |
+| `#articles` | Home knowledge teaser |
 | `#contact` | Replaced by `/contact` |
 
 Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (mega menu). Nav **Clients** → `/clients` (no mega menu). Nav **Partners** → `/partners` (no mega menu).

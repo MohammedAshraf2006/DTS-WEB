@@ -14,7 +14,9 @@ export function listArticles(locale) {
   return knowledgeArticles.map((article) => ({
     slug: article.slug,
     title: article[lang].title,
-    description: article[lang].description
+    description: article[lang].description,
+    cover: article[lang].cover,
+    category: article[lang].category
   }))
 }
 
@@ -26,6 +28,8 @@ export function getArticle(slug, locale) {
     slug: article.slug,
     title: article[lang].title,
     description: article[lang].description,
+    cover: article[lang].cover,
+    category: article[lang].category,
     html: article[lang].html
   }
 }

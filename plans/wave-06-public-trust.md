@@ -14,7 +14,7 @@ Ship the email changes on the current stack: freeze unlocked marketing numbers, 
 - [x] `scripts/emit-route-html.mjs` writes a shell per public route with title, description, and canonical
 - [x] README and architecture docs name GitHub Pages + Cloudflare, and the contact form inbox `sales@dts-eg.com`
 - [x] Hero doors: signature, procedures (`/knowledge`), quiet ESS
-- [x] `content/knowledge/{ar,en}` compiled with `markdown-it` into `/knowledge` and `/knowledge/:slug`
+- [x] `content/knowledge/{ar,en}` compiled with `markdown-it` into `/knowledge` and `/knowledge/:slug` (six articles, card grid, covers)
 - [x] Per-route SEO plus LocalBusiness hours; forms name the inbox and expose mailto only when FormSubmit fails
 
 ## Test criteria

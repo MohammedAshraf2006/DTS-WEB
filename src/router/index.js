@@ -46,12 +46,12 @@ const routes = [
       {
         path: 'knowledge',
         name: 'knowledge',
-        component: () => import('@/views/KnowledgeIndexView.vue')
+        component: () => import('@/views/KnowledgeHubView.vue')
       },
       {
         path: 'knowledge/:slug',
         name: 'knowledge-article',
-        component: () => import('@/views/KnowledgeArticleView.vue')
+        component: () => import('@/views/KnowledgeHubView.vue')
       },
       {
         path: 'products/:key',
@@ -77,6 +77,10 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
+    const knowledgeNames = new Set(['knowledge', 'knowledge-article'])
+    if (knowledgeNames.has(to.name) && knowledgeNames.has(from.name)) {
+      return false
+    }
     if (to.hash) {
       if (to.hash.startsWith('#service-')) {
         return false

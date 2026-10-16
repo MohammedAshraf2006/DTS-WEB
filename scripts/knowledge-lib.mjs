@@ -7,7 +7,19 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const contentRoot = join(root, 'content', 'knowledge')
 const md = new MarkdownIt({ html: false, linkify: true })
 
-const ARTICLE_ORDER = ['request-signature', 'what-is-ess', 'contact-hours']
+const ARTICLE_ORDER = [
+  'what-is-e-signature',
+  'signature-characteristics',
+  'signature-services',
+  'signature-applications',
+  'e-seal-steps',
+  'e-seal-vs-signature',
+  'signature-faq',
+  'usb-token',
+  'request-signature',
+  'what-is-ess',
+  'contact-hours'
+]
 
 function parseFrontmatter(source) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
@@ -37,6 +49,8 @@ function readLocale(locale) {
     bySlug.set(slug, {
       title: parsed.data.title,
       description: parsed.data.description,
+      cover: parsed.data.cover || '',
+      category: parsed.data.category || '',
       html: md.render(parsed.body)
     })
   }

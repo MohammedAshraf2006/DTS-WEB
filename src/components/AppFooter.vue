@@ -1,10 +1,13 @@
 <script setup>
 import { computed, reactive } from 'vue'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
 import { SALES_EMAIL, SUPPORT_EMAIL, SIGNATURE_EMAIL } from '@/data/contactEmails'
 
 const { t, tm, locale } = useI18n()
+const route = useRoute()
+const showContactCta = computed(() => route.name !== 'contact')
 
 const year = new Date().getFullYear()
 const revealed = reactive({ support: false, sales: false, signature: false })
@@ -35,7 +38,7 @@ const companyLinks = [
   { labelKey: 'common.footer.quickLinks.services', to: '/services' },
   { labelKey: 'common.footer.quickLinks.about', to: '/clients' },
   { labelKey: 'common.footer.quickLinks.partners', to: '/partners' },
-  { labelKey: 'knowledge.title', to: '/knowledge' }
+  { labelKey: 'common.nav.knowledge', to: '/knowledge' }
 ]
 </script>
 
@@ -53,8 +56,8 @@ const companyLinks = [
       aria-hidden="true"
     />
 
-    <!-- Pre-footer CTA band -->
-    <div class="border-b border-border/80 dark:border-[#152a45]">
+    <!-- Pre-footer CTA band — hidden on /contact -->
+    <div v-if="showContactCta" class="border-b border-border/80 dark:border-[#152a45]">
       <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-8 sm:flex-row sm:items-center lg:px-10 lg:py-10">
         <div class="max-w-xl">
           <h2 class="font-heading text-2xl font-bold tracking-tight text-text-base sm:text-3xl">

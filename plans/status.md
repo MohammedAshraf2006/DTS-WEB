@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-09-26 (public trust: frozen counts, product spine, hours, HTTP 200 shells, knowledge)
+Last updated: 2026-10-16 (knowledge covers: topic photos + DTS navy/teal mark)
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|
@@ -16,10 +16,10 @@ Last updated: 2026-09-26 (public trust: frozen counts, product spine, hours, HTT
 
 - **Stack:** Vue 3 + Vite + Tailwind 3 + vue-i18n 9 + vue-router 4 (JS only)
 - **Shell:** `MainLayout` + `AppHeader` / `AppFooter` + `SiteBackground` + `AppLoader` + `WhatsAppFloat`
-- **Home sections:** Hero (three doors) → TrustBar → ProductTabs (ESS, ESA complement, quiet ERS) → ServicesGrid
+- **Home sections:** Hero → TrustBar → ProductTabs → ServicesGrid → ArticlesTeaser
 - **Routes:** `/`, `/products`, `/products/ess|esa|ers`, `/services`, `/services/signature`, `/knowledge`, `/knowledge/:slug`, `/clients`, `/partners`, `/contact`, 404
 - **Contact:** `/contact` → `sales@dts-eg.com`; signature form → `tawqe3y_10thoframdan@dts-eg.com`; hours Sunday–Thursday, 9:00 AM to 5:00 PM in the footer
-- **Hashes live:** `#products`, `#services` (home teaser)
+- **Hashes live:** `#products`, `#services`, `#articles`
 - **Build:** `npm run build` emits per-route HTML shells (HTTP 200) after Vite
 - **Host:** GitHub Pages + Cloudflare (`dts-eg.com`). No deploy workflow file in this repo
 - **Crawlers:** GitHub Pages origin allows AI fetch; live dts-eg.com still injects Cloudflare managed `Disallow` for GPTBot/ClaudeBot — Pages deploy alone does not remove it (see `docs/architecture/crawlers.md`)

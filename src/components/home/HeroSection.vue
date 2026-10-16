@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import AppIcon from '@/components/icons/AppIcon.vue'
 
 const { t, locale } = useI18n()
 const isEnglishLocale = computed(() => locale.value === 'en')
@@ -117,9 +118,15 @@ const toneClasses = {
 
 // Rotating hero pills — brand core hues (readable in light + dark)
 const rotatingWords = [
-  { key: 'invoice', rgb: '27 115 159', to: '/products/ess' }, // Blue #1B739F
-  { key: 'receipt', rgb: '22 163 74', to: '/products/ers' }, // Green #16A34A
-  { key: 'signature', rgb: '224 184 77', to: '/products/esa' } // Gold #E0B84D
+  { key: 'invoice', rgb: '27 115 159', to: '/products/ess' },
+  { key: 'receipt', rgb: '22 163 74', to: '/products/ers' },
+  { key: 'signature', rgb: '224 184 77', to: '/products/esa' }
+]
+
+const heroDoors = [
+  { key: 'signature', to: '/services/signature', icon: 'signature', variant: 'primary' },
+  { key: 'ess', to: '/products/ess', icon: 'invoice', variant: 'alt' },
+  { key: 'procedures', to: '/knowledge', icon: 'clipboard', variant: 'alt' }
 ]
 
 const activeIndex = ref(0)
@@ -185,7 +192,7 @@ onBeforeUnmount(() => {
 
       <!-- العنوان الرئيسي مع الكلمة المتغيّرة (نفس فكرة هيرو) -->
       <h1
-        class="reveal mt-9 flex flex-wrap items-center justify-center gap-x-3 gap-y-5 font-sans text-4xl font-extrabold leading-[1.25] tracking-tight text-text-base sm:mt-11 sm:gap-y-6 sm:text-5xl lg:text-6xl xl:text-7xl"
+        class="reveal mt-9 flex flex-wrap items-center justify-center gap-x-3 gap-y-4 font-sans text-[1.7rem] font-extrabold leading-[1.3] tracking-tight text-text-base sm:mt-11 sm:gap-y-6 sm:text-5xl lg:text-6xl xl:text-7xl"
         style="transition-delay: .08s"
       >
         <span>{{ t('home.hero.titlePrefix') }}</span>
@@ -198,7 +205,7 @@ onBeforeUnmount(() => {
             v-for="(word, i) in rotatingWords"
             :key="word.key"
             :to="word.to"
-            class="relative col-start-1 row-start-1 inline-flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2 leading-none text-text-base transition-opacity duration-500 ease-out hover:brightness-110 sm:px-5 sm:py-2.5"
+            class="relative col-start-1 row-start-1 inline-flex max-w-[min(100%,18rem)] items-center gap-2 whitespace-normal rounded-full px-3 py-2 text-center leading-none text-text-base transition-opacity duration-500 ease-out hover:brightness-110 sm:max-w-none sm:whitespace-nowrap sm:px-5 sm:py-2.5"
             :class="i === activeIndex ? 'opacity-100' : 'pointer-events-none opacity-0'"
           >
             <!-- طبقة الخلفية بس — هي اللي بتنزل شوية لتحت -->
@@ -217,33 +224,27 @@ onBeforeUnmount(() => {
       </h1>
 
       <p
-        class="reveal mx-auto mt-12 max-w-2xl text-lg leading-relaxed text-text-muted sm:mt-14"
+        class="reveal mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:mt-10"
         style="transition-delay: .16s"
       >
         {{ t('home.hero.subtitle') }}
       </p>
 
-      <div class="reveal mt-9 grid w-full max-w-4xl grid-cols-1 gap-3 sm:grid-cols-3" style="transition-delay: .24s">
+      <div
+        class="reveal mx-auto mt-8 flex w-full max-w-3xl flex-col items-stretch justify-center gap-2 sm:flex-row sm:flex-wrap sm:items-center"
+        style="transition-delay: .24s"
+      >
         <RouterLink
-          to="/services/signature"
-          class="flex flex-col rounded-2xl bg-primary px-5 py-4 text-start text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover"
+          v-for="door in heroDoors"
+          :key="door.key"
+          :to="door.to"
+          class="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all hover:-translate-y-0.5"
+          :class="door.variant === 'primary'
+            ? 'bg-primary text-text-onprimary shadow-md hover:bg-primary-hover hover:shadow-lg'
+            : 'border border-border bg-surface-alt text-text-base hover:border-primary hover:text-primary'"
         >
-          <span class="text-sm font-bold">{{ t('home.hero.doors.signature.title') }}</span>
-          <span class="mt-1 text-xs leading-relaxed text-text-onprimary/80">{{ t('home.hero.doors.signature.text') }}</span>
-        </RouterLink>
-        <RouterLink
-          to="/knowledge"
-          class="flex flex-col rounded-2xl border border-border bg-surface-alt px-5 py-4 text-start transition-all hover:-translate-y-0.5 hover:border-primary"
-        >
-          <span class="text-sm font-bold text-text-base">{{ t('home.hero.doors.procedures.title') }}</span>
-          <span class="mt-1 text-xs leading-relaxed text-text-muted">{{ t('home.hero.doors.procedures.text') }}</span>
-        </RouterLink>
-        <RouterLink
-          to="/products/ess"
-          class="flex flex-col rounded-2xl px-5 py-4 text-start transition-colors hover:bg-surface-alt"
-        >
-          <span class="text-sm font-semibold text-text-muted">{{ t('home.hero.doors.ess.title') }}</span>
-          <span class="mt-1 text-xs leading-relaxed text-text-subtle">{{ t('home.hero.doors.ess.text') }}</span>
+          <AppIcon :name="door.icon" class="h-4 w-4 shrink-0" />
+          {{ t(`home.hero.doors.${door.key}.title`) }}
         </RouterLink>
       </div>
     </div>
