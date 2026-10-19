@@ -1,14 +1,14 @@
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { SITE_ORIGIN, resolveSeo } from '@/data/seo'
+import { canonicalUrl, OG_IMAGE, resolveSeo } from '@/data/seo'
 import { getArticle } from '@/data/knowledge.generated.js'
 
-function setMeta(name, content) {
-  let el = document.querySelector(`meta[name="${name}"]`)
+function setMeta(attr, key, content) {
+  let el = document.querySelector(`meta[${attr}="${key}"]`)
   if (!el) {
     el = document.createElement('meta')
-    el.setAttribute('name', name)
+    el.setAttribute(attr, key)
     document.head.appendChild(el)
   }
   el.setAttribute('content', content)
@@ -19,6 +19,17 @@ function setCanonical(href) {
   if (!el) {
     el = document.createElement('link')
     el.setAttribute('rel', 'canonical')
+    document.head.appendChild(el)
+  }
+  el.setAttribute('href', href)
+}
+
+function setHreflang(hreflang, href) {
+  let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`)
+  if (!el) {
+    el = document.createElement('link')
+    el.setAttribute('rel', 'alternate')
+    el.setAttribute('hreflang', hreflang)
     document.head.appendChild(el)
   }
   el.setAttribute('href', href)
@@ -44,10 +55,28 @@ export function usePageSeo() {
       meta = resolveSeo(lang, route.name, route.params)
     }
     if (!meta) return
+
+    const url = canonicalUrl(meta.path)
+    const is404 = route.name === 'not-found'
     document.title = meta.title
-    setMeta('description', meta.description)
-    const path = meta.path === '/' ? '/' : meta.path
-    setCanonical(`${SITE_ORIGIN}${path}`)
+    document.documentElement.lang = lang === 'en' ? 'en' : 'ar'
+
+    setMeta('name', 'description', meta.description)
+    setMeta('name', 'robots', is404 ? 'noindex' : 'index,follow')
+    setCanonical(url)
+    setHreflang('ar', url)
+    setHreflang('x-default', url)
+
+    setMeta('property', 'og:title', meta.title)
+    setMeta('property', 'og:description', meta.description)
+    setMeta('property', 'og:url', url)
+    setMeta('property', 'og:type', route.name === 'knowledge-article' ? 'article' : 'website')
+    setMeta('property', 'og:image', OG_IMAGE)
+    setMeta('property', 'og:locale', lang === 'en' ? 'en_US' : 'ar_EG')
+    setMeta('name', 'twitter:card', 'summary_large_image')
+    setMeta('name', 'twitter:title', meta.title)
+    setMeta('name', 'twitter:description', meta.description)
+    setMeta('name', 'twitter:image', OG_IMAGE)
   }
 
   watch([() => route.fullPath, locale], apply, { immediate: true })

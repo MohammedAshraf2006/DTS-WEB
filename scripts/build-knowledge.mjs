@@ -16,7 +16,9 @@ export function listArticles(locale) {
     title: article[lang].title,
     description: article[lang].description,
     cover: article[lang].cover,
-    category: article[lang].category
+    category: article[lang].category,
+    topic: article[lang].topic,
+    published: article[lang].published
   }))
 }
 
@@ -30,6 +32,9 @@ export function getArticle(slug, locale) {
     description: article[lang].description,
     cover: article[lang].cover,
     category: article[lang].category,
+    topic: article[lang].topic,
+    published: article[lang].published,
+    updated: article[lang].updated,
     html: article[lang].html
   }
 }

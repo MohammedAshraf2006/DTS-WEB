@@ -24,6 +24,14 @@ npm run build    # ينتج dist/ للنشر
 npm run preview  # يعاين نسخة الـ build محليًا
 ```
 
+انسخ `.env.example` إلى `.env` لو هتركّب القياس. المفاتيح الاختيارية:
+
+- `VITE_GA4_MEASUREMENT_ID`
+- `VITE_META_PIXEL_ID`
+- `VITE_GSC_VERIFICATION`
+
+لو فاضية، الموقع مش بيحقن سكربتات تحليلات.
+
 ## هيكل المشروع
 
 راجع `docs/architecture/structure.md` للتفاصيل الكاملة. باختصار:

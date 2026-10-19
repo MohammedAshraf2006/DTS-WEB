@@ -2,8 +2,16 @@
   "eyebrow": "Knowledge center",
   "title": "Knowledge center",
   "section": "Articles",
-  "subtitle": "Practical guides on e-signature and e-seal, the token, requesting a certificate from DTS, and how ESS and ESA connect to the tax system.",
+  "subtitle": "Practical guides on e-invoices and e-receipts, e-signature and e-seal, the token, and how DTS products connect to the tax system.",
   "back": "All articles",
   "read": "Read article",
-  "more": "Related articles"
+  "more": "Related articles",
+  "byline": "DTS team · {date}",
+  "topics": {
+    "all": "All",
+    "signature": "Signature and seal",
+    "token": "Token",
+    "ess": "ESS",
+    "receipt": "Invoice and receipt"
+  }
 }

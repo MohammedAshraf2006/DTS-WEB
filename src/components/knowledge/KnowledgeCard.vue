@@ -17,7 +17,7 @@ const { root, tilt, onMove, onLeave } = useCardTilt({ maxX: 5, maxY: 7 })
 </script>
 
 <template>
-  <li class="reveal h-full" :style="{ transitionDelay: `${delay}s` }">
+  <li class="h-full">
     <RouterLink
       :to="`/knowledge/${slug}`"
       class="sculpt-wrap block h-full"

@@ -18,8 +18,29 @@ const ARTICLE_ORDER = [
   'usb-token',
   'request-signature',
   'what-is-ess',
+  'what-is-e-invoice',
+  'what-is-e-receipt',
+  'invoice-vs-receipt',
+  'e-receipt-steps',
+  'e-receipt-faq',
   'contact-hours'
 ]
+
+function topicFromSlug(slug) {
+  if (slug === 'usb-token') return 'token'
+  if (slug === 'what-is-ess') return 'ess'
+  if (slug === 'contact-hours') return 'contact'
+  if (
+    slug === 'what-is-e-receipt' ||
+    slug === 'invoice-vs-receipt' ||
+    slug === 'e-receipt-steps' ||
+    slug === 'what-is-e-invoice' ||
+    slug === 'e-receipt-faq'
+  ) {
+    return 'receipt'
+  }
+  return 'signature'
+}
 
 function parseFrontmatter(source) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
@@ -51,6 +72,9 @@ function readLocale(locale) {
       description: parsed.data.description,
       cover: parsed.data.cover || '',
       category: parsed.data.category || '',
+      published: parsed.data.published || '2026-10-16',
+      updated: parsed.data.updated || parsed.data.published || '2026-10-16',
+      topic: parsed.data.topic || topicFromSlug(slug),
       html: md.render(parsed.body)
     })
   }

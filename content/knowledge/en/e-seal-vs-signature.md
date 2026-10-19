@@ -1,6 +1,6 @@
 ---
 slug: e-seal-vs-signature
-title: E-signature and e-seal
+title: E-signature vs e-seal
 description: When to request a personal signature, when the company seal is required, and how to ask for both in one request.
 cover: /images/knowledge/seal.webp
 category: Signature & seal

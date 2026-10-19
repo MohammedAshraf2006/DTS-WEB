@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from '@/layouts/MainLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import { isProductKey } from '@/data/products'
+import { initAnalytics, trackPageView } from '@/analytics/track.js'
 
 const routes = [
   {
@@ -51,7 +52,7 @@ const routes = [
       {
         path: 'knowledge/:slug',
         name: 'knowledge-article',
-        component: () => import('@/views/KnowledgeHubView.vue')
+        component: () => import('@/views/KnowledgeArticleView.vue')
       },
       {
         path: 'products/:key',
@@ -100,6 +101,11 @@ const router = createRouter({
     }
     return { top: 0 }
   }
+})
+
+router.afterEach((to) => {
+  initAnalytics()
+  trackPageView(to.fullPath)
 })
 
 export default router

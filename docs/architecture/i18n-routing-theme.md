@@ -21,6 +21,10 @@
 - History mode via `createWebHistory`
 - Shell: `MainLayout` with nested home, products, services, and contact routes
 - `scrollBehavior` supports saved position, hash targets (offset 90), keeps window scroll on knowledge article switches, else top
+- Canonical, sitemap, and emitted shells use trailing slashes (`/products/`). Home is `https://dts-eg.com/`
+- Indexable language is Arabic. Each URL has `hreflang="ar"` and `hreflang="x-default"` pointing at the same canonical. There is no `/en` prefix until the owner asks for English search URLs.
+- Build injects crawler-visible `h1` + article HTML into `#app`; Vue replaces it on mount
+- Analytics: optional `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION` — copy `.env.example`
 
 ### Page routes (extra)
 
@@ -30,14 +34,14 @@
 | `/services/signature` | Live — e-signature / e-seal detail + request form |
 | `/clients` | Live — featured client cards, no public count claim |
 | `/partners` | Live — partner cards; visit-site only when a URL exists; accountant offices prefixed مكتب محاسب قانوني |
-| `/knowledge` | Live — docs hub compiled from Markdown |
-| `/knowledge/:slug` | Live — articles on e-signature, token, request, seal vs signature, ESS, contact |
+| `/knowledge` | Live — topic bar, featured story, article stream |
+| `/knowledge/:slug` | Live — standalone article (signature, receipts, token, ESS, contact) |
 
 ### Hash targets (Home / footer)
 
 | Hash | Status |
 |------|--------|
-| `#products` | Live — ESS panel, ESA complement, quiet ERS link |
+| `#products` | Live — ESS panel, ESA complement, ERS cashier-receipts link |
 | `#services` | Live — `ServicesGrid` teaser (full list on `/services`) |
 | `#contact` | Redirected to page `/contact` (form) |
 | `#partners` | Replaced by page `/partners` |

@@ -3,6 +3,7 @@ import { computed, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
+import { trackEvent } from '@/analytics/track.js'
 import { SALES_EMAIL, SUPPORT_EMAIL, SIGNATURE_EMAIL } from '@/data/contactEmails'
 
 const { t, tm, locale } = useI18n()
@@ -15,7 +16,10 @@ const revealed = reactive({ support: false, sales: false, signature: false })
 const footerNumbers = computed(() => {
   void locale.value
   const raw = tm('common.footer.numbers')
-  return Array.isArray(raw) ? raw : []
+  const roles = tm('common.footer.numberRoles')
+  const nums = Array.isArray(raw) ? raw : []
+  const labels = Array.isArray(roles) ? roles : []
+  return nums.map((num, i) => ({ num, role: labels[i] || '' }))
 })
 
 const footerAddress = computed(() => {
@@ -82,7 +86,7 @@ const companyLinks = [
     <div class="mx-auto max-w-7xl px-5 py-10 lg:px-10 lg:py-12">
       <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-12 lg:gap-8">
         <!-- Brand column -->
-        <div class="col-span-2 md:col-span-3 lg:col-span-4">
+        <div class="col-span-2 md:col-span-3 lg:col-span-3">
           <RouterLink to="/" class="inline-flex items-center gap-3">
             <img src="/images/DTS.webp" alt="DTS" class="h-11 w-auto lg:h-12" width="180" height="48" decoding="async" />
           </RouterLink>
@@ -192,19 +196,25 @@ const companyLinks = [
         </div>
 
         <!-- Contact -->
-        <div class="col-span-2 md:col-span-1 lg:col-span-2">
+        <div class="col-span-2 md:col-span-1 lg:col-span-3">
           <h3 class="text-xs font-semibold uppercase tracking-[0.16em] text-text-subtle">
             {{ t('common.footer.contactTitle') }}
           </h3>
           <ul class="mt-5 space-y-2.5">
-            <li v-for="(num, i) in footerNumbers" :key="`${locale}-${i}`">
+            <li
+              v-for="(item, i) in footerNumbers"
+              :key="`${locale}-${i}`"
+              class="flex flex-nowrap items-center gap-2"
+            >
               <a
-                :href="`tel:${String(num).replace(/[^\d+]/g, '')}`"
+                :href="`tel:${String(item.num).replace(/[^\d+]/g, '')}`"
                 dir="ltr"
-                class="inline-block text-[15px] text-text-muted transition-colors hover:text-text-base [unicode-bidi:isolate]"
+                class="shrink-0 whitespace-nowrap text-[15px] text-text-muted transition-colors hover:text-text-base [unicode-bidi:isolate]"
+                @click="trackEvent('click_call')"
               >
-                {{ num }}
+                {{ item.num }}
               </a>
+              <span v-if="item.role" class="shrink-0 whitespace-nowrap text-xs text-text-subtle">{{ item.role }}</span>
             </li>
           </ul>
           <a

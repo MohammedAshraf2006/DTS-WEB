@@ -1,6 +1,8 @@
 # Execution status
 
-Last updated: 2026-10-16 (knowledge covers: topic photos + DTS navy/teal mark)
+Last updated: 2026-10-19 (remaining developer audit items: hreflang ar/x-default, SPA OG tags, env example, trailing-slash sitemap source, llms article list, CNAME in dist, quiet-path copy)
+
+Analytics env (owner provides; empty = no scripts): `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION`.
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|
@@ -9,7 +11,7 @@ Last updated: 2026-10-16 (knowledge covers: topic photos + DTS navy/teal mark)
 | 02 | [wave-02-home-complete.md](wave-02-home-complete.md) | in_progress | Home largely shipped; partners hash, client assets remain |
 | 03 | [wave-03-pages-routes.md](wave-03-pages-routes.md) | done | Products + services + clients + partners routes shipped |
 | 04 | [wave-04-forms-integrations.md](wave-04-forms-integrations.md) | done | Contact page, footer emails, WhatsApp float |
-| 05 | [wave-05-quality-launch.md](wave-05-quality-launch.md) | pending | QA, SEO basics, deploy |
+| 05 | [wave-05-quality-launch.md](wave-05-quality-launch.md) | in_progress | SEO shells + Pages workflow shipped; live Cloudflare robots overlay still owner |
 | 06 | [wave-06-public-trust.md](wave-06-public-trust.md) | done | Frozen claims, product spine, hours, HTTP 200, knowledge |
 
 ## Snapshot (current product)
@@ -21,7 +23,7 @@ Last updated: 2026-10-16 (knowledge covers: topic photos + DTS navy/teal mark)
 - **Contact:** `/contact` → `sales@dts-eg.com`; signature form → `tawqe3y_10thoframdan@dts-eg.com`; hours Sunday–Thursday, 9:00 AM to 5:00 PM in the footer
 - **Hashes live:** `#products`, `#services`, `#articles`
 - **Build:** `npm run build` emits per-route HTML shells (HTTP 200) after Vite
-- **Host:** GitHub Pages + Cloudflare (`dts-eg.com`). No deploy workflow file in this repo
+- **Host:** GitHub Pages + Cloudflare (`dts-eg.com`). Deploy workflow: `.github/workflows/deploy.yml`
 - **Crawlers:** GitHub Pages origin allows AI fetch; live dts-eg.com still injects Cloudflare managed `Disallow` for GPTBot/ClaudeBot — Pages deploy alone does not remove it (see `docs/architecture/crawlers.md`)
 
 ## Dependency order

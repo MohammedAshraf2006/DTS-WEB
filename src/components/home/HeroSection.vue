@@ -1,7 +1,6 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import AppIcon from '@/components/icons/AppIcon.vue'
 
 const { t, locale } = useI18n()
 const isEnglishLocale = computed(() => locale.value === 'en')
@@ -123,12 +122,6 @@ const rotatingWords = [
   { key: 'signature', rgb: '224 184 77', to: '/products/esa' }
 ]
 
-const heroDoors = [
-  { key: 'signature', to: '/services/signature', icon: 'signature', variant: 'primary' },
-  { key: 'ess', to: '/products/ess', icon: 'invoice', variant: 'alt' },
-  { key: 'procedures', to: '/knowledge', icon: 'clipboard', variant: 'alt' }
-]
-
 const activeIndex = ref(0)
 let rotationTimer = null
 
@@ -231,20 +224,20 @@ onBeforeUnmount(() => {
       </p>
 
       <div
-        class="reveal mx-auto mt-8 flex w-full max-w-3xl flex-col items-stretch justify-center gap-2 sm:flex-row sm:flex-wrap sm:items-center"
+        class="reveal mx-auto mt-8 flex w-full max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
         style="transition-delay: .24s"
       >
         <RouterLink
-          v-for="door in heroDoors"
-          :key="door.key"
-          :to="door.to"
-          class="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-bold transition-all hover:-translate-y-0.5"
-          :class="door.variant === 'primary'
-            ? 'bg-primary text-text-onprimary shadow-md hover:bg-primary-hover hover:shadow-lg'
-            : 'border border-border bg-surface-alt text-text-base hover:border-primary hover:text-primary'"
+          to="/contact"
+          class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-lg"
         >
-          <AppIcon :name="door.icon" class="h-4 w-4 shrink-0" />
-          {{ t(`home.hero.doors.${door.key}.title`) }}
+          {{ t('common.buttons.contactUs') }}
+        </RouterLink>
+        <RouterLink
+          to="/products"
+          class="inline-flex items-center justify-center rounded-full border border-border bg-surface-alt px-7 py-3.5 text-sm font-bold text-text-base transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+        >
+          {{ t('common.buttons.discoverProducts') }}
         </RouterLink>
       </div>
     </div>

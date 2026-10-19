@@ -17,12 +17,12 @@ export const servicesCatalog = {
   einvoicing: {
     key: 'einvoicing',
     icon: '/images/services/einvoicing.svg',
-    href: '/contact'
+    href: '/contact?service=einvoicing'
   },
   erp: {
     key: 'erp',
     icon: '/images/services/erp.svg',
-    href: '/contact'
+    href: '/contact?service=erp'
   },
   signature: {
     key: 'signature',
@@ -33,27 +33,27 @@ export const servicesCatalog = {
   consulting: {
     key: 'consulting',
     icon: '/images/services/consulting.svg',
-    href: '/contact'
+    href: '/contact?service=consulting'
   },
   integration: {
     key: 'integration',
     icon: '/images/services/integration.svg',
-    href: '/contact'
+    href: '/contact?service=integration'
   },
   projectManagement: {
     key: 'projectManagement',
     icon: '/images/services/project-management.svg',
-    href: '/contact'
+    href: '/contact?service=projectManagement'
   },
   training: {
     key: 'training',
     icon: '/images/services/training.svg',
-    href: '/contact'
+    href: '/contact?service=training'
   },
   support: {
     key: 'support',
     icon: '/images/services/support.svg',
-    href: '/contact'
+    href: '/contact?service=support'
   }
 }
 

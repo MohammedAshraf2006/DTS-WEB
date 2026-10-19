@@ -1,6 +1,6 @@
 ---
 slug: e-seal-vs-signature
-title: التوقيع والختم الإلكتروني
+title: الفرق بين التوقيع والختم الإلكتروني
 description: متى تطلب توقيعًا شخصيًا، ومتى تحتاج ختم الشركة، وكيف تجمع الاثنين في طلب واحد.
 cover: /images/knowledge/seal.webp
 category: توقيع وختم

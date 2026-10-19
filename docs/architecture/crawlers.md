@@ -1,8 +1,8 @@
 # Crawlers and AI assistants
 
 **Host:** GitHub Pages (`dist/` published for `dts-eg.com`; `CNAME` in the repo).  
-This repository does not contain `.github/workflows/deploy.yml`. Pages is configured outside the repo.  
-**Domain:** `dts-eg.com` (`CNAME` in the repo; Pages custom domain).
+Deploy: `.github/workflows/deploy.yml` builds `dist/` and publishes GitHub Pages.  
+**Domain:** `dts-eg.com` (`CNAME` in the repo and `public/CNAME`; Pages custom domain).
 
 Traffic to `https://dts-eg.com` is still proxied by **Cloudflare DNS** (orange-cloud). Pages serves `robots.txt` from `public/`; Cloudflare can **rewrite** that response before the crawler sees it.
 
