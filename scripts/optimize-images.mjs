@@ -73,11 +73,21 @@ async function writeFavicon() {
   }
   if (!source) return null
 
-  const favicon = path.join(rootDir, 'public', 'favicon.png')
-  await sharp(source).resize(32, 32, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png({ compressionLevel: 9 }).toFile(favicon)
+  const navy = { r: 11, g: 42, b: 74, alpha: 1 }
+  const sizes = [
+    [48, path.join(rootDir, 'public', 'favicon.png')],
+    [192, path.join(rootDir, 'public', 'icon-192.png')],
+    [512, path.join(rootDir, 'public', 'icon-512.png')]
+  ]
+  for (const [size, out] of sizes) {
+    await sharp(source)
+      .resize(size, size, { fit: 'contain', background: navy })
+      .png({ compressionLevel: 9 })
+      .toFile(out)
+  }
   const apple = path.join(imagesDir, 'apple-touch.png')
-  await sharp(source).resize(180, 180, { fit: 'contain', background: { r: 5, g: 10, b: 24, alpha: 1 } }).png({ compressionLevel: 9 }).toFile(apple)
-  return { favicon, apple }
+  await sharp(source).resize(180, 180, { fit: 'contain', background: navy }).png({ compressionLevel: 9 }).toFile(apple)
+  return { favicon: sizes[0][1], apple }
 }
 
 const files = await walkPng(imagesDir)

@@ -60,27 +60,27 @@ watch(
       <p class="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
         {{ article.category }}
       </p>
-      <h1 class="mt-2 break-words font-heading text-3xl font-extrabold tracking-tight text-text-base sm:text-4xl">
+      <h1 class="mt-2 break-words font-heading text-2xl font-extrabold tracking-tight text-text-base sm:text-4xl">
         {{ article.title }}
       </h1>
-      <p class="mt-3 text-base font-medium leading-relaxed text-text-base sm:text-lg">
+      <p class="mt-3 text-sm font-medium leading-relaxed text-text-base sm:text-lg">
         {{ article.description }}
       </p>
-      <p class="mt-3 text-sm text-text-muted">
+      <p class="mt-3 text-xs text-text-muted sm:text-sm">
         {{ t('knowledge.byline', { date: publishedLabel }) }}
       </p>
 
-      <div class="mt-8 overflow-hidden rounded-2xl bg-surface">
+      <div class="mt-5 overflow-hidden rounded-xl bg-surface sm:mt-8 sm:rounded-2xl">
         <img
           v-if="article.cover"
           :src="article.cover"
           :alt="article.title"
-          class="h-56 w-full object-cover sm:h-72 lg:h-[22rem]"
+          class="h-44 w-full object-cover sm:h-72 lg:h-[22rem]"
         />
       </div>
 
       <div
-        class="knowledge-body mt-10 max-w-none text-[1.2rem] font-medium leading-[1.9] text-text-base"
+        class="knowledge-body mt-6 max-w-none text-[1.05rem] font-medium leading-[1.8] text-text-base sm:mt-10 sm:text-[1.2rem] sm:leading-[1.9]"
         v-html="article.html"
       />
 
@@ -104,11 +104,18 @@ watch(
 
 <style scoped>
 .knowledge-body :deep(h2) {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.35rem;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--color-text-base);
+}
+
+@media (min-width: 640px) {
+  .knowledge-body :deep(h2) {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
 }
 
 .knowledge-body :deep(h3) {

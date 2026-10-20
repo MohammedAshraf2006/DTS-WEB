@@ -24,6 +24,7 @@ function organizationJsonLd() {
     name: 'DTS',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/images/DTS.webp`,
+    image: `${SITE_ORIGIN}/icon-512.png`,
     email: 'sales@dts-eg.com'
   }
 }

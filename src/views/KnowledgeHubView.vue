@@ -30,24 +30,27 @@ const rest = computed(() => visibleArticles.value.slice(1))
         <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
           {{ t('knowledge.eyebrow') }}
         </p>
-        <h1 class="mt-2 font-heading text-3xl font-extrabold tracking-tight text-text-base sm:text-4xl">
+        <h1 class="mt-2 font-heading text-2xl font-extrabold tracking-tight text-text-base sm:text-4xl">
           {{ t('knowledge.title') }}
         </h1>
-        <p class="mt-3 text-base leading-relaxed text-text-muted sm:text-lg">
+        <p class="mt-3 text-sm leading-relaxed text-text-muted sm:text-lg">
           {{ t('knowledge.subtitle') }}
         </p>
       </div>
 
       <nav
-        class="mt-8 border-b border-border"
+        class="mt-6 border-b border-border sm:mt-8"
         :aria-label="t('knowledge.section')"
       >
-        <ul class="flex gap-1 overflow-x-auto overflow-y-hidden" role="tablist">
+        <ul
+          class="flex gap-0 overflow-x-auto overflow-y-hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          role="tablist"
+        >
           <li v-for="topic in topics" :key="topic">
             <button
               type="button"
               role="tab"
-              class="-mb-px inline-flex shrink-0 items-center border-b-2 px-3 py-3 text-sm transition-colors sm:px-4 sm:text-base"
+              class="-mb-px inline-flex shrink-0 items-center whitespace-nowrap border-b-2 px-2.5 py-2.5 text-[13px] transition-colors sm:px-4 sm:py-3 sm:text-base"
               :class="activeTopic === topic
                 ? 'border-primary font-extrabold text-primary'
                 : 'border-transparent font-semibold text-text-muted hover:text-text-base'"
@@ -60,30 +63,30 @@ const rest = computed(() => visibleArticles.value.slice(1))
         </ul>
       </nav>
 
-      <div v-if="featured" class="mt-8">
+      <div v-if="featured" class="mt-5 sm:mt-8">
         <RouterLink
           :to="`/knowledge/${featured.slug}`"
           class="grid overflow-hidden rounded-2xl border border-border bg-surface-alt transition-colors hover:border-primary lg:grid-cols-[1.15fr_0.85fr]"
         >
-          <div class="relative min-h-[14rem] bg-surface sm:min-h-[18rem]">
+          <div class="relative h-40 bg-surface sm:h-auto sm:min-h-[18rem]">
             <img
               v-if="featured.cover"
               :src="featured.cover"
               :alt="featured.title"
-              class="absolute inset-0 h-full w-full object-cover"
+              class="h-full w-full object-cover sm:absolute sm:inset-0"
             />
           </div>
-          <div class="flex flex-col justify-center p-6 sm:p-8">
-            <p v-if="featured.category" class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+          <div class="flex flex-col justify-center p-4 sm:p-8">
+            <p v-if="featured.category" class="text-[11px] font-semibold uppercase tracking-[0.14em] text-primary sm:text-xs">
               {{ featured.category }}
             </p>
-            <h2 class="mt-2 font-heading text-2xl font-extrabold leading-snug text-text-base sm:text-3xl">
+            <h2 class="mt-1 font-heading text-lg font-extrabold leading-snug text-text-base sm:mt-2 sm:text-3xl">
               {{ featured.title }}
             </h2>
-            <p class="mt-3 text-base leading-relaxed text-text-muted">
+            <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-text-muted sm:mt-3 sm:line-clamp-none sm:text-base">
               {{ featured.description }}
             </p>
-            <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary sm:mt-5">
               {{ t('knowledge.read') }}
               <AppIcon name="arrowLeft" class="h-4 w-4 rtl:block ltr:hidden" />
               <AppIcon name="arrowRight" class="h-4 w-4 ltr:block rtl:hidden" />
@@ -92,33 +95,33 @@ const rest = computed(() => visibleArticles.value.slice(1))
         </RouterLink>
       </div>
 
-      <ul v-if="rest.length" class="mt-6 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface-alt">
+      <ul v-if="rest.length" class="mt-4 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface-alt sm:mt-6">
         <li v-for="article in rest" :key="article.slug">
           <RouterLink
             :to="`/knowledge/${article.slug}`"
-            class="flex items-center gap-4 px-4 py-4 transition-colors hover:bg-primary-light/40 sm:gap-5 sm:px-6"
+            class="flex items-start gap-3 px-3 py-3 transition-colors hover:bg-primary-light/40 sm:items-center sm:gap-5 sm:px-6 sm:py-4"
           >
             <img
               v-if="article.cover"
               :src="article.cover"
               :alt="article.title"
-              class="h-16 w-24 shrink-0 rounded-lg object-cover sm:h-20 sm:w-32"
+              class="h-14 w-[4.5rem] shrink-0 rounded-lg object-cover sm:h-20 sm:w-32"
               loading="lazy"
               decoding="async"
             />
             <span class="min-w-0 flex-1">
-              <span v-if="article.category" class="block text-xs font-semibold text-primary">
+              <span v-if="article.category" class="block text-[11px] font-semibold text-primary sm:text-xs">
                 {{ article.category }}
               </span>
-              <span class="mt-0.5 block font-heading text-base font-bold text-text-base sm:text-lg">
+              <span class="mt-0.5 block font-heading text-[15px] font-bold leading-snug text-text-base sm:text-lg">
                 {{ article.title }}
               </span>
-              <span class="mt-1 line-clamp-2 block text-sm text-text-muted">
+              <span class="mt-1 line-clamp-2 hidden text-sm text-text-muted sm:block">
                 {{ article.description }}
               </span>
             </span>
-            <AppIcon name="arrowLeft" class="h-4 w-4 shrink-0 text-primary rtl:block ltr:hidden" />
-            <AppIcon name="arrowRight" class="h-4 w-4 shrink-0 text-primary ltr:block rtl:hidden" />
+            <AppIcon name="arrowLeft" class="mt-1 hidden h-4 w-4 shrink-0 text-primary sm:rtl:block" />
+            <AppIcon name="arrowRight" class="mt-1 hidden h-4 w-4 shrink-0 text-primary sm:ltr:block" />
           </RouterLink>
         </li>
       </ul>
