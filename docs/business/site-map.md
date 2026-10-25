@@ -12,7 +12,7 @@
 | Knowledge `/knowledge` | `KnowledgeHubView` — category tabs + article cards |
 | Knowledge article `/knowledge/:slug` | `KnowledgeArticleView` — article body, dates, related cards (no sidebar) |
 | Clients `/clients` | `ClientsView` — featured client cards (logo, name, industry). No public client-count claim. |
-| Partners `/partners` | `PartnersView` — stacked cards (FEDIS, Tawqe3y, MTS, Text World, plus certified accountant offices). Visit-site CTA only when a partner has a URL. |
+| Partners `/partners` | `PartnersView` — stacked cards (FEDIS, Tawqe3y, MTS, TAXES WORLD, plus certified accountant offices). Visit-site CTA only when a partner has a URL. |
 | 404 | `NotFoundView` |
 | Contact `/contact` | `ContactView` — form to `sales@dts-eg.com`; mailto is shown only if FormSubmit fails |
 | Chrome | `AppLoader` + `MainLayout` (`SiteBackground`, `AppHeader` with mobile menu at header end and side drawer from the same side, `AppFooter`) + `WhatsAppFloat` |

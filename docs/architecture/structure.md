@@ -38,7 +38,7 @@ src/
     products.js           # ESS / ERS / ESA catalog + gallery paths
     services.js           # services catalog + icon paths
     clients.js            # featured clients catalog + logo paths
-    partners.js           # FEDIS / Tawqe3y / MTS / Text World + legal accountant offices
+    partners.js           # FEDIS / Tawqe3y / MTS / TAXES WORLD + legal accountant offices
     seo.js               # per-route title, description, canonical path
     knowledge.generated.js # built from content/knowledge
   composables/
