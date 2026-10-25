@@ -19,7 +19,7 @@ const { root, tilt, onMove, onLeave } = useCardTilt({ maxX: 5, maxY: 7 })
 <template>
   <li class="h-full">
     <RouterLink
-      :to="`/knowledge/${slug}`"
+      :to="`/knowledge/${slug}/`"
       class="sculpt-wrap block h-full"
     >
       <article

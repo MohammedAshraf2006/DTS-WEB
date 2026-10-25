@@ -65,7 +65,7 @@ const rest = computed(() => visibleArticles.value.slice(1))
 
       <div v-if="featured" class="mt-5 sm:mt-8">
         <RouterLink
-          :to="`/knowledge/${featured.slug}`"
+          :to="`/knowledge/${featured.slug}/`"
           class="grid overflow-hidden rounded-2xl border border-border bg-surface-alt transition-colors hover:border-primary lg:grid-cols-[1.15fr_0.85fr]"
         >
           <div class="relative h-40 bg-surface sm:h-auto sm:min-h-[18rem]">
@@ -98,7 +98,7 @@ const rest = computed(() => visibleArticles.value.slice(1))
       <ul v-if="rest.length" class="mt-4 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface-alt sm:mt-6">
         <li v-for="article in rest" :key="article.slug">
           <RouterLink
-            :to="`/knowledge/${article.slug}`"
+            :to="`/knowledge/${article.slug}/`"
             class="flex items-start gap-3 px-3 py-3 transition-colors hover:bg-primary-light/40 sm:items-center sm:gap-5 sm:px-6 sm:py-4"
           >
             <img

@@ -31,18 +31,18 @@ const footerAddressUrl =
   'https://www.google.com/maps/place/Digital+Transformation+Services+DTS/@30.3094896,31.7275622,14.67z/data=!4m6!3m5!1s0x1457fdc94317b8b7:0x1ab0121372ea4db6!8m2!3d30.3085736!4d31.7089065!16s%2Fg%2F11syxf9_5p?entry=ttu&g_ep=EgoyMDI2MDgxNi4wIKXMDSoASAFQAw%3D%3D'
 
 const productLinks = [
-  { key: 'ess', to: '/products/ess' },
-  { key: 'esa', to: '/products/esa' },
-  { key: 'ers', to: '/products/ers' }
+  { key: 'ess', to: '/products/ess/' },
+  { key: 'esa', to: '/products/esa/' },
+  { key: 'ers', to: '/products/ers/' }
 ]
 
 const companyLinks = [
   { labelKey: 'common.footer.quickLinks.home', to: '/' },
-  { labelKey: 'common.footer.quickLinks.products', to: '/products' },
-  { labelKey: 'common.footer.quickLinks.services', to: '/services' },
-  { labelKey: 'common.footer.quickLinks.about', to: '/clients' },
-  { labelKey: 'common.footer.quickLinks.partners', to: '/partners' },
-  { labelKey: 'common.nav.knowledge', to: '/knowledge' }
+  { labelKey: 'common.footer.quickLinks.products', to: '/products/' },
+  { labelKey: 'common.footer.quickLinks.services', to: '/services/' },
+  { labelKey: 'common.footer.quickLinks.about', to: '/clients/' },
+  { labelKey: 'common.footer.quickLinks.partners', to: '/partners/' },
+  { labelKey: 'common.nav.knowledge', to: '/knowledge/' }
 ]
 </script>
 
@@ -72,7 +72,7 @@ const companyLinks = [
           </p>
         </div>
         <RouterLink
-          to="/contact"
+          to="/contact/"
           class="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-lg"
         >
           {{ t('common.footer.ctaButton') }}
@@ -229,6 +229,10 @@ const companyLinks = [
           <p class="mt-3 text-xs leading-relaxed text-text-subtle">
             {{ t('common.footer.hours') }}
           </p>
+          <p class="mt-2 text-xs leading-relaxed text-text-subtle">
+            {{ t('common.footer.taxIdLabel') }}:
+            <span dir="ltr" class="[unicode-bidi:isolate]">{{ t('common.footer.taxId') }}</span>
+          </p>
         </div>
       </div>
 
@@ -240,13 +244,13 @@ const companyLinks = [
           © {{ year }} DTS — {{ t('common.footer.rights') }}
         </p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-subtle">
-          <RouterLink to="/products" class="transition-colors hover:text-text-base">
+          <RouterLink to="/products/" class="transition-colors hover:text-text-base">
             {{ t('common.footer.quickLinks.products') }}
           </RouterLink>
-          <RouterLink to="/services" class="transition-colors hover:text-text-base">
+          <RouterLink to="/services/" class="transition-colors hover:text-text-base">
             {{ t('common.footer.quickLinks.services') }}
           </RouterLink>
-          <RouterLink to="/contact" class="transition-colors hover:text-text-base">
+          <RouterLink to="/contact/" class="transition-colors hover:text-text-base">
             {{ t('common.nav.contact') }}
           </RouterLink>
         </div>

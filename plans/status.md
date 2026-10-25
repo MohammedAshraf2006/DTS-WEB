@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-10-20 (Google-sized favicons 48/192/512; ESS logo replaced; knowledge hub/article compacted for phones)
+Last updated: 2026-10-25 (Moataz 24 Oct follow-up: GTM/GA4/Pixel env + conversion events, prerendered page bodies, trailing-slash nav, tax ID 769038883, WhatsApp 01050992816)
 
 Analytics env (owner provides; empty = no scripts): `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION`.
 

@@ -21,7 +21,7 @@
 - History mode via `createWebHistory`
 - Shell: `MainLayout` with nested home, products, services, and contact routes
 - `scrollBehavior` supports saved position, hash targets (offset 90), keeps window scroll on knowledge article switches, else top
-- Canonical, sitemap, and emitted shells use trailing slashes (`/products/`). Home is `https://dts-eg.com/`
+- Canonical, sitemap, in-app links, and emitted shells use trailing slashes (`/products/`). Home is `https://dts-eg.com/`. Vue Router redirects a missing slash with `replace` so clicks match canonical.
 - Indexable language is Arabic. Each URL has `hreflang="ar"` and `hreflang="x-default"` pointing at the same canonical. There is no `/en` prefix until the owner asks for English search URLs.
 - Build injects crawler-visible `h1` + article HTML into `#app`; Vue replaces it on mount
 - Analytics: optional `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION` — copy `.env.example`

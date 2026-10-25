@@ -83,7 +83,7 @@ const {
               {{ t('home.cta.subtitle') }}
             </p>
             <RouterLink
-              to="/clients"
+              to="/clients/"
               class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-lg"
             >
               {{ t('home.cta.button') }}

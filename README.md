@@ -26,11 +26,12 @@ npm run preview  # يعاين نسخة الـ build محليًا
 
 انسخ `.env.example` إلى `.env` لو هتركّب القياس. المفاتيح الاختيارية:
 
-- `VITE_GA4_MEASUREMENT_ID`
-- `VITE_META_PIXEL_ID`
+- `VITE_GTM_ID` (مفضّل لو القياس هيتعمل من Tag Manager)
+- `VITE_GA4_MEASUREMENT_ID` (يُحقن مباشرة فقط لو GTM فاضي)
+- `VITE_META_PIXEL_ID` (يُحقن مباشرة فقط لو GTM فاضي)
 - `VITE_GSC_VERIFICATION`
 
-لو فاضية، الموقع مش بيحقن سكربتات تحليلات.
+لو فاضية، الموقع مش بيحقن سكربتات تحليلات. للبناء على GitHub Pages حط نفس المفاتيح كـ Secrets في المستودع. أحداث التحويل الجاهزة: `click_whatsapp`، `click_call`، `generate_lead`، `signature_lead`.
 
 ## هيكل المشروع
 

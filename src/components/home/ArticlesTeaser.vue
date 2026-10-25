@@ -24,7 +24,7 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
       <ul class="mt-8 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface-alt">
         <li v-for="article in articles" :key="article.slug">
           <RouterLink
-            :to="`/knowledge/${article.slug}`"
+            :to="`/knowledge/${article.slug}/`"
             class="flex items-center gap-4 px-4 py-4 transition-colors hover:bg-primary-light/40 sm:gap-5 sm:px-6"
           >
             <img
@@ -49,7 +49,7 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
         </li>
         <li>
           <RouterLink
-            to="/knowledge"
+            to="/knowledge/"
             class="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-primary transition-colors hover:bg-primary-light/40 sm:px-6 sm:text-lg"
           >
             {{ t('home.articles.cta') }}

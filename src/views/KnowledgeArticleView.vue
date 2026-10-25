@@ -49,7 +49,7 @@ watch(
   <article v-if="article" class="relative overflow-x-hidden bg-transparent pb-12 pt-20 lg:pb-16 lg:pt-24">
     <div class="mx-auto max-w-[88rem] px-4 sm:px-6 lg:px-8">
       <RouterLink
-        to="/knowledge"
+        to="/knowledge/"
         class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover"
       >
         <AppIcon name="arrowRight" class="h-4 w-4 rtl:block ltr:hidden" />
@@ -89,7 +89,7 @@ watch(
         <ul class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <li v-for="item in related" :key="item.slug">
             <RouterLink
-              :to="`/knowledge/${item.slug}`"
+              :to="`/knowledge/${item.slug}/`"
               class="block rounded-xl border border-border bg-surface-alt p-4 hover:border-primary"
             >
               <span class="font-heading text-base font-bold text-text-base">{{ item.title }}</span>

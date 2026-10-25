@@ -101,9 +101,9 @@ const heroIcons = [
 ]
 
 const floatingProductCards = [
-  { src: '/images/Products/ers-logo.webp', key: 'ers', to: '/products/ers', className: 'sm:-translate-y-1' },
-  { src: '/images/Products/esa-logo.webp', key: 'esa', to: '/products/esa', className: 'translate-y-2 sm:translate-y-3' },
-  { src: '/images/Products/ess-logo.webp', key: 'ess', to: '/products/ess', className: '-translate-y-1 sm:-translate-y-2' }
+  { src: '/images/Products/ers-logo.webp', key: 'ers', to: '/products/ers/', className: 'sm:-translate-y-1' },
+  { src: '/images/Products/esa-logo.webp', key: 'esa', to: '/products/esa/', className: 'translate-y-2 sm:translate-y-3' },
+  { src: '/images/Products/ess-logo.webp', key: 'ess', to: '/products/ess/', className: '-translate-y-1 sm:-translate-y-2' }
 ]
 
 const toneClasses = {
@@ -117,9 +117,9 @@ const toneClasses = {
 
 // Rotating hero pills — brand core hues (readable in light + dark)
 const rotatingWords = [
-  { key: 'invoice', rgb: '27 115 159', to: '/products/ess' },
-  { key: 'receipt', rgb: '22 163 74', to: '/products/ers' },
-  { key: 'signature', rgb: '224 184 77', to: '/products/esa' }
+  { key: 'invoice', rgb: '27 115 159', to: '/products/ess/' },
+  { key: 'receipt', rgb: '22 163 74', to: '/products/ers/' },
+  { key: 'signature', rgb: '224 184 77', to: '/products/esa/' }
 ]
 
 const activeIndex = ref(0)
@@ -228,13 +228,13 @@ onBeforeUnmount(() => {
         style="transition-delay: .24s"
       >
         <RouterLink
-          to="/contact"
+          to="/contact/"
           class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-lg"
         >
           {{ t('common.buttons.contactUs') }}
         </RouterLink>
         <RouterLink
-          to="/products"
+          to="/products/"
           class="inline-flex items-center justify-center rounded-full border border-border bg-surface-alt px-7 py-3.5 text-sm font-bold text-text-base transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary"
         >
           {{ t('common.buttons.discoverProducts') }}

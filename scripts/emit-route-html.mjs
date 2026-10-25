@@ -2,6 +2,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadArticles } from './knowledge-lib.mjs'
+import { prerenderBody } from './prerender-bodies.mjs'
 import { canonicalUrl, OG_IMAGE, SITE_ORIGIN, staticHtmlRoutes } from '../src/data/seo.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -25,7 +26,8 @@ function organizationJsonLd() {
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/images/DTS.webp`,
     image: `${SITE_ORIGIN}/icon-512.png`,
-    email: 'sales@dts-eg.com'
+    email: 'sales@dts-eg.com',
+    taxID: '769038883'
   }
 }
 
@@ -36,6 +38,8 @@ function localBusinessJsonLd() {
     name: 'DTS',
     url: `${SITE_ORIGIN}/`,
     telephone: '+201050992815',
+    taxID: '769038883',
+    vatID: '769038883',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Villa 136, District 44, Misr El Noor Road',
@@ -114,7 +118,7 @@ const routes = [
     type: 'website',
     image: OG_IMAGE,
     jsonLd: route.path === '/' || route.path === '/contact' ? [org, local] : [org],
-    body: `<article><h1>${escapeHtml(route.title)}</h1><p>${escapeHtml(route.description)}</p></article>`
+    body: `<article>${prerenderBody(route.path, articles) || `<h1>${escapeHtml(route.title)}</h1><p>${escapeHtml(route.description)}</p>`}</article>`
   })),
   ...articles.map((article) => {
     const urlPath = `/knowledge/${article.slug}`

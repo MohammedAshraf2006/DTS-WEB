@@ -27,4 +27,4 @@ Until then, pushing to `main` and redeploying Pages will not unblock ChatGPT or 
 
 ## Deep links
 
-Public routes are emitted as real files (`dist/products/index.html`, `dist/contact/index.html`, and the same for the other sitemap URLs) with a per-route title, description, and canonical link. A crawler that does not run JavaScript still receives HTTP 200 and those tags. Unknown paths keep using `public/404.html`, which is an HTTP 404.
+Public routes are emitted as real files (`dist/products/index.html`, `dist/contact/index.html`, and the same for the other sitemap URLs) with a per-route title, description, canonical link, and Arabic body copy (home, products, services, partners, clients, contact, knowledge index, plus full article HTML). A crawler that does not run JavaScript still receives HTTP 200 and that text. Unknown paths keep using `public/404.html`, which is an HTTP 404.

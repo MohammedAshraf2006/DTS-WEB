@@ -44,11 +44,13 @@
     "supportPhone": "(+20) 10 50992816",
     "numbers": ["(+20) 10 50992815", "(+20) 10 50992816", "(+20) 10 50992817", "(+20) 10 50992818"],
     "rights": "All rights reserved",
-    "numberRoles": ["Sales", "Signature", "WhatsApp", "Support"]
+    "numberRoles": ["Sales", "WhatsApp", "Signature", "Support"],
+    "taxIdLabel": "Tax ID",
+    "taxId": "769038883"
   },
   "whatsapp": {
     "label": "Chat on WhatsApp",
-    "href": "https://wa.me/201050992817"
+    "href": "https://wa.me/201050992816"
   },
   "notFound": {
     "title": "Page not found | DTS",

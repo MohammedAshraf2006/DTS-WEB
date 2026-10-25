@@ -115,7 +115,7 @@ const tintClass = computed(() => {
         </div>
 
         <RouterLink
-          :to="`/products/${productKey}`"
+          :to="`/products/${productKey}/`"
           class="sculpt-cta mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-primary-hover"
         >
           {{ t('products.learnMore') }}

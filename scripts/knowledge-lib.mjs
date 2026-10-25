@@ -2,6 +2,11 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import MarkdownIt from 'markdown-it'
+import { withTrailingSlash } from '../src/utils/trailingSlash.js'
+
+function slashInternalHrefs(html) {
+  return html.replace(/href="(\/[^"]+)"/g, (_, href) => `href="${withTrailingSlash(href)}"`)
+}
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const contentRoot = join(root, 'content', 'knowledge')
@@ -75,7 +80,7 @@ function readLocale(locale) {
       published: parsed.data.published || '2026-10-16',
       updated: parsed.data.updated || parsed.data.published || '2026-10-16',
       topic: parsed.data.topic || topicFromSlug(slug),
-      html: md.render(parsed.body)
+      html: slashInternalHrefs(md.render(parsed.body))
     })
   }
   return bySlug

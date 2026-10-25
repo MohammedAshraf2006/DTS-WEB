@@ -3,6 +3,7 @@ import MainLayout from '@/layouts/MainLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import { isProductKey } from '@/data/products'
 import { initAnalytics, trackPageView } from '@/analytics/track.js'
+import { withTrailingSlash } from '@/utils/trailingSlash.js'
 
 const routes = [
   {
@@ -100,6 +101,18 @@ const router = createRouter({
       })
     }
     return { top: 0 }
+  }
+})
+
+router.beforeEach((to) => {
+  if (to.name === 'not-found') return
+  if (to.path !== '/' && !to.path.endsWith('/')) {
+    return {
+      path: withTrailingSlash(to.path),
+      query: to.query,
+      hash: to.hash,
+      replace: true
+    }
   }
 })
 
