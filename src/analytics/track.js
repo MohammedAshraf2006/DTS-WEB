@@ -1,5 +1,8 @@
-const gaId = () => import.meta.env.VITE_GA4_MEASUREMENT_ID || ''
-const pixelId = () => import.meta.env.VITE_META_PIXEL_ID || ''
+const DEFAULT_GA4 = 'G-EY2GF14XJ0'
+const DEFAULT_PIXEL = '1763152844965514'
+
+const gaId = () => import.meta.env.VITE_GA4_MEASUREMENT_ID || DEFAULT_GA4
+const pixelId = () => import.meta.env.VITE_META_PIXEL_ID || DEFAULT_PIXEL
 const gtmId = () => import.meta.env.VITE_GTM_ID || ''
 const gsc = () => import.meta.env.VITE_GSC_VERIFICATION || ''
 

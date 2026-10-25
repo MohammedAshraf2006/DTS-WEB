@@ -24,14 +24,14 @@ npm run build    # ينتج dist/ للنشر
 npm run preview  # يعاين نسخة الـ build محليًا
 ```
 
-انسخ `.env.example` إلى `.env` لو هتركّب القياس. المفاتيح الاختيارية:
+القياس المباشر (من غير GTM):
 
-- `VITE_GTM_ID` (مفضّل لو القياس هيتعمل من Tag Manager)
-- `VITE_GA4_MEASUREMENT_ID` (يُحقن مباشرة فقط لو GTM فاضي)
-- `VITE_META_PIXEL_ID` (يُحقن مباشرة فقط لو GTM فاضي)
-- `VITE_GSC_VERIFICATION`
+- GA4: `G-EY2GF14XJ0` (`VITE_GA4_MEASUREMENT_ID`)
+- Meta Pixel: `1763152844965514` (`VITE_META_PIXEL_ID`)
+- `VITE_GTM_ID` فاضي — لو اتحط، GTM بيمسك التاجز وما فيش حقن مباشر لـ GA4/Pixel
+- `VITE_GSC_VERIFICATION` اختياري
 
-لو فاضية، الموقع مش بيحقن سكربتات تحليلات. للبناء على GitHub Pages حط نفس المفاتيح كـ Secrets في المستودع. أحداث التحويل الجاهزة: `click_whatsapp`، `click_call`، `generate_lead`، `signature_lead`.
+أحداث التحويل: `click_whatsapp`، `click_call`، `generate_lead` (فورم التواصل)، `signature_lead` (فورم التوقيع). Pixel: `Contact` للواتساب/الاتصال و `Lead` للفورم.
 
 ## هيكل المشروع
 

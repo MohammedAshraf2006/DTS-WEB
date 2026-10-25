@@ -1,8 +1,8 @@
 # Execution status
 
-Last updated: 2026-10-25 (Moataz 24 Oct follow-up: GTM/GA4/Pixel env + conversion events, prerendered page bodies, trailing-slash nav, tax ID 769038883, WhatsApp 01050992816)
+Last updated: 2026-10-26 (GA4 `G-EY2GF14XJ0` + Meta Pixel `1763152844965514` live in analytics defaults; GSC still owner)
 
-Analytics env (owner provides; empty = no scripts): `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION`.
+Analytics: GA4 + Pixel IDs from Moataz (26 Oct). GTM unused. Conversion events: `click_whatsapp`, `click_call`, `generate_lead`, `signature_lead`.
 
 | Wave | File | Status | Goal |
 |------|------|--------|------|

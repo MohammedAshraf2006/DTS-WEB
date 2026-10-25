@@ -24,7 +24,7 @@
 - Canonical, sitemap, in-app links, and emitted shells use trailing slashes (`/products/`). Home is `https://dts-eg.com/`. Vue Router redirects a missing slash with `replace` so clicks match canonical.
 - Indexable language is Arabic. Each URL has `hreflang="ar"` and `hreflang="x-default"` pointing at the same canonical. There is no `/en` prefix until the owner asks for English search URLs.
 - Build injects crawler-visible `h1` + article HTML into `#app`; Vue replaces it on mount
-- Analytics: optional `VITE_GA4_MEASUREMENT_ID`, `VITE_META_PIXEL_ID`, `VITE_GSC_VERIFICATION` — copy `.env.example`
+- Analytics: GA4 `G-EY2GF14XJ0` and Meta Pixel `1763152844965514` (env override via `.env.example`). Direct inject unless `VITE_GTM_ID` is set. Events: `click_whatsapp`, `click_call`, `generate_lead`, `signature_lead`.
 
 ### Page routes (extra)
 
