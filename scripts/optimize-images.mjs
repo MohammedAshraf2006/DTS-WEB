@@ -59,96 +59,11 @@ async function convertPng(file) {
   return { rel, before, after }
 }
 
-function pngIco(images) {
-  const count = images.length
-  const header = Buffer.alloc(6)
-  header.writeUInt16LE(0, 0)
-  header.writeUInt16LE(1, 2)
-  header.writeUInt16LE(count, 4)
-  const entries = Buffer.alloc(16 * count)
-  let offset = 6 + 16 * count
-  const parts = [header, entries]
-  for (let i = 0; i < count; i += 1) {
-    const img = images[i]
-    const e = i * 16
-    const dim = img.size >= 256 ? 0 : img.size
-    entries.writeUInt8(dim, e)
-    entries.writeUInt8(dim, e + 1)
-    entries.writeUInt16LE(1, e + 4)
-    entries.writeUInt16LE(32, e + 6)
-    entries.writeUInt32LE(img.png.length, e + 8)
-    entries.writeUInt32LE(offset, e + 12)
-    offset += img.png.length
-    parts.push(img.png)
-  }
-  return Buffer.concat(parts)
-}
-
-async function squareMark(source, size, navy) {
-  const trimmed = await sharp(source).trim({ background: '#000000', threshold: 18 }).png().toBuffer()
-  const inner = Math.max(1, Math.round(size * 0.9))
-  const logo = await sharp(trimmed)
-    .resize(inner, inner, { fit: 'contain', background: navy })
-    .png()
-    .toBuffer()
-  return sharp({
-    create: { width: size, height: size, channels: 4, background: navy }
-  })
-    .composite([{ input: logo, gravity: 'centre' }])
-    .png({ compressionLevel: 9 })
-    .toBuffer()
-}
-
-async function writeFavicon() {
-  const sources = ['DTS.webp', 'DTS.png'].map((name) => path.join(imagesDir, name))
-  let source = null
-  for (const candidate of sources) {
-    try {
-      await stat(candidate)
-      source = candidate
-      break
-    } catch {
-      /* try next */
-    }
-  }
-  if (!source) return null
-
-  const navy = { r: 11, g: 42, b: 74, alpha: 1 }
-  const sizes = [
-    [48, path.join(rootDir, 'public', 'favicon.png')],
-    [192, path.join(rootDir, 'public', 'icon-192.png')],
-    [512, path.join(rootDir, 'public', 'icon-512.png')]
-  ]
-  const pngs = []
-  for (const [size, out] of sizes) {
-    const png = await squareMark(source, size, navy)
-    await writeFile(out, png)
-    pngs.push({ size, png })
-  }
-  const apple = path.join(imagesDir, 'apple-touch.png')
-  await writeFile(apple, await squareMark(source, 180, navy))
-  const icoSizes = [16, 32, 48]
-  const icoImages = []
-  for (const size of icoSizes) {
-    icoImages.push({ size, png: await squareMark(source, size, navy) })
-  }
-  await writeFile(path.join(rootDir, 'public', 'favicon.ico'), pngIco(icoImages))
-  return { favicon: sizes[0][1], apple, pngs }
-}
-
-if (process.argv.includes('--favicon-only')) {
-  const written = await writeFavicon()
-  console.log(written ? 'favicon set written' : 'favicon source missing')
-  process.exit(written ? 0 : 1)
-}
-
 const files = await walkPng(imagesDir)
 const rows = []
 for (const file of files) {
   rows.push(await convertPng(file))
 }
-
-await writeFavicon()
 
 const beforeTotal = rows.reduce((sum, row) => sum + row.before, 0)
 const afterTotal = rows.reduce((sum, row) => sum + row.after, 0)
