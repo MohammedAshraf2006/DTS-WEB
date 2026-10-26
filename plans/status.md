@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-10-26 (GA4 `G-EY2GF14XJ0` + Meta Pixel `1763152844965514` live in analytics defaults; GSC still owner)
+Last updated: 2026-10-26 (GA4 SPA `config` page views + square navy favicon set including `/favicon.ico`. Search Console 403 is Cloudflare bot protection, not origin.)
 
 Analytics: GA4 + Pixel IDs from Moataz (26 Oct). GTM unused. Conversion events: `click_whatsapp`, `click_call`, `generate_lead`, `signature_lead`.
 

@@ -6,6 +6,10 @@ const pixelId = () => import.meta.env.VITE_META_PIXEL_ID || DEFAULT_PIXEL
 const gtmId = () => import.meta.env.VITE_GTM_ID || ''
 const gsc = () => import.meta.env.VITE_GSC_VERIFICATION || ''
 
+function gaDebug() {
+  return typeof window !== 'undefined' && /(?:^|[?&])ga_debug=1(?:&|$)/.test(window.location.search)
+}
+
 function dataLayerPush(payload) {
   window.dataLayer = window.dataLayer || []
   window.dataLayer.push(payload)
@@ -57,7 +61,10 @@ export function initAnalytics() {
       window.dataLayer.push(arguments)
     }
     window.gtag('js', new Date())
-    window.gtag('config', measurement, { send_page_view: false })
+    window.gtag('config', measurement, {
+      send_page_view: false,
+      debug_mode: gaDebug()
+    })
   }
 
   const pixel = pixelId()
@@ -89,10 +96,17 @@ export function initAnalytics() {
 }
 
 export function trackPageView(path) {
-  dataLayerPush({ event: 'page_view', page_path: path })
+  const page_location = window.location.href
+  const page_title = document.title
+  dataLayerPush({ event: 'page_view', page_path: path, page_location, page_title })
   const measurement = gaId()
   if (measurement && window.gtag) {
-    window.gtag('event', 'page_view', { page_path: path })
+    window.gtag('config', measurement, {
+      page_path: path,
+      page_location,
+      page_title,
+      debug_mode: gaDebug()
+    })
   }
   if (pixelId() && window.fbq) {
     window.fbq('track', 'PageView')
