@@ -2,7 +2,7 @@
 slug: signature-characteristics
 title: خصائص التوقيع الإلكتروني
 description: لماذا يُعتد بالتوقيع الإلكتروني: الهوية، سلامة المستند، عدم الإنكار، والارتباط بجهازك عبر التوكن.
-cover: /images/knowledge/lock.webp
+cover: /images/knowledge/signature-traits.webp
 category: توقيع إلكتروني
 ---
 

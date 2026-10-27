@@ -2,7 +2,7 @@
 slug: signature-characteristics
 title: Characteristics of an e-signature
 description: Why a licensed e-signature counts: identity, document integrity, non-repudiation, and the token on your PC.
-cover: /images/knowledge/lock.webp
+cover: /images/knowledge/signature-traits.webp
 category: E-signature
 ---
 

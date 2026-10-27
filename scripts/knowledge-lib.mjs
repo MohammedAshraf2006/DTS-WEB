@@ -8,11 +8,23 @@ function slashInternalHrefs(html) {
   return html.replace(/href="(\/[^"]+)"/g, (_, href) => `href="${withTrailingSlash(href)}"`)
 }
 
+function prepareArticleHtml(html) {
+  let next = slashInternalHrefs(html)
+  next = next.replace(/<pre>/g, '<pre dir="ltr">')
+  next = next.replace(/<pre dir="ltr"><code/g, '<pre dir="ltr"><code dir="ltr"')
+  next = next.replaceAll(
+    '<code>3008 Error in verifying License</code>',
+    '<span dir="ltr">3008 Error in verifying License</span>'
+  )
+  return next
+}
+
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const contentRoot = join(root, 'content', 'knowledge')
 const md = new MarkdownIt({ html: false, linkify: true })
 
 const ARTICLE_ORDER = [
+  'fix-error-3008-itida-websign',
   'what-is-e-signature',
   'signature-characteristics',
   'signature-services',
@@ -80,7 +92,12 @@ function readLocale(locale) {
       published: parsed.data.published || '2026-10-16',
       updated: parsed.data.updated || parsed.data.published || '2026-10-16',
       topic: parsed.data.topic || topicFromSlug(slug),
-      html: slashInternalHrefs(md.render(parsed.body))
+      path: parsed.data.path || '',
+      featured: parsed.data.featured === 'true',
+      video: parsed.data.video || '',
+      poster: parsed.data.poster || '',
+      download: parsed.data.download || '',
+      html: prepareArticleHtml(md.render(parsed.body))
     })
   }
   return bySlug
@@ -93,9 +110,17 @@ export function loadArticles() {
   for (const slug of ar.keys()) {
     if (!slugs.includes(slug) && en.has(slug)) slugs.push(slug)
   }
-  return slugs.map((slug) => ({
-    slug,
-    ar: ar.get(slug),
-    en: en.get(slug)
-  }))
+  return slugs.map((slug) => {
+    const arabic = ar.get(slug)
+    return {
+      slug,
+      path: arabic.path || '',
+      featured: Boolean(arabic.featured),
+      video: arabic.video || '',
+      poster: arabic.poster || '',
+      download: arabic.download || '',
+      ar: arabic,
+      en: en.get(slug)
+    }
+  })
 }

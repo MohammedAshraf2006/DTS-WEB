@@ -2,7 +2,7 @@
 slug: what-is-e-signature
 title: Introduction to e-signature
 description: What an e-signature is, the legal basis in Egypt, and how DTS uses it to send documents to the tax authority.
-cover: /images/knowledge/intro.webp
+cover: /images/knowledge/e-signature.webp
 category: E-signature
 ---
 

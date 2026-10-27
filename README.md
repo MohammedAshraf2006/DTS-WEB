@@ -31,7 +31,7 @@ npm run preview  # يعاين نسخة الـ build محليًا
 - `VITE_GTM_ID` فاضي — لو اتحط، GTM بيمسك التاجز وما فيش حقن مباشر لـ GA4/Pixel
 - `VITE_GSC_VERIFICATION` اختياري
 
-أحداث التحويل: `click_whatsapp`، `click_call`، `generate_lead` (فورم التواصل)، `signature_lead` (فورم التوقيع). Pixel: `Contact` للواتساب/الاتصال و `Lead` للفورم.
+أحداث التحويل: `click_whatsapp`، `click_call`، `generate_lead` (فورم التواصل)، `signature_lead` (فورم التوقيع). Pixel: `Contact` للواتساب/الاتصال و `Lead` للفورم. مقال خطأ 3008: `article_view_3008` (Pixel `ViewContent`)، `file_download_3008` (Pixel `Lead` و `DownloadFix`)، `copy_code_3008`.
 
 ## هيكل المشروع
 

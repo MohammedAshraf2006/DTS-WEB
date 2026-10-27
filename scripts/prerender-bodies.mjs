@@ -134,7 +134,10 @@ function signatureBody() {
 function knowledgeHubBody(articles) {
   const knowledge = load('knowledge.json')
   const list = articles
-    .map((item) => `<li><a href="/knowledge/${item.slug}/">${escapeHtml(item.ar.title)}</a> — ${escapeHtml(item.ar.description)}</li>`)
+    .map((item) => {
+      const href = item.path ? `${item.path.replace(/\/$/, '')}/` : `/knowledge/${item.slug}/`
+      return `<li><a href="${href}">${escapeHtml(item.ar.title)}</a> — ${escapeHtml(item.ar.description)}</li>`
+    })
     .join('')
   return `${h(1, knowledge.title)}${p(knowledge.subtitle)}<ul>${list}</ul>`
 }

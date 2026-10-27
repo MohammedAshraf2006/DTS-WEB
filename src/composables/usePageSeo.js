@@ -42,13 +42,13 @@ export function usePageSeo() {
   function apply() {
     const lang = locale.value === 'en' ? 'en' : 'ar'
     let meta = null
-    if (route.name === 'knowledge-article') {
-      const article = getArticle(route.params.slug, lang)
+    if (route.name === 'knowledge-article' || route.name === 'fix-error-3008') {
+      const article = getArticle(route.meta.articleSlug || route.params.slug, lang)
       if (article) {
         meta = {
           title: `${article.title} | DTS`,
           description: article.description,
-          path: `/knowledge/${article.slug}`
+          path: article.path || `/knowledge/${article.slug}`
         }
       }
     } else {
@@ -70,7 +70,7 @@ export function usePageSeo() {
     setMeta('property', 'og:title', meta.title)
     setMeta('property', 'og:description', meta.description)
     setMeta('property', 'og:url', url)
-    setMeta('property', 'og:type', route.name === 'knowledge-article' ? 'article' : 'website')
+    setMeta('property', 'og:type', route.name === 'knowledge-article' || route.name === 'fix-error-3008' ? 'article' : 'website')
     setMeta('property', 'og:image', OG_IMAGE)
     setMeta('property', 'og:locale', lang === 'en' ? 'en_US' : 'ar_EG')
     setMeta('name', 'twitter:card', 'summary_large_image')

@@ -53,7 +53,18 @@ const routes = [
       {
         path: 'knowledge/:slug',
         name: 'knowledge-article',
-        component: () => import('@/views/KnowledgeArticleView.vue')
+        component: () => import('@/views/KnowledgeArticleView.vue'),
+        beforeEnter(to) {
+          if (to.params.slug === 'fix-error-3008-itida-websign') {
+            return { path: '/fix-error-3008-itida-websign/', replace: true }
+          }
+        }
+      },
+      {
+        path: 'fix-error-3008-itida-websign',
+        name: 'fix-error-3008',
+        component: () => import('@/views/KnowledgeArticleView.vue'),
+        meta: { articleSlug: 'fix-error-3008-itida-websign' }
       },
       {
         path: 'products/:key',
@@ -79,7 +90,7 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
-    const knowledgeNames = new Set(['knowledge', 'knowledge-article'])
+    const knowledgeNames = new Set(['knowledge', 'knowledge-article', 'fix-error-3008'])
     if (knowledgeNames.has(to.name) && knowledgeNames.has(from.name)) {
       return false
     }

@@ -91,6 +91,7 @@ Ambient orbs on Home are **dark mode only**.
 - `/partners` → `PartnersView` (`name: partners`)
 - `/knowledge` → `KnowledgeHubView` (`name: knowledge`; news-style topic bar, featured story, article stream)
 - `/knowledge/:slug` → `KnowledgeArticleView` (`name: knowledge-article`; full-width article page)
+- `/fix-error-3008-itida-websign` → `KnowledgeArticleView` (`name: fix-error-3008`; video + batch download)
 - `/products/:key` → `ProductDetailView` (`name: product-detail`; `key` = ess | esa | ers)
 - catch-all → lazy `NotFoundView` (`name: not-found`)
 - Hash scroll uses top offset `90` for the fixed header

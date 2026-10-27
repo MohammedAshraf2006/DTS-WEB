@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
-import { listArticles } from '@/data/knowledge.generated.js'
+import { articlePath, listArticles } from '@/data/knowledge.generated.js'
 
 const { t, locale } = useI18n()
 
@@ -21,11 +21,14 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
         </p>
       </div>
 
-      <ul class="mt-8 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface-alt">
+      <ul class="mt-8 flex flex-col gap-4">
         <li v-for="article in articles" :key="article.slug">
           <RouterLink
-            :to="`/knowledge/${article.slug}/`"
-            class="flex items-center gap-4 px-4 py-4 transition-colors hover:bg-primary-light/40 sm:gap-5 sm:px-6"
+            :to="articlePath(article)"
+            class="flex items-center gap-4 rounded-2xl border px-4 py-4 transition-colors sm:gap-5 sm:px-6"
+            :class="article.featured
+              ? 'border-[#1b739f] bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] shadow-[0_0_0_1px_rgba(35,184,193,0.25),0_12px_32px_-16px_rgba(27,115,159,0.65)] hover:border-[#23b8c1] dark:border-[#00e8f0]/70 dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528] dark:shadow-[0_0_0_1px_rgba(0,232,240,0.28),0_12px_32px_-16px_rgba(0,232,240,0.35)]'
+              : 'border-border bg-surface-alt hover:border-primary/40'"
           >
             <img
               v-if="article.cover"
@@ -36,10 +39,16 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
               decoding="async"
             />
             <span class="min-w-0 flex-1">
+              <span
+                v-if="article.featured"
+                class="mb-1 inline-flex items-center rounded-full bg-[#1b739f] px-2.5 py-0.5 text-[11px] font-bold text-white dark:bg-[#00e8f0] dark:text-[#050a18]"
+              >
+                {{ t('knowledge.featured') }}
+              </span>
               <span class="block font-heading text-base font-bold text-text-base sm:text-lg">
                 {{ article.title }}
               </span>
-              <span class="mt-1 line-clamp-1 block text-sm text-text-muted">
+              <span class="mt-1 line-clamp-2 block text-sm text-text-muted">
                 {{ article.description }}
               </span>
             </span>
@@ -47,17 +56,15 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
             <AppIcon name="arrowRight" class="h-4 w-4 shrink-0 text-primary ltr:block rtl:hidden" />
           </RouterLink>
         </li>
-        <li>
-          <RouterLink
-            to="/knowledge/"
-            class="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-primary transition-colors hover:bg-primary-light/40 sm:px-6 sm:text-lg"
-          >
-            {{ t('home.articles.cta') }}
-            <AppIcon name="arrowLeft" class="h-5 w-5 rtl:block ltr:hidden" />
-            <AppIcon name="arrowRight" class="h-5 w-5 ltr:block rtl:hidden" />
-          </RouterLink>
-        </li>
       </ul>
+      <RouterLink
+        to="/knowledge/"
+        class="mt-4 flex items-center justify-center gap-2 rounded-2xl border border-border bg-surface-alt px-4 py-4 text-base font-bold text-primary transition-colors hover:border-primary/40 sm:px-6 sm:text-lg"
+      >
+        {{ t('home.articles.cta') }}
+        <AppIcon name="arrowLeft" class="h-5 w-5 rtl:block ltr:hidden" />
+        <AppIcon name="arrowRight" class="h-5 w-5 ltr:block rtl:hidden" />
+      </RouterLink>
     </div>
   </section>
 </template>

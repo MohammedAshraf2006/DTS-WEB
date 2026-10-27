@@ -36,6 +36,7 @@
 | `/partners` | Live — partner cards; visit-site only when a URL exists; accountant offices prefixed مكتب محاسب قانوني |
 | `/knowledge` | Live — topic bar, featured story, article stream |
 | `/knowledge/:slug` | Live — standalone article (signature, receipts, token, ESS, contact) |
+| `/fix-error-3008-itida-websign` | Live — ITIDA WebSign error 3008 article, video, and batch download |
 
 ### Hash targets (Home / footer)
 

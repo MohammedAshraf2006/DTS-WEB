@@ -121,7 +121,7 @@ const routes = [
     body: `<article>${prerenderBody(route.path, articles) || `<h1>${escapeHtml(route.title)}</h1><p>${escapeHtml(route.description)}</p>`}</article>`
   })),
   ...articles.map((article) => {
-    const urlPath = `/knowledge/${article.slug}`
+    const urlPath = article.path || `/knowledge/${article.slug}`
     const image = article.ar.cover ? `${SITE_ORIGIN}${article.ar.cover}` : OG_IMAGE
     const jsonLd = [
       org,
@@ -190,9 +190,8 @@ writeFileSync(join(dist, '404.html'), injectBody(notFound, '<article><h1>الص�
 
 const sitemapUrls = routes.map((route) => {
   const loc = canonicalUrl(route.path)
-  const lastmod = route.path.startsWith('/knowledge/')
-    ? articles.find((item) => `/knowledge/${item.slug}` === route.path)?.ar.updated || '2026-10-19'
-    : '2026-10-19'
+  const article = articles.find((item) => (item.path || `/knowledge/${item.slug}`) === route.path)
+  const lastmod = article?.ar.updated || '2026-10-19'
   return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`
 })
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`
@@ -200,7 +199,7 @@ writeFileSync(join(dist, 'sitemap.xml'), sitemapXml)
 writeFileSync(join(pub, 'sitemap.xml'), sitemapXml)
 
 const llmsArticles = articles
-  .map((item) => `- ${item.en.title}: ${canonicalUrl(`/knowledge/${item.slug}`)}`)
+  .map((item) => `- ${item.en.title}: ${canonicalUrl(item.path || `/knowledge/${item.slug}`)}`)
   .join('\n')
 const llmsTxt = `# DTS (Digital Transformation Services)
 

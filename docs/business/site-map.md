@@ -11,6 +11,7 @@
 | Signature `/services/signature` | `SignatureServiceView` — signature/seal panels + request form to `tawqe3y_10thoframdan@dts-eg.com` |
 | Knowledge `/knowledge` | `KnowledgeHubView` — category tabs + article cards |
 | Knowledge article `/knowledge/:slug` | `KnowledgeArticleView` — article body, dates, related cards (no sidebar) |
+| ITIDA 3008 fix `/fix-error-3008-itida-websign` | Same article layout, plus the step video and `Fix-ITIDA-WebSign.bat` download. Featured on the home articles block and the knowledge hub. |
 | Clients `/clients` | `ClientsView` — featured client cards (logo, name, industry). No public client-count claim. |
 | Partners `/partners` | `PartnersView` — stacked cards (FEDIS, Tawqe3y, MTS, TAXES WORLD, plus certified accountant offices). Visit-site CTA only when a partner has a URL. |
 | 404 | `NotFoundView` |

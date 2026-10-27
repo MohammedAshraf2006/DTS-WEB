@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-10-26 (GA4 SPA `config` page views + square navy favicon set including `/favicon.ico`. Search Console 403 is Cloudflare bot protection, not origin.)
+Last updated: 2026-10-27 (ITIDA WebSign error 3008 article: LTR code boxes, JPG poster, GA4/Pixel events `article_view_3008`, `file_download_3008`, `copy_code_3008`, sitemap URL without UTM.)
 
 Analytics: GA4 + Pixel IDs from Moataz (26 Oct). GTM unused. Conversion events: `click_whatsapp`, `click_call`, `generate_lead`, `signature_lead`.
 

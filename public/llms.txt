@@ -13,6 +13,7 @@ DTS helps Egyptian companies issue electronic invoices and receipts and use digi
 
 ## Knowledge articles
 
+- Fix error 3008 Error in verifying License in ITIDA WebSign for e-invoices and e-receipts: https://dts-eg.com/fix-error-3008-itida-websign/
 - Introduction to e-signature: https://dts-eg.com/knowledge/what-is-e-signature/
 - Characteristics of an e-signature: https://dts-eg.com/knowledge/signature-characteristics/
 - E-signature services: https://dts-eg.com/knowledge/signature-services/

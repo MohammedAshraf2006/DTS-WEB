@@ -120,10 +120,15 @@ export function trackEvent(name, params = {}) {
     window.gtag('event', name, params)
   }
   if (pixelId() && window.fbq) {
-    if (name === 'generate_lead' || name === 'signature_lead') {
-      window.fbq('track', 'Lead')
+    if (name === 'generate_lead' || name === 'signature_lead' || name === 'file_download_3008') {
+      window.fbq('track', 'Lead', params)
     } else if (name === 'click_whatsapp' || name === 'click_call') {
-      window.fbq('track', 'Contact')
+      window.fbq('track', 'Contact', params)
+    } else if (name === 'article_view_3008') {
+      window.fbq('track', 'ViewContent', params)
+    }
+    if (name === 'file_download_3008') {
+      window.fbq('trackCustom', 'DownloadFix', params)
     }
   }
 }

@@ -2,7 +2,7 @@
 slug: what-is-e-signature
 title: مقدمة عن التوقيع الإلكتروني
 description: ما هو التوقيع الإلكتروني، وعلى أي أساس قانوني يعمل في مصر، وكيف تستخدمه مع DTS لإرسال المستندات لمصلحة الضرائب.
-cover: /images/knowledge/intro.webp
+cover: /images/knowledge/e-signature.webp
 category: توقيع إلكتروني
 ---
 
