@@ -16,6 +16,10 @@ function prepareArticleHtml(html) {
     '<code>3008 Error in verifying License</code>',
     '<span dir="ltr">3008 Error in verifying License</span>'
   )
+  next = next.replace(
+    /<a href="(https:\/\/wa\.me\/[^"]*)">/g,
+    '<a href="$1" dir="ltr" target="_blank" rel="noopener noreferrer">'
+  )
   return next
 }
 

@@ -17,6 +17,12 @@ function onDownload() {
   trackEvent('file_download_3008', { file_name: 'Fix-ITIDA-WebSign.bat' })
 }
 
+function onBodyClick(event) {
+  const link = event.target.closest?.('a')
+  if (!link?.href?.includes('wa.me')) return
+  trackEvent('click_whatsapp', { path: route.fullPath })
+}
+
 function withLtrPhrase(text) {
   return String(text || '')
     .replaceAll('&', '&amp;')
@@ -164,6 +170,7 @@ onMounted(() => mountCopyButtons())
         ref="bodyEl"
         class="knowledge-body mt-6 min-w-0 max-w-full text-[1.05rem] font-medium leading-[1.8] text-text-base sm:mt-10 sm:text-[1.2rem] sm:leading-[1.9]"
         v-html="article.html"
+        @click="onBodyClick"
       />
 
       <div v-if="related.length" class="mt-12 border-t border-border pt-8">

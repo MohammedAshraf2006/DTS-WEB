@@ -118,7 +118,7 @@ It does not delete other files, change anything else on the PC, or send any data
 - **Make sure the PC can reach the ITIDA server** (`escc.itida.gov.eg`). DNS, a proxy, a firewall, or antivirus can block it. Try another network or ask your network admin.
 - **Check the clock:** date, time, and time zone must be correct. In Settings > Time & language turn on **Set time automatically** and **Set time zone automatically**.
 - Restart the PC and try again.
-- If it still fails, WhatsApp **01050992816** and the DTS team will help.
+- If it still fails, WhatsApp [**01050992816**](https://wa.me/201050992816?text=Hello%20DTS%2C%20I%20need%20help%20with%20error%203008) and the DTS team will help.
 
 ## Common questions
 **Do I run the file every time?** No. Once is enough. If you reinstall the signer and the error comes back, run it again.
