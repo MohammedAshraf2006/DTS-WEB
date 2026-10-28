@@ -24,7 +24,7 @@
 |----|---------|
 | `#products` | ESS panel, ESA complement, ERS cashier-receipts link |
 | `#services` | Top 3 services + e-signature highlight |
-| `#articles` | Home knowledge teaser (three stacked cards). An article published within the last 7 days is pulled into this list and styled like the featured card, labeled New, then returns to a plain card. |
+| `#articles` | Home knowledge teaser (three stacked cards). An article published within the last 7 days uses the featured treatment and the New label, then returns to a plain card. |
 | `#contact` | Replaced by `/contact` |
 
 Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (mega menu). Nav **Clients** → `/clients` (no mega menu). Nav **Partners** → `/partners` (no mega menu).

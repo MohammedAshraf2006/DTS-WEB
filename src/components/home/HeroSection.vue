@@ -4,6 +4,19 @@ import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 const isEnglishLocale = computed(() => locale.value === 'en')
+const splitOpen = ref(false)
+
+function onSplitFocusOut(event) {
+  if (!event.currentTarget.contains(event.relatedTarget)) splitOpen.value = false
+}
+
+function onSplitHalfClick(event) {
+  if (splitOpen.value) return
+  if (window.matchMedia('(hover: none)').matches) {
+    event.preventDefault()
+    splitOpen.value = true
+  }
+}
 
 const heroBackground = ref(null)
 let vantaEffect = null
@@ -229,17 +242,115 @@ onBeforeUnmount(() => {
       >
         <RouterLink
           to="/contact/"
-          class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-md transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-lg"
+          class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-text-onprimary shadow-[0_0_10px_rgba(35,184,193,0.32)] transition-all hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-[0_0_14px_rgba(35,184,193,0.45)]"
         >
           {{ t('common.buttons.contactUs') }}
         </RouterLink>
-        <RouterLink
-          to="/products/"
-          class="inline-flex items-center justify-center rounded-full border border-border bg-surface-alt px-7 py-3.5 text-sm font-bold text-text-base transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+        <div
+          class="split-cta"
+          :class="{ 'is-open': splitOpen }"
+          @mouseenter="splitOpen = true"
+          @mouseleave="splitOpen = false"
+          @focusin="splitOpen = true"
+          @focusout="onSplitFocusOut"
         >
-          {{ t('common.buttons.discoverProducts') }}
-        </RouterLink>
+          <div class="split-cta__shell">
+            <RouterLink
+              to="/knowledge/"
+              class="split-cta__half"
+              @click="onSplitHalfClick"
+            >
+              {{ t('common.buttons.latestArticles') }}
+            </RouterLink>
+            <RouterLink
+              to="/products/"
+              class="split-cta__half split-cta__half--extra"
+              :tabindex="splitOpen ? 0 : -1"
+              @click="onSplitHalfClick"
+            >
+              {{ t('common.buttons.discoverProducts') }}
+            </RouterLink>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.split-cta__shell {
+  display: flex;
+  align-items: stretch;
+  overflow: visible;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  box-shadow: 0 0 10px rgba(35, 184, 193, 0.32);
+  transition: transform 0.35s ease, gap 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.split-cta__half {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: color 0.25s ease, background-color 0.35s ease, box-shadow 0.35s ease, max-width 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+}
+
+.split-cta__half--extra {
+  flex: 0 0 auto;
+  max-width: 0;
+  overflow: hidden;
+  padding-inline: 0;
+  opacity: 0;
+  color: var(--color-text-on-primary);
+  background: transparent;
+  pointer-events: none;
+}
+
+.split-cta.is-open .split-cta__shell,
+.split-cta:hover .split-cta__shell {
+  box-shadow: 0 0 14px rgba(35, 184, 193, 0.45);
+}
+
+.split-cta.is-open .split-cta__shell {
+  gap: 0.4rem;
+  padding: 0.25rem;
+  transform: scale(1.06);
+}
+
+.split-cta.is-open .split-cta__half {
+  border-radius: 999px;
+}
+
+.split-cta.is-open .split-cta__half--extra {
+  max-width: 22rem;
+  padding-inline: 1.35rem;
+  opacity: 1;
+  background: var(--color-primary);
+  pointer-events: auto;
+}
+
+.split-cta:hover .split-cta__half:first-child {
+  color: var(--color-primary);
+}
+
+.split-cta.is-open .split-cta__half--extra:hover {
+  background: var(--color-primary-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-cta__shell,
+  .split-cta__half {
+    transition: none;
+  }
+
+  .split-cta.is-open .split-cta__shell {
+    transform: none;
+  }
+}
+</style>

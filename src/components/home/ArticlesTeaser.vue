@@ -3,14 +3,14 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
 import { articlePath, listArticles } from '@/data/knowledge.generated.js'
-import { articleMark, isFreshArticle } from '@/data/articleFresh.js'
+import { articleMark } from '@/data/articleFresh.js'
 
 const { t, locale } = useI18n()
 
 const articles = computed(() => {
   const list = listArticles(locale.value)
   return [...list]
-    .sort((a, b) => Number(isFreshArticle(b.published)) - Number(isFreshArticle(a.published)))
+    .sort((a, b) => String(b.published).localeCompare(String(a.published)))
     .slice(0, 3)
 })
 
