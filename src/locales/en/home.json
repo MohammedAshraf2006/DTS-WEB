@@ -103,6 +103,10 @@
   "articles": {
     "title": "Articles",
     "subtitle": "Practical guides on e-signature, the token, and how DTS products connect to the tax system.",
-    "cta": "More"
+    "cta": "More",
+    "carousel": "Latest articles",
+    "prev": "Previous article",
+    "next": "Next article",
+    "slide": "Article {n} of {total}"
   }
 }

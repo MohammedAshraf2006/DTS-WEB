@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { socialLinks } from '../src/data/socialLinks.js'
 import { getPartnersList } from '../src/data/partners.js'
 import { PRODUCT_KEYS } from '../src/data/products.js'
 import { SERVICE_KEYS } from '../src/data/services.js'
@@ -27,9 +28,17 @@ function h(level, text) {
   return `<h${level}>${escapeHtml(text)}</h${level}>`
 }
 
-function homeBody() {
+function homeBody(articles = []) {
   const home = load('home.json')
   const common = load('common.json')
+  const latest = [...articles]
+    .sort((a, b) => String(b.ar?.published || '').localeCompare(String(a.ar?.published || '')))
+    .slice(0, 6)
+    .map((item) => {
+      const href = item.path ? `${String(item.path).replace(/\/$/, '')}/` : `/knowledge/${item.slug}/`
+      return `<li><a href="${href}">${escapeHtml(item.ar.title)}</a></li>`
+    })
+    .join('')
   const ess = home.products.tabs.ess
   const services = home.services
   return [
@@ -52,6 +61,7 @@ function homeBody() {
     ...services.items.map((card) => `${h(3, card.title)}${p(card.description)}`),
     h(2, home.articles.title),
     p(home.articles.subtitle),
+    `<ul>${latest}</ul>`,
     p(common.footer.description),
     p(`${common.footer.hours}. ${common.footer.address}`)
   ].join('\n')
@@ -107,6 +117,8 @@ function contactBody() {
     p(common.footer.hours),
     p(`${common.footer.taxIdLabel}: ${common.footer.taxId}`),
     p(common.footer.numbers.join(' · ')),
+    h(2, common.social.title),
+    `<ul>${socialLinks.map((item) => `<li><a href="${item.href}">${escapeHtml(common.social[item.key])}</a></li>`).join('')}</ul>`,
     p(common.footer.description)
   ].join('\n')
 }
@@ -143,7 +155,7 @@ function knowledgeHubBody(articles) {
 }
 
 export function prerenderBody(path, articles = []) {
-  if (path === '/') return homeBody()
+  if (path === '/') return homeBody(articles)
   if (path === '/products') return productsBody()
   if (path === '/products/ess') return productDetailBody('ess')
   if (path === '/products/esa') return productDetailBody('esa')

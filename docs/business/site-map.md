@@ -24,7 +24,7 @@
 |----|---------|
 | `#products` | ESS panel, ESA complement, ERS cashier-receipts link |
 | `#services` | Top 3 services + e-signature highlight |
-| `#articles` | Home knowledge teaser |
+| `#articles` | Home knowledge teaser (three stacked cards). An article published within the last 7 days is pulled into this list and styled like the featured card, labeled New, then returns to a plain card. |
 | `#contact` | Replaced by `/contact` |
 
 Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (mega menu). Nav **Clients** → `/clients` (no mega menu). Nav **Partners** → `/partners` (no mega menu).
@@ -40,7 +40,8 @@ Nav **Products** → `/products` (mega menu). Nav **Services** → `/services` (
 | About / numbers | Unpublished marketing counts stay off the site until wording is locked. Footer hours: Sunday–Thursday, 9:00 AM to 5:00 PM |
 | Clients / trust | Live `/clients` (featured cards); Home `TrustBar` uses curated logos |
 | Partners | Live `/partners` (tech partners + legal accountant offices; visit-site only if URL exists) |
-| Contact | Live `/contact` form to `sales@dts-eg.com`; footer Support/Sales/E-signature emails reveal on click |
+| Contact | Live `/contact` form to `sales@dts-eg.com`; footer Support/Sales/E-signature emails reveal on click. Contact and footer also link WhatsApp, Facebook, LinkedIn, and Instagram |
+| Social profiles | Footer strip and contact “Follow us”: `https://wa.me/201050992816`, `https://www.facebook.com/DTS.EGYPT22`, `https://www.linkedin.com/company/dtsegypt22`, `https://www.instagram.com/dts.egypt/` |
 | WhatsApp float | Live — `https://wa.me/201050992817`; sits under the mobile sidebar when the menu is open |
 
 ## Media drop paths

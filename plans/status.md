@@ -1,6 +1,6 @@
 # Execution status
 
-Last updated: 2026-10-27 (ITIDA WebSign error 3008 article: phone `01050992816` opens WhatsApp; published video matches `itida_web_16x9_v2.mp4`.)
+Last updated: 2026-10-28 (Footer and contact social strip: WhatsApp, Facebook, LinkedIn, Instagram. Home articles teaser is a latest-6 slider. Organization/LocalBusiness `sameAs` includes the three profile URLs.)
 
 Analytics: GA4 + Pixel IDs from Moataz (26 Oct). GTM unused. Conversion events: `click_whatsapp`, `click_call`, `generate_lead`, `signature_lead`.
 

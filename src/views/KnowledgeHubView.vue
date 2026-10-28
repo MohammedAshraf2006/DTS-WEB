@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { articlePath, listArticles } from '@/data/knowledge.generated.js'
+import { articleMark } from '@/data/articleFresh.js'
 import AppIcon from '@/components/icons/AppIcon.vue'
 
 const { t, locale } = useI18n()
@@ -67,9 +68,9 @@ const rest = computed(() => visibleArticles.value.slice(1))
         <RouterLink
           :to="articlePath(featured)"
           class="grid overflow-hidden rounded-2xl border bg-surface-alt transition-colors hover:border-primary lg:grid-cols-[1.15fr_0.85fr]"
-          :class="featured.featured
-            ? 'border-[#1b739f] bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] ring-2 ring-[#23b8c1]/45 dark:border-[#00e8f0]/70 dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528] dark:ring-[#00e8f0]/40'
-            : 'border-border'"
+          :class="articleMark(featured) === 'plain'
+            ? 'border-border'
+            : 'border-[#1b739f] bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] ring-2 ring-[#23b8c1]/45 dark:border-[#00e8f0]/70 dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528] dark:ring-[#00e8f0]/40'"
         >
           <div class="relative h-40 bg-surface sm:h-auto sm:min-h-[18rem]">
             <img
@@ -81,10 +82,10 @@ const rest = computed(() => visibleArticles.value.slice(1))
           </div>
           <div class="flex flex-col justify-center p-4 sm:p-8">
             <span
-              v-if="featured.featured"
+              v-if="articleMark(featured) !== 'plain'"
               class="mb-3 inline-flex w-fit items-center rounded-full bg-[#1b739f] px-3 py-1 text-[11px] font-bold tracking-wide text-white dark:bg-[#00e8f0] dark:text-[#050a18]"
             >
-              {{ t('knowledge.featured') }}
+              {{ t(articleMark(featured) === 'featured' ? 'knowledge.featured' : 'knowledge.fresh') }}
             </span>
             <p v-if="featured.category" class="text-[11px] font-semibold uppercase tracking-[0.14em] text-primary sm:text-xs">
               {{ featured.category }}
@@ -109,6 +110,9 @@ const rest = computed(() => visibleArticles.value.slice(1))
           <RouterLink
             :to="articlePath(article)"
             class="flex items-start gap-3 px-3 py-3 transition-colors hover:bg-primary-light/40 sm:items-center sm:gap-5 sm:px-6 sm:py-4"
+            :class="articleMark(article) === 'fresh'
+              ? 'bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528]'
+              : ''"
           >
             <img
               v-if="article.cover"
@@ -119,6 +123,12 @@ const rest = computed(() => visibleArticles.value.slice(1))
               decoding="async"
             />
             <span class="min-w-0 flex-1">
+              <span
+                v-if="articleMark(article) === 'fresh'"
+                class="mb-1 inline-flex items-center rounded-full bg-[#1b739f] px-2.5 py-0.5 text-[11px] font-bold text-white dark:bg-[#00e8f0] dark:text-[#050a18]"
+              >
+                {{ t('knowledge.fresh') }}
+              </span>
               <span v-if="article.category" class="block text-[11px] font-semibold text-primary sm:text-xs">
                 {{ article.category }}
               </span>

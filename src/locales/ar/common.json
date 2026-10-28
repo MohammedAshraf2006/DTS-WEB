@@ -48,6 +48,13 @@
     "taxIdLabel": "الرقم الضريبي",
     "taxId": "769038883"
   },
+  "social": {
+    "title": "تابعنا",
+    "whatsapp": "واتساب",
+    "facebook": "فيسبوك",
+    "linkedin": "لينكدإن",
+    "instagram": "إنستجرام"
+  },
   "whatsapp": {
     "label": "تواصل عبر واتساب",
     "href": "https://wa.me/201050992816"

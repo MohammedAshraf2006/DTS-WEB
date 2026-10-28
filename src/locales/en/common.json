@@ -48,6 +48,13 @@
     "taxIdLabel": "Tax ID",
     "taxId": "769038883"
   },
+  "social": {
+    "title": "Follow us",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram"
+  },
   "whatsapp": {
     "label": "Chat on WhatsApp",
     "href": "https://wa.me/201050992816"

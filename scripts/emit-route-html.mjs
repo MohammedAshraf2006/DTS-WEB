@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadArticles } from './knowledge-lib.mjs'
 import { prerenderBody } from './prerender-bodies.mjs'
+import { socialSameAs } from '../src/data/socialLinks.js'
 import { canonicalUrl, OG_IMAGE, SITE_ORIGIN, staticHtmlRoutes } from '../src/data/seo.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -27,7 +28,8 @@ function organizationJsonLd() {
     logo: `${SITE_ORIGIN}/images/DTS.webp`,
     image: `${SITE_ORIGIN}/icon-512.png`,
     email: 'sales@dts-eg.com',
-    taxID: '769038883'
+    taxID: '769038883',
+    sameAs: socialSameAs
   }
 }
 
@@ -37,6 +39,7 @@ function localBusinessJsonLd() {
     '@type': 'LocalBusiness',
     name: 'DTS',
     url: `${SITE_ORIGIN}/`,
+    sameAs: socialSameAs,
     telephone: '+201050992815',
     taxID: '769038883',
     vatID: '769038883',

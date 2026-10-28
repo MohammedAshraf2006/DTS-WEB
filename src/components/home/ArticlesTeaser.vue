@@ -3,10 +3,19 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
 import { articlePath, listArticles } from '@/data/knowledge.generated.js'
+import { articleMark, isFreshArticle } from '@/data/articleFresh.js'
 
 const { t, locale } = useI18n()
 
-const articles = computed(() => listArticles(locale.value).slice(0, 3))
+const articles = computed(() => {
+  const list = listArticles(locale.value)
+  return [...list]
+    .sort((a, b) => Number(isFreshArticle(b.published)) - Number(isFreshArticle(a.published)))
+    .slice(0, 3)
+})
+
+const highlightClass =
+  'border-[#1b739f] bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] shadow-[0_0_0_1px_rgba(35,184,193,0.25),0_12px_32px_-16px_rgba(27,115,159,0.65)] hover:border-[#23b8c1] dark:border-[#00e8f0]/70 dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528] dark:shadow-[0_0_0_1px_rgba(0,232,240,0.28),0_12px_32px_-16px_rgba(0,232,240,0.35)]'
 </script>
 
 <template>
@@ -26,9 +35,9 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
           <RouterLink
             :to="articlePath(article)"
             class="flex items-center gap-4 rounded-2xl border px-4 py-4 transition-colors sm:gap-5 sm:px-6"
-            :class="article.featured
-              ? 'border-[#1b739f] bg-gradient-to-br from-[#e4f3fb] via-surface-alt to-[#c9fbfe] shadow-[0_0_0_1px_rgba(35,184,193,0.25),0_12px_32px_-16px_rgba(27,115,159,0.65)] hover:border-[#23b8c1] dark:border-[#00e8f0]/70 dark:from-[#062a32] dark:via-surface-alt dark:to-[#0a1528] dark:shadow-[0_0_0_1px_rgba(0,232,240,0.28),0_12px_32px_-16px_rgba(0,232,240,0.35)]'
-              : 'border-border bg-surface-alt hover:border-primary/40'"
+            :class="articleMark(article) === 'plain'
+              ? 'border-border bg-surface-alt hover:border-primary/40'
+              : highlightClass"
           >
             <img
               v-if="article.cover"
@@ -40,10 +49,10 @@ const articles = computed(() => listArticles(locale.value).slice(0, 3))
             />
             <span class="min-w-0 flex-1">
               <span
-                v-if="article.featured"
+                v-if="articleMark(article) !== 'plain'"
                 class="mb-1 inline-flex items-center rounded-full bg-[#1b739f] px-2.5 py-0.5 text-[11px] font-bold text-white dark:bg-[#00e8f0] dark:text-[#050a18]"
               >
-                {{ t('knowledge.featured') }}
+                {{ t(articleMark(article) === 'featured' ? 'knowledge.featured' : 'knowledge.fresh') }}
               </span>
               <span class="block font-heading text-base font-bold text-text-base sm:text-lg">
                 {{ article.title }}

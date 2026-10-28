@@ -3,6 +3,7 @@ import { computed, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '@/components/icons/AppIcon.vue'
+import SocialLinks from '@/components/SocialLinks.vue'
 import { trackEvent } from '@/analytics/track.js'
 import { SALES_EMAIL, SUPPORT_EMAIL, SIGNATURE_EMAIL } from '@/data/contactEmails'
 
@@ -96,6 +97,7 @@ const companyLinks = [
           <p class="mt-4 max-w-sm text-[15px] leading-relaxed text-text-subtle">
             {{ t('common.footer.description') }}
           </p>
+          <SocialLinks labelled class="mt-5" />
         </div>
 
         <!-- Product -->
