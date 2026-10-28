@@ -298,6 +298,7 @@ onBeforeUnmount(() => {
   padding: 0.875rem 1.75rem;
   font-size: 0.875rem;
   font-weight: 700;
+  border-radius: 999px;
   transition: color 0.25s ease, background-color 0.35s ease, box-shadow 0.35s ease, max-width 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
 }
 
@@ -321,10 +322,6 @@ onBeforeUnmount(() => {
   gap: 0.4rem;
   padding: 0.25rem;
   transform: scale(1.06);
-}
-
-.split-cta.is-open .split-cta__half {
-  border-radius: 999px;
 }
 
 .split-cta.is-open .split-cta__half--extra {
